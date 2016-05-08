@@ -1,0 +1,245 @@
+\documentclass[a4paper,10pt,listof=totocnumbered,headsepline,twoside,abstracton, titlepage=false]{scrreprt}
+\KOMAoptions{open=left}
+\usepackage[table]{xcolor} %  http://ctan.org/pkg/xcolor
+
+% \definecolor{mygreen}{}{cyan}
+% \definecolor{mygreen}{cmyk}{0.92 0 0.87 0.09}
+\colorlet{g5}{blue!60!white}
+\colorlet{g4}{blue!45!white}
+\colorlet{g3}{blue!30!white}
+\colorlet{g2}{blue!15!white}
+\colorlet{g1}{white}
+
+%language and input
+\usepackage[utf8]{inputenc}
+\usepackage[english,ngerman]{babel}
+\usepackage{microtype}
+\usepackage{pdfpages}
+
+%Title, Author
+\title{Experimentalphysik 4 - Boykott-Gruppenseminar}
+\author{Fabs \and Chris \and Michi \and Paul \and Anton \and Sören \and Hein \and Martina \and Mitsch}
+\date{\today}
+%math packages
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+\usepackage{amsmath, mathtools, wasysym, braket}
+\usepackage[load-configurations=astronomy]{siunitx}
+\DeclareSIUnit\parsec{pc}
+\DeclareSIUnit\dex{dex}
+\setcounter{secnumdepth}{2}
+\sisetup{mode=text,range-phrase = {\text{~to~}}}
+\usepackage{nicefrac}
+\usepackage{mathtools}% Erweitert amsmath beispielsweise um multlined
+\usepackage{siunitx}
+\usepackage[version=3]{mhchem}
+\DeclareMathOperator{\Cov}{Cov}
+\newcommand{\const}{\text{const.}}
+
+%bibliography
+
+\usepackage[backend=bibtex,citestyle=authoryear-comp,natbib=true]{biblatex}
+% \usepackage{natbib}
+\newcommand{\aap}{A\&A}
+\newcommand{\araa}{ARA\&A}
+\newcommand{\apj}{ApJ}
+\newcommand{\mnras}{MNRAS}
+\newcommand{\nat}{Nature}
+\newcommand{\pasp}{PASP}
+\newcommand{\aj}{AJ}
+\newcommand{\apjl}{ApJ}
+\newcommand{\apjs}{ApJS}
+% \bibliographystyle{apalike}
+% \DeclareFieldFormat{title}{\textit{#1}}
+% \DeclareFieldFormat[article]{journal}{\textbf{#1}}
+\bibliography{literature/ba-literature.bib}
+
+
+
+%graphic
+% \usepackage{color}
+\usepackage{graphicx,epstopdf}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.8}
+\usepackage{tikz}
+\usetikzlibrary{arrows,decorations.pathmorphing,backgrounds,positioning,fit,petri,calc}
+
+\usetikzlibrary{fadings,decorations.pathreplacing}
+\usetikzlibrary{decorations.markings}
+\tikzset{->-/.style={decoration={
+  markings,
+  mark=at position #1 with {\arrow{>}}},postaction={decorate}}}
+\tikzset{middlearrow/.style={
+        decoration={markings,
+            mark= at position 0.5 with {\arrow{#1}} ,
+        },
+        postaction={decorate}
+    }
+}
+
+\pgfdeclarefunctionalshading{sphere}{\pgfpoint{-25bp}{-25bp}}{\pgfpoint{25bp}{25bp}}{}{
+%% calculate unit coordinates
+25 div exch
+25 div exch
+%% copy stack
+2 copy 
+%% compute -z^2 of the current position 
+dup mul exch
+dup mul add
+1.0 sub
+%% and the -z^2 of the light source 
+0.3 dup mul
+-0.5 dup mul add
+1.0 sub
+%% now their sqrt product
+mul abs sqrt
+%% and the sum product of the rest
+exch 0.3 mul add
+exch -0.5 mul add
+%% max(dotprod,0)
+dup abs add 2.0 div 
+%% matte-ify
+0.6 mul 0.4 add
+%% currently there is just one number in the stack.
+%% we need three corresponding to the RGB values
+dup
+0.4
+}
+
+
+
+\usepackage{float}
+% Load package framed for boxes with math font in it
+\usepackage{framed}
+    
+%%%%%%%%%%%%%%%%%
+%%Tables and tablesettings
+%%%%%%%%%%%%%%%%
+\usepackage{caption}
+% \usepackage{rotating}
+% \usepackage{colortbl}
+% \usepackage{multirow} 
+% \usepackage{booktabs}
+\usepackage{ltxtable} % Longtable + tabularx
+%-- Settings for tables ----------
+% \providecommand\tablestyle{
+%   \renewcommand{\arraystretch}{1.5} % Groessere Abstaende zwischen Zeilen
+%   \normalfont\normalsize            %
+%   \colorlet{tableheadcolor}{gray!25}
+% }
+% \usepackage{rotating}
+% \usepackage{longtable}
+% \usepackage{colortbl}
+
+\DeclareCaptionLabelFormat{mylabel}{#1 #2.\hspace{1ex}}
+\captionsetup{labelformat=mylabel,labelsep=none}
+% \captionsetup{labelsep=\,}
+
+\usepackage{array}
+\newcolumntype{x}[1]{>{\centering\arraybackslash\hspace{0pt}}p{#1}}
+
+
+
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue]{hyperref}
+
+\makeatletter
+\renewcommand*{\eqref}[1]{%
+  \hyperref[{#1}]{\textup{\tagform@{\ref*{#1}}}}%
+}
+\makeatother
+
+%remove white pages between chapters with dirty hack
+\let\cleardoublepage\clearpage
+
+%Inhaltsverzeichnis und co
+\setcounter{tocdepth}{4}
+\setcounter{secnumdepth}{4}
+
+
+\def\emcee{\texttt{emcee\,}}
+\newcommand{\feh}{[\ce{Fe}/\ce{H}]}
+\renewcommand{\arraystretch}{1.5}
+
+
+\usepackage{scrlayer-scrpage}
+% \pagestyle{scrheadings}
+
+% \ohead{
+
+\automark[chapter]{chapter}
+% % \automark*{section}
+\clearpairofpagestyles
+\ihead{\headmark}
+ \ifoot{\pagemark}
+
+ 
+\makeatletter
+\newcommand\Abstractchap{%
+                    \par\vspace{2cm}
+                    \global\@topnum\z@
+                    \@afterindentfalse
+                    \secdef\@chapter\@schapter}
+\makeatother
+
+
+
+
+%%%% user defined commands:
+% column vector command with 2 components
+\newcommand{\twovec}[2]{%
+	\begin{pmatrix}
+		#1\\
+		#2
+	\end{pmatrix}
+}
+
+% 2x2 matrix command
+\newcommand{\twomatrix}[4]{%
+	\begin{pmatrix}
+        	#1 & #2\\
+        	#3 & #4
+	\end{pmatrix}
+}
+
+% row vector command with 2 components
+\newcommand{\twovecRow}[2]{%
+	\begin{pmatrix}
+		#1 & #2
+	\end{pmatrix}
+}
+
+% nice left parenthesis
+\newcommand{\lp}{\left( } 
+
+% nice right parenthesis
+\newcommand{\rp}{\right) }
+
+
+\usepackage{subfiles}
+
+
+\begin{document}
+% \setcounter{page}{-1}
+% $~~$
+% 
+% \thispagestyle{empty}
+% \clearpage 
+
+
+
+\maketitle
+
+
+
+
+
+\selectlanguage{ngerman}
+
+
+
+\tableofcontents
+
+\subfile{Sitzung01Ex4.tex}
+%Unterschrift
+\end{document}

@@ -1,0 +1,10 @@
+# put all files in here, that should not be synced.
+
+*.aux
+*.log
+*.out
+*.xml
+*.toc
+*.bib
+*.gz
+
