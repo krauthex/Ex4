@@ -88,7 +88,7 @@ Für zwei $e^-$ (z.B. Helium) gilt daher:
 
 $\ket{\chi_+,\ -}$ ist ein \textbf{symm}etrisches Triplett [2S+1=3 heißt Multiplizität].
 
-\chapter{ Ex4 - 1.Vorlesung und Einführung}
+\chapter{ Ex4 - Atomphysik}
 
 In der Ex4-Vorlesung wird es um folgende Themen gehen:
 
@@ -102,7 +102,6 @@ In der Ex4-Vorlesung wird es um folgende Themen gehen:
 Johanna Stachels Notation: 
 \begin{align*}
 & e^2 = \frac{q_e^2}{4\pi \epsilon_{0}}  \\
-%%
 & 1 \ eV = 1.60 \cdot 10^{-19} J  \\
 & 1 \ fm = 913 \ \nicefrac{MeV}{c^2} = 1.66 \cdot 10^{-27} kg \\
 & \hslash = 6.58 \cdot 10^{-16} eVs = 1.05 \cdot 10^{-34} Js \\
@@ -117,8 +116,9 @@ Um den Zustand einer Unterschale nl anzugeben, führen wir die spektroskopische 
 \end{equation}
 mit
 \begin{align*}
-&S := | \sum_{i} m_{s,i}\ \quad |L:=  | \sum_{i} m_{l,i} | \\
-&J := \left| \vec L + \vec S \right|  = | M_L + M_S |   = | \sum_{i} m_{l,i} + \sum_{i} m_{s,i}  | 
+&S := \lvert \sum_{i} m_{s,i} \rvert 
+&L:=  \lvert \sum_{i} m_{l,i} \rvert \\
+&J := \lvert \vec L + \vec S \rvert   = \lvert M_L + M_S \rvert   = \lvert \sum_{i} m_{l,i} + \sum_{i} m_{s,i}  \rvert 
 \end{align*}
 \newline
 Die Notation für die Elemente des Periodensystems lautet: 
@@ -181,9 +181,9 @@ Die Elektronen werden für die Grundzustände so aufgefüllt, dass die Bindungse
 
 Innerhalb einer Unterschale gelten für die Grundzustände die hierarchischen \textbf{Hund'schen Regeln}: 
 \begin{enumerate}
-\item Wenn $  | \sum_{i} m_{s,i} | \text{ maximal } \Rightarrow $ S maximal und $ S =  | \sum_{i} m_{s,i} |$. 
-\item Wenn $  | \sum_{i} m_{l,i} | \text{ maximal } \Rightarrow $ L maximal und $ L =  | \sum_{i} m_{l,i} |$. 
-\item Ist die Unterschale bis zu (einschließlich) halb voll, so wird J minimal d.h \\  $ J \stackrel{!}{=} \lvert L-S \rvert $ , bei mehr als halb vollen Unterschalden muss $ J \stackrel{!}{=} | L+S | $ sein. 
+\item Der Gesamtspin  $ S := \lvert \sum_{i} m_{s,i} \rvert $  wird maximal.
+\item Der Gesamtdrehimpuls $ L:=  \lvert \sum_{i} m_{l,i} \rvert $ wird maximal.
+\item Ist die Unterschale bis zu (einschließlich) halb voll, so wird J minimal d.h \\  $ J := \lvert M_L + M_S \rvert \stackrel{!}{=} \lvert L-S \rvert $ , bei mehr als halb vollen Unterschalden muss $ J \stackrel{!}{=} L+S $ sein. 
 \end{enumerate} 
 
 Diese Regeln bestimmen die Feinstruktur des Elements. Regt man das Element an, so gelten diese Regeln nicht mehr.  \newpage Die Schalen-/Orbitalübergänge werden von den sog. \textbf{Auswahlregeln} beherrscht, die wohlgemerkt nicht hierarchisch sind. 
@@ -234,6 +234,141 @@ Für das Wasserstoffatom entspricht das Moseley-Gesetz der Rydberg-Formel. \newl
 Für wasserstoffähnliche Atome (b=1) gilt : \quad K-Linie: $ n_2 = 1, \  \alpha :  n_1 = 2, \  \beta: n_1 = 3 $ \newline
 Für schwere Atome ($ Z > 40 $  )  gilt :  \qquad L-Linie: $ n_2 = 2 , b \approx 7.4 , \ \alpha : \ n_1= 3 , \  \beta: n_1 = 4 $ \newline
 Die Auswahlregeln müssen gelten. 
+
+\section{LS-Kopplung,JJ-Kopplung}
+....
+
+
+\chapter{Werkzeuge der Kern- und Teilchenphysik} 
+
+\section{Zerfallsgesetz}
+Es gibt 3 verschiedene Zerfallsarten des Radioaktiven Zerfalls.  (A: Nukleonenanzahl , Z: Kernladungszahl)
+\begin{itemize}
+\item  $ \alpha $  - Zerfall:  $ ^{A}_{Z}X \rightarrow ^{A-4}_{Z-2}Y \ + \ ^{4}_{2}He $  \quad   \\ $ \alpha $ -Strahlung wird mittlels Heliumkernen vermittelt (positiv geladen). 
+\item $ \beta $ - Zerfall: 
+	\begin{enumerate} 
+	\item $ \beta^{-} $ - Zerfall: $ ^{A}_{Z} X\rightarrow ^{A}_{Z+1} Y\ + \ e^{-} \ +\overline{\nu_{e}} $  \\ Beim  $ \beta^{-} $ -Zerfall wird im Kern ein Neutron in ein Proton umgewandelt. Dabei werden eine Elektron und ein Elektron-Antineutrino emittiert.
+	\item $ \beta^{-} $ - Zerfall: $ ^{A}_{Z}X \rightarrow ^{A}_{Z-1}Y \ + \ e^{+} \ +\nu_{e} $ \\ Beim $ \beta^{-} $ -Zerfall wird im Kern ein Proton in ein Neutron umgewandelt. Dabei werden eine Elektron und ein Elektron-Neutrino emittiert.
+	\end{enumerate}
+\item $ \gamma $ -Zerfall :  $ ^{A}_{Z}X^{*} \rightarrow ^{A}_{Z}X + \gamma $ \newline Falls nach einem $ \alpha $ - Zerfall oder $ \beta $ - Zerfall ein Atomkern in einem angeregten Zustand vorliegt, ist $ \gamma $ - Zerfall möglich. Beim Übergang in einen energetisch günstigeren Zustand wird hochfrequente elektromagnetische Strahlung emittiert. Meist folgt der  $ \gamma $ -Zerfall unmittelbar auf einen $ \alpha $ - oder $ \beta $ - Zerfall. \\ 
+\newline 
+Für die Zerfallsrate(Aktivität) $ A = \frac{d}{dt} N(t)$  gilt die folgende Differentialgleichung: 
+\begin{equation}
+\frac{d}{dt} N(t) = - \lambda N(t) 
+\end{equation}
+$ \lambda $ : Zerfallskonstante beschreibt Wahrscheinlichkeit für eine bestimmte radioaktive Zerfallsart. Sie ist unabhängig von Ort und Zeit, aber charakteristisch für den Kern. \newline
+Die Lösung dieser Gleichung gibt die Anzahl N der Atome zum Zeitpunkt t an: 
+\begin{equation}
+N(t) = N_{0} e^{-\lambda \cdot t}
+\end{equation}  \newpage
+Wobei man in diesem Zusammenhang noch folgende nützliche Größen definiert: 
+\begin{itemize}
+\item Mittlere Lebensdauer: $ \tau = \nicefrac{1}{\lambda} $ \newline 
+Nach dieser Zeit sind nurnoch $\nicefrac{1}{e} $ ($ \approx 37 \% $) der ursprünlichen Atome vorhanden.
+\item Halbwertszeit : $ T_{\nicefrac{1}{2}} = \frac{ln(2)}{\lambda} $
+Nach dieser Zeit sind nurnoch 50 \% der ursprünlichen Atome vorhanden.
+\end{itemize}
+\end{itemize}
+Der radioaktive Zerfall ist ein stat. Prozess. Die Wahrscheinlichkeit einen zerfallenden Kern anzutreffen ist bei t=0 am größten, danach fällt sie exponentiell ab. 
+Diese Wahrscheinlichkeit ist prinzipiell eine Binomial-Verteilung. Für eine hohe Anzahl an Versuchen und eine kleine Wahrscheinlichkeit konvergiert die Binomialverteilung gegen eine Poisson-Verteilung. Diese Näherung lässt sich auf den radioaktiven Zerfall anwenden, da man in der Regel viele Atome (N $\approx 10^{23} $) betrachtet, also eine hohe Anzahl Versuche durchführt, und die Zerfallswahrscheinlichkeit in der Regel klein ist: 
+\begin{equation}
+p(t) = 1 - e^{-\lambda \cdot t} 
+\end{equation}
+Somit lässt sich der Zerfall also durch eine Poisson-Verteilung beschreiben mit dem Mittelwert $ \mu = n\cdot p $ und der Standardabweichung  $ \sigma = \sqrt{\mu} $ wobei der Zerfall k-mal eintreten soll. 
+\begin{equation}
+P(k) = \frac{\mu^k \cdot e^{-\mu} } {k!} 
+\end{equation}
+
+\section{Fermis Goldene Regel}
+Wir wollen eine Vorraussage für die Übergangsrate $ \lambda $ (Übergangswahrscheinlichkeit pro Zeit), mit der ein Anfangszustand unter dem Einfluss einer Störung in einen anderen Zustand übergeht, treffen. Wir nehmen dabei an, dass es sich um ein an sich zeitlich konstantes System handelt, welches durch den Hamilton-Operator $ H_0 $ beschrieben wird, und durch einen Störoperator V, welcher vergleichsweise klein gegenüber  $ H_0 $ ist, gestört wird. Der gesamte Hamiltonoperator lautet also $ H = H_0 + V $ \newline
+Wir formulieren Fermis Goldene Regel: 
+\begin{equation}
+\lambda_{A->E} = \frac{2\pi}{\hslash} \cdot |\braket{\psi_{E} | V |\psi_{A}}|^2 \cdot \rho_{E} = \frac{dP}{dt}
+\end{equation}
+Die Übergansrate hängt also davon ab wie stark die Störung V den Anfangszustand $ \psi_A $ und den Endzustand $ \psi_E $ koppelt. Außerdem skaliert die Übergangsrate mit der Anzahl der möglichen Übergänge welche durch die Endzustandsdichte $ \rho_{E} $ beschrieben wird. \newpage 
+
+\textbf{Was ist} $\rho(E)$ \textbf{eigentlich ?}
+\ \\ \newline
+Wir bezeichnen den Phasenraum unseres Systems als den Raum, der durch die Ortskoordinaten \textbf{x} und die dazugehörigen Impulse \textbf{p} aufgespannt wird. In diesem Raum können wir einem Punkt ein Volumen von $ h^3 = (2\pi \hslash)^3 $ zuordnen (Unschärferelation). \newline 
+
+\textbf{1 Dimension}: \newline
+Zunächst betrachten wir einen jeweils eindimensionalen Orts-und Impulsraum mit Zuständen $ (x,p) \in  [x,x+L] \times [p_{x},p_{x}+p] $ In diesem Fall kann die Gesamtfläche Lp mit $ N = \frac{Lp}{2\pi \hslash} $ Zuständen gefüllt werden. Für die Zustandsdichte gilt dann: 
+\begin{equation}
+ \rho(E) = \frac{dN}{dE} = 2 \frac{dN}{dp} \frac{dp}{dE} = \frac{Lp}{2\pi \hslash} \frac{2m}{p} =  \frac{Lp}{2\pi \hslash} \sqrt{\frac{2m}{E}} 
+ \end{equation}
+ Wobei wir im letzten Schritt auf Kugelkoordinaten transformieren. 
+ Der Faktor 2 kommt daher, dass die Zustände (x,p) und (x,-p) bezüglich der Energie entartet sind, denn $ E = E_{kin} = \frac{p^2}{2m} $ \newline
+ 
+ \textbf{3 Dimensionen}: \newline
+ Die Anzahl der Gesamtzustände N ist nun
+ \begin{equation}
+ N = \frac{1}{2 \pi \hslash} \int d\textbf{x}^3 d\textbf{p}^3 = \frac{V}{2 \pi \hslash} \int d\textbf{p}^3 = \frac{V}{2 \pi \hslash} \int p^2 dp \  d\Omega 
+ \end{equation}
+ Aus der relativistischen Energie-Impuls-Beziehung $ E^2 = (pc)^2 +  (m_pc^2)^2 $ folgern wir $ \frac{d}{dE} = \frac{E}{pc^2} \frac{d}{dp} $ und erhalten damit für die Zustandsdichte für \textbf{1 Teilchen}
+ \begin{equation}
+\rho(E) = \frac{dN}{dE} = \frac{V}{(2 \pi \hslash)^3}  \frac{E}{pc^2} \frac{d}{dp}  \int p^2 dp \  d\Omega =  \frac{V}{(2 \pi \hslash)^3} \frac{pE}{c^2} \int d\Omega = \frac{VpE}{2 \pi^2 c^2 \hslash^3}
+\end{equation}
+
+Für \textbf{2 Teilchen} addieren sich die Impulse im Mittel zu 0, weshalb die Zustandsdichte konstant ist. Jedoch addieren sich die Energien zu $ E = E_1 + E_2 $
+\begin{equation}
+dE = dE_1 + dE_2 = \frac{p_1c^2}{E1} dp1 + \frac{p_2c^2}{E2} dp2
+\end {equation}
+Da $ p_1^2 = p_2^2 $ folgt $  p_1 dp_{1} = p_2 dp_{2} $ 
+\begin{align*}
+\rightarrow  dE &= \frac{E_1 + E_2}{E_1E_2} c^2 p_1 dp_1  \\
+\rightarrow  \rho_2 &=   \frac{V}{(2 \pi \hslash)^3} \frac{E_1E_2}{E_1+E_2} p_{1} \int d\Omega_{1}
+\end{align*}
+\newpage
+Wir können dies auf n Teilchen erweitern
+\begin{equation}
+\rho_{n} = \frac{V^{n-1}}{(2 \pi \hslash)^{3(n-1)}} \frac{d}{dE} \prod_{i=1}^{n-1} \int d^3p_{i} 
+\end{equation}
+
+\section{Wirkungsquerschnitt}
+Die bisherigen Überlegungen dienten allesamt dazu die Reaktionsrate einer Zustandsänderung zu quantifizieren. Wir nennen nun eine letzte Größe kennen, die ebenfalls diesen Zweck erfüllt.
+Der Wirkungsquerschnitt $ \sigma $ gibt die Stärke einer Reaktion an. Um dies zu begreifen betrachten wir einen konstanten Fluss  $\Phi $ von Teilchen, die allesamt der Sorte a zugehören und auf ein Target der Dicke x aus Teilchen der Sorte b geschossen werden.  
+
+\begin{figure}[h]
+\includegraphics[height= 4cm, width=4cm]{fluss.png}
+\caption{Teilchenfluss auf Target}
+\end{figure}
+Die Reaktionsrate pro Targetteilchen ist $ W = \Phi \cdot \sigma $ 
+Die Reaktionsrate im gesamten Target ist $ W \cdot N = \Phi \cdot n_{B} \cdot x $ \\ 
+mit N Targetteilchen und der Volumenteilchendichte $ n_B $. \newline
+
+Im Allgemeinen hängt der Wirkungsquerschnitt  $ \sigma $ von der Art der Reaktion ab: 
+\begin{itemize}
+\item Absorbtion $ \sigma_{A} $
+\item elastische Streuung $ \sigma_{E} $
+\item inelastische Streuung $ \sigma_{I} $
+\end{itemize}
+Der Gesamtwirkungsquerschnitt ergibt sich dann via Addition $ \sigma_{Ges} = \sigma_{A} + \sigma_{E} + \sigma_{I}  $ \newline
+Für Teilchen die sich innerhalb eines Mediums ausbreiten definiert man die mittlere freie Weglänge $ \lambda = \frac{1}{n_B \sigma}$ \newline
+Diese gibt die durchschnittliche Stracke an, die ein Teilchen im Target ohne Wechselwirkun zurücklegen kann. \newpage
+Das Volumen in dem 1 Targetteilchen ist ist also $ V = \lambda \cdot \sigma = \nicefrac{1}{n} $  \newline
+Anhand der mittleren freien Weglänge lassen sich folgende Größen berechnen: 
+\begin{itemize}
+\item Anzahl der Strahlteilchen im Targetmaterial : $ N(x) = N_{0} \cdot e^{-\nicefrac{x}{\lambda}} $
+\item Kollisionsrate: $ c(x) = - \frac{dN(x)}{dx} = \frac{N_{0}}{\lambda} \cdot e^{-\nicefrac{x}{\lambda}} = c_0 \cdot e^{-\nicefrac{x}{\lambda}} $
+\item Wahrscheinlichkeit für Reaktion eines einfallenden Teilchens: $  p(x) = 1- e^{-\nicefrac{x}{\lambda}} $
+\end{itemize}
+\ \\ 
+Aus Dimensionsbetrachtungen lässt sich darauf schliessen, dass der Wirkungsquerschnitt die Dimension einer Fläche hat. Wir werden dies nun veranschaulichen: 
+\begin{figure}[h]
+\includegraphics[height=6cm,width=6cm]{wirkungsquerschnitt.png}
+\caption{Wirkungsquerschnitt eines Teilchens (rot) das auf ein Targetteilchen (blau) trifft, mit Wirkungsquerschnitt (gewellte Fläche)}
+\end{figure} \newline
+Im Allgemeinen ist bei Teilchenkollisionen der Wirkungsquerschnitt, die kleinste Fläche, die beide Teilchen komplett einschließt: 
+\begin{equation}
+\sigma = \pi (r_{K} + r_{P})^2 
+\end{equation}
+Kernradius: $ r_K $ \qquad Projektilradius: $ r_P $ \newline
+Hieraus ergibt sich die Wahrscheinlichkeit, dass das n Projektile mit dem Target wechselwirken, als das Verhältnis der effektiven Flächen:
+\begin{equation}
+P = \frac{n \sigma}{A}
+\end{equation}
+
+
 
 \end{document}
  
