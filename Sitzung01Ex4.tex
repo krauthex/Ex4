@@ -116,8 +116,7 @@ Um den Zustand einer Unterschale nl anzugeben, führen wir die spektroskopische 
 \end{equation}
 mit
 \begin{align*}
-&S := \lvert \sum_{i} m_{s,i} \rvert 
-&L:=  \lvert \sum_{i} m_{l,i} \rvert \\
+&S := \lvert \sum_{i} m_{s,i} \rvert \qquad L:=  \lvert \sum_{i} m_{l,i} \rvert \\
 &J := \lvert \vec L + \vec S \rvert   = \lvert M_L + M_S \rvert   = \lvert \sum_{i} m_{l,i} + \sum_{i} m_{s,i}  \rvert 
 \end{align*}
 \newline
@@ -129,6 +128,7 @@ Die Notation für die Elemente des Periodensystems lautet:
 \section{Hund'sche Regeln und Auswahlregeln}
 Die Elektronen werden für die Grundzustände so aufgefüllt, dass die Bindungsenergie(negativ) minimiert wird, das heißt deren Betrag maximal wird. Zwischen den Unterschalen gilt folgende Reihenfolge: \\ \newline
 	\begin{figure}[h]
+	\centering
 	\begin{tikzpicture}
 	\draw (0,0) +(-.5,-.5) rectangle ++(.5,.5);
 	\draw (0,0) node{$1s^2$};
@@ -203,6 +203,7 @@ Für Elemente mit mehr als einem Elektron gibt es keine analytische Lösung der 
  $ V_{eff}(r) = - \frac{e^2 Z_{eff}(r)}{r} $ mit $ 1 < Z_{eff}(r) < Z $ \  und  $ Z_ {eff} \stackrel{r\rightarrow \infty}{\rightarrow} 1, \ Z_{eff} \stackrel{r \rightarrow 0}{\rightarrow} Z $
  
 \begin{figure}[h]
+\centering
 \includegraphics[height= 6cm, width=9cm]{effpot.png}
 \caption{ Effektives Potential }
 \end{figure}
@@ -233,11 +234,165 @@ für Übergänge $ n_1 \rightarrow n_2 $ , b - Abschirmkonstante \newline
 Für das Wasserstoffatom entspricht das Moseley-Gesetz der Rydberg-Formel. \newline
 Für wasserstoffähnliche Atome (b=1) gilt : \quad K-Linie: $ n_2 = 1, \  \alpha :  n_1 = 2, \  \beta: n_1 = 3 $ \newline
 Für schwere Atome ($ Z > 40 $  )  gilt :  \qquad L-Linie: $ n_2 = 2 , b \approx 7.4 , \ \alpha : \ n_1= 3 , \  \beta: n_1 = 4 $ \newline
-Die Auswahlregeln müssen gelten. 
+Die Auswahlregeln müssen gelten. \newline
 
-\section{LS-Kopplung,JJ-Kopplung}
-....
+\section{LS-Kopplung, jj-Kopplung}
+\subsubsection*{LS-Kopplung}
+\begin{itemize}
+	\item Wasserstoff: Potential $\rightarrow$ Störungen $\rightarrow$ Spin-Bahn-Kopplung
+	\item Spin-Bahn-Kopplung: nicht $\ell$ und $s$ sondern $j$ relevant
+	\item Viele Elektronen: $J$ relevant
+\end{itemize}
 
+\begin{figure}[h]
+	\centering
+	\begin{tikzpicture}
+		\node at (0,0) (nodeS1) {$S_1$};
+		\node at (0,-1) (nodeS2) {$S_2$};
+		\node at (0,-2) (nodeS3) {$S_3$};
+		\node at (2, 0) (nodeL1) {$L_1$};
+		\node at (2, -1) (nodeL2) {$L_2$};
+		\node at (2, -2) (nodeL3) {$L_3$};
+		\node at (5.3, 0) (nodeK) {Kopplung};
+		
+		\draw (nodeS1) -- (nodeS2);
+		\draw (nodeS2) -- (nodeS3);
+		\draw (nodeS1) -- (nodeL1);
+		\draw (nodeS1) -- (nodeL2);
+		\draw (nodeS1) -- (nodeL3);
+		\draw (nodeS2) -- (nodeL1);
+		\draw (nodeS2) -- (nodeL2);
+		\draw (nodeS2) -- (nodeL3);
+		\draw (nodeS3) -- (nodeL1);
+		\draw (nodeS3) -- (nodeL2);
+		\draw (nodeS3) -- (nodeL3);
+		\draw (nodeL1) -- (nodeL2);
+		\draw (nodeL2) -- (nodeL3);
+		
+		\draw [
+			thick,
+			decoration={
+				brace,
+				raise=0.3cm
+				},
+			decorate
+			] (nodeS1) -- (nodeL1) 
+			node [pos=0.5, anchor=north,yshift=0.9cm] {$\propto Z^4$};
+			
+		\draw [
+		thick,
+		decoration={
+			brace,
+			raise=0.3cm
+		},
+		decorate
+		] (nodeL1) -- (nodeL3) 
+		node [pos=0.45,anchor=east,xshift=1.5cm] {$\propto Z^2$};
+		
+		\draw (4,0) -- (nodeK);
+		
+	\end{tikzpicture}
+	\caption{L-S-Kopplung}
+\end{figure}
+
+\subsubsection*{SATZ:}
+Sei die Spin-Bahnkopplung eines Elekektrons $\ll$ Bahn-Bahn-Kopplung und Spin-Spin-Kopplung zwischen den Elektronen. 
+Dann ist der Gesamtdrehimpuls: 
+$$\vec{J} = \vec{L} + \vec{S} = \sum_i \vec{\ell}_i + \sum_i \vec{s}_i$$ \\
+$ \underbrace{	
+		\begin{matrix}
+			s_1 & & \ell_1\\
+			+ & & + \\
+			s_2 & & \ell_2\\
+			+ & & + \\
+			s_3 & & \ell_3
+		\end{matrix}
+		}_{L + S = J} $
+\qquad Anzahl der Feinstrukturaufspaltungen: $\min \lp 2s+1; 2\ell+1 \rp $.\\
+
+Entscheidend für die Feinstrukturaufspaltung ist die Zusammensetzung von $L$ und $S$.
+
+%\newpage
+\subsubsection*{Beispiel:}
+Elektronenkonfiguration: $L=2$, $S=1$ $\rightarrow$ $J=1, 2, 3$.\\
+Anzahl der $J_S$: $\min \lp 2S+1; 2L+1 \rp$ \\
+Hier: 3
+
+\begin{figure}[h]
+	\centering
+	\begin{tikzpicture}
+		% Termschema
+		\node at (5,1) (J3) {$J=3$};
+		\node at (5,0) (J2) {$J=2$};
+		\node at (5,-1) (J1) {$J=1$};
+		
+		\draw (0,0) -- (2,0) node [midway, above] (TextNode) {$L=2$} node [midway, below] (TextNode) {$S=1$} -- (3,1) -- (J3);
+		\draw (2,0) -- (J2);
+		\draw (2,0) -- (3, -1) -- (J1);
+	\end{tikzpicture}
+	\caption{Termschema}
+	\begin{tikzpicture}
+		%Vektordiagramme
+		\node at (0,-2) (J3) {$J=3$};
+		\draw [->, >=latex] (J3) -- (0,0) node [midway, right] (TextNode) {$L=2$};
+		\draw [->, >=latex] (0,0) -- (0,1) node [midway, right] (TextNode) {$S=1$}; 
+		
+		\node at (2, -2) (J2) {$J=2$};
+		\draw [->, >=latex] (J2.north) -- (3,-1) node [midway, below, sloped] {$L=2$};
+		\draw [->, >=latex] (3,-1) -- (2,0) node [midway, above, sloped] {$S=1$};
+		\draw [dashed, ->, >=latex] (J2) -- (2,0); 
+		
+		\node at (4.5, -2) (J1) {$J=1$};
+		\draw [->, >=latex] (J1) -- (4.5,0) node [midway, left] {$L=2$};
+		\draw [dashed, ->, >=latex] ([xshift=0.2 cm] J1.north) -- (4.7, -1);
+		\draw [->, >=latex] (4.7, 0) -- (4.7, -1) node [midway, right] {$S=1$}; 
+	\end{tikzpicture}
+	\caption{Vektordiagramme der möglichen Additionen}
+\end{figure}
+
+Feinstruktur ist sehr klein im verglichen mit den Energiedifferenzen zwischen verschiedenen $L_S$ oder $S$.\\
+
+Energien: 
+\begin{align*}
+	E_j\lp n,L,S \rp &= E\lp n,L,S \rp + c\cdot L\cdot S = E\lp n,L,S \rp + \frac{c}{2}\lp J(J+1) - S(S+1) - L(L+1) \rp \\
+	%%
+	E_j(n,L,S) &= E(n,L,S) + \frac{c}{2} \lp J(J+1) -8 \rp \hslash^2
+\end{align*}
+\begin{align*}
+	\rightarrow J=3 &: E(n,L,S) + 2c\hslash^2\\
+	J=2 &: E(n,L,S) - 1c\hslash^2\\
+	J=1 &: E(n,L,S) - 3c\hslash^2
+\end{align*}
+
+c ist am größten für kleine n. $\rightarrow$ Bei großen n nur noch sehr kleine Feinstruktur.
+\newpage
+\subsection*{jj-Kopplung}
+
+\subsubsection*{SATZ:}
+Sei die Spin-Bahn-Kopplung eines Elektrons $\gg$ Bahn-Bahn-Kopplung und Spin-Spin-Kopplung verschiedener Elektronen. Dann ist der Gesamtdrehimpuls:
+$$ \vec{J} = \sum_i \vec{j}_i = \sum_i \left| \vec{s}_i + \vec{\ell}_i \right|$$
+
+\begin{itemize}
+	\item Bei jj-Kopplung sind $L$ und $S$ nicht definiert, daher nur Gesamtdrehimpuls $J$
+	\item Multiplett-Zustände nicht mehr erkennbar.
+\end{itemize}
+
+\begin{figure}[!h]
+	\centering
+	\begin{tikzpicture}
+		\node at (0,0) (s1) {$s_1$};
+		\node at (0,-1) (s2) {$s_2$};
+		\node at (0,-2) (s3) {$s_3$};
+		\node at (1,0) (l1) {$\ell_1$};
+		\node at (1,-1) (l2) {$\ell_2$};
+		\node at (1,-2) (l3) {$\ell_3$};
+		
+		\draw (s1) -- (l1);
+		\draw (s2) -- (l2) node [midway, above] {$+$};
+		\draw (s3) -- (l3) node [midway, above] {$+$};
+	\end{tikzpicture}
+	\caption{jj-Kopplung}
+\end{figure}
 
 \chapter{Werkzeuge der Kern- und Teilchenphysik} 
 
