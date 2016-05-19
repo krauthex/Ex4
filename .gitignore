@@ -7,4 +7,5 @@
 *.toc
 *.bib
 *.gz
-
+*.bbl
+*.blg

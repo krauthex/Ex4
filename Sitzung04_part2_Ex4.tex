@@ -1,0 +1,137 @@
+\documentclass[Ex4_Zusammenfassung.tex]{subfiles}
+
+
+\begin{document}
+
+\section{Darstellung der Teilchen-WW mit Feynman-Diagrammen}
+	\subsection*{Regeln}
+	
+	\begin{itemize}
+		\item Meist ist die Zeitachse eingezeichnet, übrige Richtungen beziehen sich auf den Raum
+		\item Teilchen werden durch Linien symbolisiert, dabei gibt die Pfeilrichtung an, ob es sich um das Teilchen selbst (Pfeil in Richtung der Zeitachse) oder sein Antiteilchen (Pfeil entgegengesetzt zur Zeitachse gerichtet).\\
+		Die reellen Teilchen erfüllen alle $E^2 - p^2 = m^2\ (c=1)$.
+		\item virtuelle Teilchen hingegen sind durch im Feynman-Diagramm abgeschlossene Linie dargestellt und erfüllen $E^2 - p^2 = m^2$ \textbf{nicht}!
+		\item Linienformen können angeben, um welche Teilchen es sich handelt. So haben die Eichbosonen $\gamma,\ W^+,\ W^-,\ Z^0$ eine Wellenlinie (~\ref{Linie Eichboson} ), Gluonen eine schraubenförmige Linie (~\ref{Linie Gluon} ).
+		\item Vertices, die Knotenpunkte zwischen den Linien, geben durch ihre Anzahl die Ordnung der Feynman-Diagramme an.
+		\item Propagatoren, die Linien zwischen Vertices, sind virtuelle Eichbosonen, welche keine Vorzugsrichtung haben.
+	\end{itemize}
+	
+	\begin{figure}[h]
+		\centering
+		\feynmandiagram [horizontal=f1 to f2] {
+			f1 -- [photon] f2
+		};
+		\caption{Eichboson}
+		\label{Linie Eichboson}
+		\feynmandiagram [horizontal=f1 to f2] {
+			f1 -- [gluon] f2
+		};
+		\caption{Gluon}
+		\label{Linie Gluon}
+	\end{figure}
+	
+	$
+	\begin{array}{c|ccc}
+		\textbf{Eichbosonen} & \textbf{Anzahl} & \textbf{WW} & \textbf{auf Materieteilchen} \\
+		\hline
+		\textbf{Gluon} & 8 & starke\ WW & Quarks \\ 
+		W^+,\ W^-,\ Z^0 & 3 & schwache\ WW & Quarks,\ Leptonen \\ 
+		\textbf{Photonen} & 1 & el.mag.\ WW & Quarks,\ Leptonen
+	\end{array} 
+	$
+	\captionof{figure}{Tabelle über die WW von Eichbosonen}
+	
+	\subsection*{Beispiele}
+	
+	\begin{enumerate}
+		\item Positron (Antifermion) + Elektron(Fermion) in Feynman-Diagramm 2. Ordnung:
+			\begin{figure}[H]
+				\centering
+					\begin{tikzpicture}
+						\draw [->, >=latex] (0,0) -- (0, 4) node [midway, left] {$t$};
+					\end{tikzpicture}	
+					%
+					\quad
+				\begin{subfigure}[b]{0.4\textwidth}
+					\feynmandiagram [vertical=a to b] {
+						i1 [particle=$e$] -- [fermion] a -- [fermion] i2 [particle=$e$],
+						a -- [photon, edge label=$\gamma$] b,
+						f1 [particle=$e$] -- [anti fermion] b -- [anti fermion] f2 [particle=$e$],
+					};
+					%\caption{zeitartig $q^2 > 0$}
+				\end{subfigure}
+				%
+				\begin{tikzpicture}
+					\draw [->, >=latex] (0,0) -- (0, 3) node [midway, left] {$t$};
+				\end{tikzpicture}	
+				%
+				\quad
+				\begin{subfigure}[b]{0.4\textwidth}
+					\feynmandiagram [horizontal=a to b] {
+						i1[particle=$e$] -- [fermion] a -- [fermion] i2 [particle=$e$],
+						a -- [photon, edge label=$\gamma$] b,
+						f1[particle=$e$]-- [anti fermion] b -- [anti fermion] f2 [particle=$e$],
+					};
+					%\caption{raumartig $q^2 < 0$}
+				\end{subfigure}
+				\caption{zeitartig $q^2 >0$ (links) / raumartig $q^2 < 0$ (rechts)}
+			\end{figure}
+			%
+			Wichtig: Das Zeitinterwall der Wechselwirkung ist durch die Heisenberg'sche Unschärferelation beschränkt: $\Delta E \cdot \Delta t \ge \hslashtwo$\\
+			für el.mag. WW: $E = h \cdot \nu \Rightarrow \Delta t \ge (2\pi \nu)^{-1}$\\
+			Diese Unschärfe erlaubt die Superposition aller möglichen Prozesse, die wir durch die Feynman-Diagramme darstellen können.
+			%
+			\item Compton-Effekt:
+				\begin{figure}[H]
+					\centering
+					\begin{tikzpicture}
+						\draw [->, >=latex] (0,0) -- (0, 4) node [midway, left] {$t$};
+					\end{tikzpicture}
+					%
+					\feynmandiagram [vertical=a to b] {
+						i1[particle=$e$] -- [anti fermion] a -- [photon] i2 [particle=$\gamma$],
+						a -- [anti fermion, edge label=$e$] b,
+						f1[particle=$\gamma$]-- [photon] b -- [anti fermion] f2 [particle=$e$],
+					};
+					\caption{Feynman-Diagramm des Compton-Effekts}
+				\end{figure}
+				%
+			\newpage
+			\item Proton-Zerfall:
+				\begin{figure}[H]
+					\centering
+					\begin{tikzpicture}
+						\draw [->, >=latex] (0,0) -- (0, 4) node [midway, left] {$t$};
+					\end{tikzpicture}
+					%
+					\begin{tikzpicture}
+						\begin{feynman}
+							\vertex (p) {$p$};
+							\vertex [above=of p] (b);
+							\vertex [above right=of b] (c);
+							\vertex [above=of b] (n) {$n$};
+							\vertex [above right=of b] (d);
+							\vertex [above right=of d] (e) {$e$};
+							\vertex [above=of d] (nue) {$\nu_e$};
+							
+							\diagram*{
+								(p) -- [fermion] (b) -- [fermion] (n);
+								(b) -- [scalar, edge label'=$W^+$] (c);
+								(e) -- [fermion] (c) -- [fermion] (nue);
+								};
+						\end{feynman}
+					\end{tikzpicture}
+					\caption{Feynman-Diagramm des Proton-Zerfalls}
+				\end{figure}
+	\end{enumerate}
+	
+	\subsection*{Feynman-Kalkül}
+	
+	Prozesse sind auf beliebig vielen Arten darstellbar (mehr Vertices möglich). Jeder Vertex liefert die Wurzel aus einer Kopplungskonstante: $\sqrt{\alpha}$.\\
+	Z.B. $\alpha = \frac{e^2}{\hslash c}$ für el.mag. WW ist es die Feinstrukturkonstante.\\
+	Je mehr Vertices ein Diagramm enthällt, desto geringer ist sein Beitrag zur Gesamtamplitude der superponierten Zustände (alle bis heute erzielten Forschungsergebnisse mit Termen nur bis 4. Ordnung errechnet).\\
+	Austauschteilchen in Berechnung von Matrixelement durch Propagator beschrieben:
+	$$ \text{Es gilt: } \frac{1}{m^2 + q^2} \text{, Matrixelement } M \propto \frac{1}{\alpha q^2} \Rightarrow \sigma \propto \frac{\alpha^2}{q^4}$$
+		
+	
+\end{document}

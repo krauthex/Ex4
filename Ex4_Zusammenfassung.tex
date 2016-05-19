@@ -11,7 +11,8 @@
 \colorlet{g1}{white}
 
 %language and input
-\usepackage[utf8]{inputenc}
+%\usepackage[utf8]{inputenc}
+\usepackage[utf8]{luainputenc}
 \usepackage[english,ngerman]{babel}
 \usepackage{microtype}
 \usepackage{pdfpages}
@@ -36,6 +37,8 @@
 \usepackage[version=3]{mhchem}
 \DeclareMathOperator{\Cov}{Cov}
 \newcommand{\const}{\text{const.}}
+\usepackage{tikz-feynman}
+\usepackage{tikzfeynman}
 
 %bibliography
 
@@ -117,6 +120,7 @@ dup
 %%Tables and tablesettings
 %%%%%%%%%%%%%%%%
 \usepackage{caption}
+\usepackage{subcaption}
 % \usepackage{rotating}
 % \usepackage{colortbl}
 % \usepackage{multirow} 
@@ -209,6 +213,39 @@ dup
 	\end{pmatrix}
 }
 
+% column vector with 3 components
+\newcommand{\threevec}[3]{%
+	\begin{pmatrix}
+		#1\\
+		#2\\
+		#3
+	\end{pmatrix}
+}
+
+% row vector with 3 components
+\newcommand{\threevecRow}[3]{%
+	\begin{pmatrix}
+		#1 & #2 &#3
+	\end{pmatrix}
+}
+
+% column vector with 5 components
+\newcommand{\fivevec}[5]{%
+	\begin{pmatrix}
+		#1\\
+		#2\\
+		#3\\
+		#4\\
+		#5
+	\end{pmatrix}
+}
+
+% h-quer-halbe :) 
+\newcommand{\hslashtwo}{\frac{\hslash}{2}}
+
+% total derivative of something:
+\newcommand{\derive}[2]{\frac{\mathrm{d} #1}{\mathrm{d} #2}}
+
 % nice left parenthesis
 \newcommand{\lp}{\left( } 
 
@@ -241,5 +278,6 @@ dup
 \tableofcontents
 
 \subfile{Sitzung01Ex4.tex}
+\subfile{Sitzung04_part2_Ex4.tex}
 %Unterschrift
 \end{document}

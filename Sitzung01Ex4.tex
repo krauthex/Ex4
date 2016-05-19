@@ -386,10 +386,12 @@ $$ \vec{J} = \sum_i \vec{j}_i = \sum_i \left| \vec{s}_i + \vec{\ell}_i \right|$$
 		\node at (1,0) (l1) {$\ell_1$};
 		\node at (1,-1) (l2) {$\ell_2$};
 		\node at (1,-2) (l3) {$\ell_3$};
+		\node at (0.5, -0.5) {$+$};
+		\node at (0.5, -1.5) {$+$};
 		
 		\draw (s1) -- (l1);
-		\draw (s2) -- (l2) node [midway, above] {$+$};
-		\draw (s3) -- (l3) node [midway, above] {$+$};
+		\draw (s2) -- (l2);
+		\draw (s3) -- (l3);
 	\end{tikzpicture}
 	\caption{jj-Kopplung}
 \end{figure}
@@ -484,6 +486,7 @@ Die bisherigen Überlegungen dienten allesamt dazu die Reaktionsrate einer Zusta
 Der Wirkungsquerschnitt $ \sigma $ gibt die Stärke einer Reaktion an. Um dies zu begreifen betrachten wir einen konstanten Fluss  $\Phi $ von Teilchen, die allesamt der Sorte a zugehören und auf ein Target der Dicke x aus Teilchen der Sorte b geschossen werden.  
 
 \begin{figure}[h]
+\centering
 \includegraphics[height= 4cm, width=4cm]{fluss.png}
 \caption{Teilchenfluss auf Target}
 \end{figure}
@@ -510,6 +513,7 @@ Anhand der mittleren freien Weglänge lassen sich folgende Größen berechnen:
 \ \\ 
 Aus Dimensionsbetrachtungen lässt sich darauf schliessen, dass der Wirkungsquerschnitt die Dimension einer Fläche hat. Wir werden dies nun veranschaulichen: 
 \begin{figure}[h]
+\centering
 \includegraphics[height=6cm,width=6cm]{wirkungsquerschnitt.png}
 \caption{Wirkungsquerschnitt eines Teilchens (rot) das auf ein Targetteilchen (blau) trifft, mit Wirkungsquerschnitt (gewellte Fläche)}
 \end{figure} \newline
