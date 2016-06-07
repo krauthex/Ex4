@@ -1,0 +1,135 @@
+\documentclass[Ex4_Zusammenfassung.tex]{subfiles}
+
+
+\begin{document}
+\section{WdH zu Wirkungsquerschnit, Streuung..}
+\textbf{von Michi \& Pauli}\\
+
+Die Wahrscheinlichkeit $w$, dass ein einfallendes Teilchen mit einem Targetteilchen wechselwirkt, errechnet sich aus:
+\begin{equation}
+	w = \sigma \frac{N_T}{F_T}
+\end{equation}
+wobei $\sigma$ der Wirkungsquerschnitt,  $F_T$ die bestrahlte Targetfläche und $N_T$ die Anzahl der darin enthaltenen Targetteilchen ist. Also:
+\begin{equation*}
+	w \propto \text{Target--Teilchenflächendichte}
+\end{equation*}
+Vorraussetzung hierfür ist:
+\begin{equation*}
+	\sigma N_T \ll F_T
+\end{equation*}
+
+Experimentell im Beschleuniger zu bestimmen ist die Reaktionsrate $W$: 
+\begin{equation}
+	W = \frac{\md N_{\text{\rom{3}}}}{\md t} = \sigma L
+\end{equation}
+wobei $L$ die Luminosität des Beschleunigers ist.\\
+
+\subsection*{Differentieller Wirkungsquerschnitt: $\derive{\sigma}{\Omega}$}
+\begin{equation}
+	\underbrace{j_{\text{Strom}}}_{\mathclap{\nicefrac{1}{\text{(Zeit$\cdot$RWE)} }} } \equiv j_{\text{\rom{3}}} = \derive{\sigma}{\Omega} \lp \Omega \rp \cdot \underbrace{j_{\text{\rom{1}}}}_{\mathclap{\nicefrac{1}{\text{(Zeit$\cdot$Fläche) }} } } 
+\end{equation}
+wobei RWE für Raumwinkelelement steht. 
+\begin{equation}
+	\Rightarrow \sigma = \int_{\Omega \setminus \text{Beam} }\derive{\sigma}{\Omega} \md \Omega
+\end{equation}
+Ebenso gilt allgemein:
+\begin{equation}
+	I = \mathop{\int \kern -0.7em \int}_{\kern -0.6em F} \vec{j}\ \md \vec{F}
+\end{equation}
+
+%%%% Big Fat Drawing incoming!
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+		% Nodes
+		\node at (2.8, 0.4) (beam) {\tiny Beam};
+		\node at (4.0, 2.5) (omega3) {$\Omega_{\text{\rom{3}}}$};
+		\node at (0, 1.4) (duenn) {dünn};
+		\node at (-1.7, 0.9) (ft) {$F_T$};
+		\draw (ft) -- (-1.2, 0.6);
+		
+		% Shapes
+		\draw (0,0) circle (4cm);
+		\draw (-0.75,0) ellipse (0.5cm and 1.2cm);
+		\draw (-0.75,1.2) -- (0.75, 1.2);
+		\draw (-0.75,-1.2) -- (0.75, -1.2);
+		\draw [rotate=180] (-0.75,-1.2) arc (270:90:0.5cm and 1.2cm) ;
+		\draw [rotate around={-47:(2.8,2.64575)}, pattern=north west lines] (2.8,2.64575) ellipse (1.2cm and 0.5cm);
+		
+		%Arrows
+		\draw [->, >=latex] (-4.5,0) node [above] {$p_0$} node [below] {$E_0$} -- (-0.75,0) node [midway, above] {$j_{\text{\rom{1}}},\ L=N_{\text{\rom{1}}} \cdot j_{\text{\rom{1}}}$};
+		\draw [->, >=latex] (1.25,0) -- (4.5,0) node [xshift=0.9cm] {geht durch} node [anchor=south, yshift=-0.6cm] {$j_{\text{\rom{2}}}$};
+		\draw [->, >=latex] (0,0) -- (3,2.64575) node [midway, above, sloped] {$j_{\text{\rom{3}}} $} node [midway, below, sloped] (gstrt) {\tiny (gestreut)};
+		\draw (2,0) to [bend right] (gstrt.south) node [yshift=-0.5cm]{$\theta$};
+		
+		%Beam
+			\foreach \y in {-0.2, 0.2}
+				\draw [dotted] (-3.99, \y) -- (3.1, \y);
+		\draw [dotted, rotate around={180:(3,-0.95)}, yshift=0.37cm, xshift=-0.4cm] (3, -0.2) arc (120:270:0.5cm and 1cm);
+		\draw [dotted, rotate around={180:(3,0.2)}, yshift=0cm, xshift=-0.16cm] (3, 0.2) arc (90:240:0.5cm and 1cm);
+	\end{tikzpicture}
+	\caption{Streuung eines Teilchenstrahles (Beam) an einem Target bzw. an einer Targetfläche ($F_T$). }
+\end{figure}
+
+\subsection*{Rutherford-Querschnitt}
+\begin{equation}
+	\derive{\sigma^R}{\Omega} = \lp \frac{zZe^2}{4 E_0 \sin^2 \lp \frac{\vartheta}{2} \rp} \rp^2 
+\end{equation}
+
+\subsection*{Zusammenhang zw. Streu--/Raumwinkel und Impulsübertrag $|q|$}
+\begin{align}
+	\vec{q} &= \vec{p} - \pvec{p}^\prime \\
+	|\vec{q}| &= 2 |\vec{p}| \sin \lp \frac{\vartheta}{2} \rp 
+\end{align}
+\textbf{Herleitung:} Impulserhaltung wegen
+\begin{enumerate}
+	\item Target sehr schwer
+	\item Reibung vernachlässigbar (elastischer Stoß)
+\end{enumerate}
+\begin{equation}
+	\vec{p} = \threevec{0}{0}{|\vec{p}|}, \quad \pvec{p}^\prime = \threevec{|\vec{p}| \sin \vartheta \cos \varphi}{|\vec{p}| \sin \vartheta \sin \varphi}{|\vec{p}| \cos \vartheta}
+\end{equation}
+\begin{align}
+	\left\Vert \vec{q} \right\Vert^2 = \lp \vec{p} - \pvec{p}^\prime \rp^2 &= \left\vert \vec{p} \right\vert^2
+	% left parenthesis, not scaling to underbrace:
+	\lp \vphantom{\sin^2 \vartheta \cos^2 \varphi + \sin^2 \vartheta \sin^2 \varphi } \right.
+	\sin^2 \vartheta \cos^2 \varphi + \sin^2 \vartheta \sin^2 \varphi + \underbrace{1 - 2\cos \vartheta + \cos^2 \vartheta}_{\text{Binom.}} 
+	% right parenthesis, not scaling to underbrace
+	\left. \vphantom{\sin^2 \vartheta \cos^2 \varphi + \sin^2 \vartheta \sin^2 \varphi} \rp\\
+	\intertext{Vernachlässigung der quadratischen Terme führt auf:}
+	%% next equation
+	&= 2 \left\vert \vec{p} \right\vert^2 \lp 1 - \cos \vartheta \rp = 4 \left\vert \vec{p} \right\vert^2 \sin^2 \lp \frac{\vartheta}{2} \rp
+\end{align}
+Hierbei wurde verwendet, dass
+\begin{equation*}
+	1 - \cos \vartheta = 2 \sin^2 \lp \frac{\vartheta}{2} \rp
+\end{equation*}
+
+\subsection*{Raumwinkel $\Omega$}
+\begin{equation}
+	\Omega := \mathop{\int}_{\varphi_1}^{\varphi_2} \mathop{\int}_{\vartheta_1}^{\vartheta_2} \sin \vartheta^\prime \md \vartheta^\prime \md \varphi^\prime
+\end{equation}
+für Rutherford folgt hieraus: 
+\begin{align}
+	\Rightarrow \md \Omega &= \underbrace{\frac{\partial \Omega}{\partial \varphi} \md \varphi}_{=0} + \frac{\partial \Omega}{\partial \vartheta} \md \vartheta\\
+	&= 2 \pi \sin \vartheta \md \vartheta
+\end{align}
+\begin{equation}
+	\int_{S^2} \md \Omega = 4\pi \approx 12.57\si{sr}
+\end{equation}
+wobei $\si{sr}$ für Steradianten steht.
+
+\subsection*{Differentieller Wirkungsquerschnitt Part \rom{2}}
+\begin{equation}
+	\derive{\sigma}{q^2} = \derive{\sigma}{\Omega} \derive{\Omega}{q^2} = \derive{\sigma}{\Omega} \frac{2 \pi \sin \vartheta \md \vartheta}{\md\lp 4 p^2 \sin^2 \frac{\vartheta}{2} \rp} = \derive{\sigma}{\Omega} \frac{\pi}{\left\vert \vec{p} \right\vert^2}
+\end{equation}
+\begin{equation}
+	\text{Herleitung:}
+	\lp \derive{\vartheta}{('')} = \lp \derive{\lp 4p^2 \sin^2 \lp \frac{\vartheta}{2} \rp \rp}{\vartheta} \rp^{-1} = 4p^2 \sin \frac{\vartheta}{2} \cos \frac{\vartheta}{2} = 2 p^2 \sin \vartheta \rp 
+\end{equation}
+	
+
+
+\end{document}
+
+

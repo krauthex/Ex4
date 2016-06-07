@@ -19,8 +19,8 @@
 \usepackage{pdfpages}
 
 %Title, Author
-\title{Experimentalphysik 4 - Boykott-Gruppenseminar}
-\author{Fabs \and Chris \and Michi \and Paul \and Anton \and Sören \and Hein \and Martina \and Mitsch}
+\title{ExkRementalpfü\$ic! 4 - Boykott-Gruppenseminar}
+\author{$\mathop{\text{\small{no} \Large Fabs}}\limits_{\text{were given}}$ \and $\overline{\text{Chris}}$ \and Mi$\raisebox{3pt}{\chi}$ \and Pauli \and Anton \and S\o{}ni \and HeinStein \and Martina \and HerMitsch}
 \date{\today}
 %math packages
 \usepackage{amssymb}
@@ -71,7 +71,7 @@
 \pgfplotsset{compat=1.8}
 \usepackage{tikz}
 \usetikzlibrary{arrows,decorations.pathmorphing,backgrounds,positioning,fit,petri,calc}
-
+\usetikzlibrary{patterns}
 \usetikzlibrary{fadings,decorations.pathreplacing}
 \usetikzlibrary{decorations.markings}
 \tikzset{->-/.style={decoration={
@@ -114,7 +114,8 @@ dup
 0.4
 }
 
-
+%ds fonts package
+\usepackage{dsfont}
 
 \usepackage{float}
 % Load package framed for boxes with math font in it
@@ -259,6 +260,11 @@ dup
 \newcommand{\md}{\mathrm{d}}
 \usepackage{subfiles}
 
+%uppercase roman numerals
+\newcommand{\rom}[1]{\uppercase \expandafter{\romannumeral #1 \relax}}
+
+% vector with extra space, so that the prime is actually visible. (prime has to be added manually with ^\prime)
+\newcommand{\pvec}[1]{\vec{#1}\mkern2mu\vphantom{#1}}
 
 \begin{document}
 % \setcounter{page}{-1}
@@ -288,5 +294,6 @@ dup
 \subfile{Sitzung06_part2_Ex4.tex}
 \subfile{Sitzung07Ex4.tex}
 \subfile{Sitzung08_part1_Ex4.tex}
+\subfile{Sitzung09Ex4.tex}
 %Unterschrift
 \end{document}
