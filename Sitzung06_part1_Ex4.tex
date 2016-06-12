@@ -38,7 +38,7 @@ Für leichte Teilchen (Elektronen, Positronen) mit $v \ll c$ kann man die Richtu
 \begin{equation}
 \frac{dE}{dx} \approx \frac{4\pi Z_1 e^4 n_E }{m_e v^2} \cdot  \text{ln} \frac{m_E v^2}{2 \braket{E_b} }
 \end{equation}
-Der Vergleich mit .. zeigt, dass bei gleicher Geschwindigkeit v der spezifische Energieverlust pro Weglänge für schwere Teilchen (Masse $m_S$) und Elektronen (Masse $m_E$) gleich ist, bei gleicher Energie jedoch für Elektronen um den Faktor $\frac{m_E}{m_S} $ kleiner ist. Die Reichweite von Elektronen ist deshalb trotz er größeren Streuung wesentlich größer als die von schweren Teilchen der gleichen Energie. Für Teilchen mit relativistischen Energien sind dagegen die Unterschiede für $\frac{dE}{dx}$ zwischen Elektronen und schweren Teilchen nur noch klein. 
+Der Vergleich mit (5.1) zeigt, dass bei gleicher Geschwindigkeit v der spezifische Energieverlust pro Weglänge für schwere Teilchen (Masse $m_S$) und Elektronen (Masse $m_E$) gleich ist, bei gleicher Energie jedoch für Elektronen um den Faktor $\frac{m_E}{m_S} $ kleiner ist. Die Reichweite von Elektronen ist deshalb trotz er größeren Streuung wesentlich größer als die von schweren Teilchen der gleichen Energie. Für Teilchen mit relativistischen Energien sind dagegen die Unterschiede für $\frac{dE}{dx}$ zwischen Elektronen und schweren Teilchen nur noch klein. 
 \begin{figure}[H]
 \includegraphics[width=9cm]{Strahlungsverluste.png}
 \caption{Ionisationsverluste,Strahlungsverluste und Gesamtverluste $ \frac{dE}{dx} $ \newline (in relativen Einheiten) von Elektronen in Blei (rote Kurven) und Wasser (schwarze Kurven) als Funktion der Elektronenenergie}
@@ -123,7 +123,7 @@ Thomson-Streuung tritt auf, solange die Energie des einfallenden Photons klein g
 \end{itemize}
 
 \textbf{Unterschied}  \\ \newline
-Rayleigh-Streuung geschieht an einem gebundenen Elektron, Thomson-Streuung an einem freien bzw. sehr schwach gebundenen Elektron.
+Rayleigh-Streuung geschieht an einem gebundenen Elektron, Thomson-Streuung an einem freien bzw. sehr schwach gebundenen Elektron. \newpage
 
 \subsubsection{Compton-Effekt}
 \textbf{Bei höheren Photonenenergien} ($ h \nu \gg E_b$) wird der Compton-Effekt wichtig. Ein Photon streut an einem Teilchen und gibt einen Teil seiner Energie an das Teilchen ab. Durch diesen Energieverlust wird die Wellenlänge des Photons größer.\newline
@@ -149,7 +149,7 @@ mit dem Thomson-Wirkungsquerschnitt: $\sigma_{T} = 6.65 \cdot 10^{-29} $ m
 				};
 		\caption{Feynman-Diagramm für Compton-Streuung}
 	\end{figure}
-	
+	\newpage
 \subsubsection{Photoeffekt}
 Als Photoeffekt bezeichnet man die Absorbtion des Photons mit der Energie $ h \nu > E_b $ durch ein Hüllenelektron, welches durch diese Energiezufuhr das Atom verlässt. Da anders als beim Compton-Effekt das Photon absorbiert wird und deshalb verschwindet, können Energie- und Impulserhaltung nur gleichzeitig erfüllt werden, wenn das Atom einen Teil des Impulses aufnimmt (Rückstoß). Deshalb gibt es keinen Photoeffekt an freien Elektronen. \newline
 Summiert man den Wirkungsquerschnitt über alle Z Hüllenelektronen so erhält man als gesamten Wechselwirkungsquerschnitt für $ E_{\gamma} > E_b $
@@ -189,28 +189,14 @@ Hierbei erzeugt ein Photon im Coulomb-Feld des Atomkerns ein Elektron-Positron-P
  	
 Der Wirkungsquerschnitt für die Paarbildung ist
 \begin{equation}
-\sigma_{p} \propto Z^2 \text{ln} E_{\gamma}
+\sigma_{p} \propto Z^2 \  \text{ln} (E_{\gamma})
 \end{equation}
 Dieser steigt anfangs logarithmisch mit der Photonenenergie an, um dann bei sehr hohen Energien $E_{\gamma} \gg 2 m_E c^2$ fast konstant zu werden. \newline
-Die Bedeutung der einzelnen Prozesse für die Absorbtion von Photonen in den verschiedenen Energiebreichen hängt von der Kernladungszahl Z des Absorbtionsmaterials ab.\newpage
+Die Bedeutung der einzelnen Prozesse für die Absorbtion von Photonen in den verschiedenen Energiebreichen hängt von der Kernladungszahl Z des Absorbtionsmaterials ab. \newpage
 \subsubsection{Photoeffekt vs. Comptoneffekt vs. Paarbildung}
-\begin{figure}[h]
 
-	\begin{subfigure}{\textwidth}
-	\includegraphics[width=6.8cm]{FCP_Z.png}
-	\caption{Die dominanten Bereiche für Photoeffekt,Compton-Effekt und Paarbildung als Funktion der Ordnungszahl Z des Absorbers und der Energie $ E_{\gamma} $ der $ \gamma $ - Quanten}
-	\end{subfigure}
-	\\ \newline
-	\begin{subfigure}{\textwidth}
-	\includegraphics[width=6.8cm]{FCP_sigma.png}
-	\caption{Wirkungsquerschnitt $ \sigma_{ph} $ für Photoeffekt, $ \sigma_{c} $ für Compton-Effekt, und $ \sigma_{PB} $ für Paarbildung für Blei (Z=82) als Funktion der $ \gamma $ -Energie}
-	\end{subfigure}
-	\caption{Vergleich von Photoeffekt,Compton-Effekt und Paarbildung im Hinblick auf (a) Kernladungszahl (b) Wirkungsquerschnitt}
-
-\end{figure}
-
-	\begin{sidewaystable}[h]
-    \centering\setlength\tabcolsep{2pt}
+\begin{sidewaystable}[h]
+    \centering\setlength\tabcolsep{1pt}
         \begin{tabular} {p{1.6cm} | c | p{3.5cm} | p{4cm} | p{5cm} | p{5.5cm} } 
              \textbf{Strahlung} &\textbf{Name} &\textbf{Bedingung} & \centering \textbf{$\frac{dE}{dx}$} & \textbf{Sonstiges} & \textbf{Wirkungsquerschnitt} \\ 
  			\midrule
@@ -237,4 +223,18 @@ Die Bedeutung der einzelnen Prozesse für die Absorbtion von Photonen in den ver
         \end{tabular}\hspace*{-1cm}
         \caption{Zusammenfassung und Ergänzungen}
 	\end{sidewaystable}
+	\begin{figure}[h]
+	
+		\begin{subfigure}{\textwidth}
+		\includegraphics[width=6.8cm]{FCP_Z.png}
+		\caption{Die dominanten Bereiche für Photoeffekt,Compton-Effekt und Paarbildung als Funktion der Ordnungszahl Z des Absorbers und der Energie $ E_{\gamma} $ der $ \gamma $ - Quanten}
+		\end{subfigure}
+		\\ \newline
+		\begin{subfigure}{\textwidth}
+		\includegraphics[width=6.8cm]{FCP_sigma.png}
+		\caption{Wirkungsquerschnitt $ \sigma_{ph} $ für Photoeffekt, $ \sigma_{c} $ für Compton-Effekt, und $ \sigma_{PB} $ für Paarbildung für Blei (Z=82) als Funktion der $ \gamma $ -Energie}
+		\end{subfigure}
+		\caption{Vergleich von Photoeffekt,Compton-Effekt und Paarbildung im Hinblick auf (a) Kernladungszahl (b) Wirkungsquerschnitt}
+	
+	\end{figure}
 \end{document}
