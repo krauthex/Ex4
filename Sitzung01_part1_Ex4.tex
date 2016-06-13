@@ -1,0 +1,92 @@
+\documentclass[Ex4_Zusammenfassung.tex]{subfiles}
+
+
+\begin{document}
+	
+\chapter{Einleitung - Ex3 Zusammenfassung}
+\textbf{Von Michi und Pauli} \newline
+
+Wir hatten die QUANTENMECHANIK eingeführt, siehe Theo 4:\\
+
+$ \fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+	{\centering 
+		\textbf{Axiom 4:  Es gilt die  Schrödingergleichung: \ } 
+		$  \hat{H} \ket{\psi} = i \hslash \partial_t \ket{\psi}\ $ \\
+		wobei $ \hat{H} := \frac{\hat{p}^2}{2m} + \hat{V} = - \frac{\hslash^2}{2m} \nabla^2 + V$
+		 } } $ \\
+
+Diese hatten wir für das Wasserstoffatom (H-At.) \textbf{analytisch} gelöst. (Coulombpotential, Kugelkoordinaten, Separation: Schwerpunkt/Relativbew., Winkel-/Radialanteil). Die Lösungen sind Polynome mit ganzzahligen Parametern, "Quantenzahlen":
+\begin{align*}
+	\psi_{n,l,m_l}\lp r, \vartheta, \varphi \rp &= R_{n,l} (r) \cdot \Theta_l^{m_l} (\vartheta) \cdot \phi_{m_l} (\varphi)\\
+	\psi_{n,l,m_l} &\propto\  \mathrm{e}^{- \frac{Zr}{na_0}}\  \underbrace{L_{n-l-1}^{2l+1} \lp \frac{2Zr}{na_0} \rp \cdot P_l^{m_l} (\cos{\vartheta})}_{\mathclap{\text{zugeordnete Laguerre- bzw. Legendrepolynome.}}} \cdot \frac{1}{\sqrt{2\pi}} \mathrm{e}^{im_l \varphi}\\
+\end{align*}
+
+Es gilt für physikalische Lösungen: $\boxed{ | m_l | \leq l < n } $\\ 
+
+\section{Notation der Quantenzahlen}
+Hauptquantenzahlen $n\ \in \{ 1, 2, 3, ... \} = \{K, L, M, ...\}$ ''Schale'' \\
+Bahndrehimpulsquantenzahlen $ l \in \{0, 1, 2, ...\} = \{s, p, d, f, ...\} $ ''Unterschale'' \\
+Magnetbahnquantenzahlen $m_l \in \{-l, -l+1, ... , l \}$ ''Orbital'' (zzgl. ''Spin'')\\
+\begin{equation*}
+	E \lp \psi_n \rp = E_n = -E_0 \frac{Z^2}{n^2}
+\end{equation*}
+''Rydberg-Formel'', mit $E_0 := Ry =\SI{13.6}{\eV} $ und $Z$ als Kernladungszahl.\\
+Dem Übergang entspricht dann die Differenz $E_n - E_m$.
+
+\section{Korrekturterme der Energieniveaus}
+Die Energieniveaus (EN) werden korrigiert durch:
+\begin{align*}
+	\hat{H} &= \hat{H}_0 + \underbrace{ \Delta \hat{E}_{\text{rel}} + \Delta \hat{E}_{S-B} + \Delta \hat{E}_{\text{Darwin}} }_{\mathclap{\sum\ = \text{ Feinstruktur } \Delta E_{FS}} } + \Delta \hat{E}_{\text{Lamb}} + \Delta \hat{E}_{\text{HFS}} + \Delta \hat{E}_{\text{Zeeman}}\\
+	\hat{H}_0 &= \frac{\hat{p}^2}{2m_e} + \hat{V}\\
+	\Delta \hat{E}_{\text{rel}} &= - \frac{p^4}{8 m_e^3 c^2} \\
+	& \kern -3.1em \begin{rcases}
+		\Delta \hat{E}_{\text{S-B}} = \frac{Z q_e^2 \mu_0}{8 \pi m_e^2 \braket{r}^3}\ \hat{\vec{l}} \cdot \hat{\vec{s}} = \frac{Z q_e^2 \mu_0 \hslash^2}{16 \pi m_e^2 \braket{r}^3} \cdot 
+			\begin{cases}
+				l,&  j=l+\frac{1}{2}\\
+				-(l+1) ,& j=l-\frac{1}{2}
+			\end{cases} \\
+	\kern -1.3em \Delta \hat{E}_{\text{Darwin}} = \mu_0 \lp \frac{q_e \hslash}{m_e} \rp^2 Z \cdot \delta\lp \vec{r} \rp\  \text{''Kernpotential''} 
+	\end{rcases}
+	\Delta \hat{E}_{FS} \stackrel{\mathclap{\text{\tiny{H-At.}}}}{=} E_0 \frac{Z^2}{n^2} \left[ \frac{Z^2 \alpha^2}{n} \lp \frac{1}{j+\frac{1}{2}} - \frac{3}{4n} \rp  \right] \\
+	& \kern -3.55em \Delta \hat{E}_{\text{Lamb}}\  \widehat{=} \text{ quantenelektrodynamische Wechselwirkung (WW) mit dem Vakuum}\\
+	& \kern -3.1em \Delta \hat{E}_{\text{HFS}} \propto\ \vec{J} \cdot \underbrace{\vec{I}}_{\mathclap{\text{''Kernspin''}}}\\
+	& \kern -4.2em \Delta \hat{E}_{\text{Zeeman}} = \frac{\mu}{\hslash} \lp \hat{L}_z + g_e \hat{S}_z \rp B_z\ \text{''anomal'', normal für } \hat{S}_z = 0\ ,\ g_e \approx 2\ ,\ \mu = \frac{q_e \hslash}{2m_e}
+\end{align*}
+
+\section{Näherungen für mehrere Elektronen}
+Für mehrere Elektronen $ \lp e^- \rp $ müssen wir Näherungen machen, denn die $ e^- - e^- - WW$ verhindert das analytische Lösen. \\
+
+\textbf{Helium (He):}
+\begin{enumerate}
+	\item $E_B = - Z^2 E_0 \lp \frac{1}{n_1^2} + \frac{1}{n_2^2} \rp \ \text{''Bindungsenergie'' (negativ!)}$
+	\item $E_B = - E_0 \lp \frac{Z^2}{1^2} + \frac{(Z-1)^2}{n_2^2} \rp\ \text{Abschirmung des } n_2-e^-$
+	\item $E_B = -E_0 \lp-2Z_R^2 + (4Z - \frac{5}{4}) Z_R \rp\ \text{minimiere } E_B(Z_R) $
+	\item wahrer Wert $ E_B \approx \SI{-79.0}{\eV}$
+\end{enumerate}
+
+\section{Das Pauli-Prinzip}
+Die relativistische Quantenmechanik fordert für Teilchen mit Spin $\frac{1}{2},\ \frac{3}{2},\ ... $ [ bzw. 0, 1, 2, ... ] eine unter Teilchenvertauschung $\hat{P}_{ij} $ antisymmetrische [bzw, symmetrische] \textbf{Gesamtwellenfunktion} $ \ket{\psi} = \ket{\psi_{\text{Ort}}} \otimes \ket{\chi_{\text{Spin}}} $. Wir nennen diese Teilchen \textbf{Fermionen} [bzw. \textbf{Bosonen}]. Aus diesem Postulat folgt das:\\
+
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+	{\centering 
+		\textbf{Paul\tiny{i}\small{-Prinzip:} \ } Man kann nie mehr als ein Fermion im gleichen (Orts- \& Spin-) Zustand haben.} }\\
+
+Für zwei $e^-$ (z.B. Helium) gilt daher:
+\begin{align*}
+	\ket{\psi_{\text{Ort}}}_{\text{symm.}} &\Rightarrow \underbrace{\ket{\chi_-}}_{\mathclap{\text{Dies ist ein \textbf{anti}symmetrisches Singulett [2S+1=1] }}} = \frac{1}{\sqrt{2}} \lp \ket{\uparrow_1\ \downarrow_2} - \ket{\downarrow_1\ \uparrow_2} \rp\  \widehat{=} \underbrace{\ket{S=0, M_S=0}}_{\mathclap{\substack{\text{ [Großbuchstaben } S,\ M_S,\ J,\ ... \\ \text{ sind Gesamtquantenzahlen, Summen] } }} }\\
+	& \kern -5.95em \begin{rcases}
+		\ket{\psi_{\text{Ort}}}_{\text{antisym.}} \Rightarrow &\ket{\chi_+ ,\ 1} = \ket{\uparrow_1\ \uparrow_2} \\
+		&\ket{\chi_+ ,\ 0} = \frac{1}{\sqrt{2}} \lp \ket{\uparrow_1\ \downarrow_2} + \ket{\downarrow_1\ \uparrow_2} \rp\\
+		&\ket{\chi_+ ,\ -1} = \ket{\downarrow_1\ \downarrow_2}
+	\end{rcases} 
+	\widehat{=} 
+		\begin{array}{l}
+			\ket{S=1,\ M_S=0}\\
+			\ket{1,\ 0}\\
+			\ket{1,\ -1}
+		\end{array}
+\end{align*}
+
+$\ket{\chi_+,\ -}$ ist ein \textbf{symm}etrisches Triplett [2S+1=3 heißt Multiplizität].
+\end{document}

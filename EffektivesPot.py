@@ -15,7 +15,7 @@ def effpot(Z,x):
 fig = plt.figure()
 ax1 = fig.add_subplot(111)
 ax1.plot(r,effpot(4,r),'g--',label=r'$- \ \frac{e^2}{r}$')
-ax1.plot(r,effpot(50,r),'r--',label=r'$- \ \frac{Z \cdot e^2}{r}$')
+ax1.plot(r,effpot(50,r),'r:',label=r'$- \ \frac{Z \cdot e^2}{r}$')
 ax1.plot(r,effpot(25,r),'b-',label=r'$- \ \frac{Z_{eff} \cdot e^2}{r}$')
 plt.xlim(0,15)
 plt.ylim(-100,1)

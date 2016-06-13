@@ -4,6 +4,7 @@
 \begin{document}
 
 \section{Darstellung der Teilchen-WW mit Feynman-Diagrammen}
+\textbf{S\o{}ni,Martina}
 	\subsection*{Regeln}
 	
 	\begin{itemize}
@@ -13,7 +14,7 @@
 		\item virtuelle Teilchen hingegen sind durch im Feynman-Diagramm abgeschlossene Linie dargestellt und erfüllen $E^2 - p^2 = m^2$ \textbf{nicht}!
 		\item Linienformen können angeben, um welche Teilchen es sich handelt. So haben die Eichbosonen $\gamma,\ W^+,\ W^-,\ Z^0$ eine Wellenlinie (~\ref{Linie Eichboson} ), Gluonen eine schraubenförmige Linie (~\ref{Linie Gluon} ).
 		\item Vertices, die Knotenpunkte zwischen den Linien, geben durch ihre Anzahl die Ordnung der Feynman-Diagramme an.
-		\item Propagatoren, die Linien zwischen Vertices, sind virtuelle Eichbosonen, welche keine Vorzugsrichtung haben.
+		\item Propagatoren, die Linien zwischen Vertices, sind virtuell und haben keine Vorzugsrichtung.
 	\end{itemize}
 	
 	\begin{figure}[h]
@@ -21,8 +22,23 @@
 		\feynmandiagram [horizontal=f1 to f2] {
 			f1 -- [photon] f2
 		};
-		\caption{Eichboson}
-		\label{Linie Eichboson}
+		\caption{Photon}
+		\label{Linie Photon}
+		\text{und}
+
+		\feynmandiagram [horizontal=f1 to f2] {
+			f1 -- [scalar]	f2
+		};
+		\caption{$W^-,W^+,Z^0$}
+		\label{Linie WeakWW} 
+		\text{oder}
+		
+		\feynmandiagram [horizontal=f1 to f2] {
+					f1 -- [photon] f2
+				};
+				\caption{Eichbosonen}
+				\label{Linie Eichbosonen}
+		
 		\feynmandiagram [horizontal=f1 to f2] {
 			f1 -- [gluon] f2
 		};
@@ -77,10 +93,10 @@
 				\caption{zeitartig $q^2 >0$ (links) / raumartig $q^2 < 0$ (rechts)}
 			\end{figure}
 			%
-			Wichtig: Das Zeitinterwall der Wechselwirkung ist durch die Heisenberg'sche Unschärferelation beschränkt: $\Delta E \cdot \Delta t \ge \hslashtwo$\\
+			Wichtig: Das Zeitintervall der Wechselwirkung ist durch die Heisenberg'sche Unschärferelation beschränkt: $\Delta E \cdot \Delta t \ge \hslashtwo$\\
 			für el.mag. WW: $E = h \cdot \nu \Rightarrow \Delta t \ge (2\pi \nu)^{-1}$\\
 			Diese Unschärfe erlaubt die Superposition aller möglichen Prozesse, die wir durch die Feynman-Diagramme darstellen können.
-			%
+
 			\item Compton-Effekt:
 				\begin{figure}[H]
 					\centering
@@ -95,8 +111,6 @@
 					};
 					\caption{Feynman-Diagramm des Compton-Effekts}
 				\end{figure}
-				%
-			\newpage
 			\item Proton-Zerfall:
 				\begin{figure}[H]
 					\centering
