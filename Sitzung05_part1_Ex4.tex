@@ -10,6 +10,8 @@
 \begin{document}
 \chapter{Wechselwirkung von Teilchen und Strahlung mit Materie}
 \textbf{Anton,S\o{}ni,$\overline{\text{Chris}}$}
+
+
 Bei der Wechselwirkung von Teilchen mit Atomen oder Molekülen können folgende elementare Prozesse ablaufen:
 \begin{itemize}
 \item Rayleigh-Streuung, Thomson-Streuung
@@ -19,12 +21,14 @@ Bei der Wechselwirkung von Teilchen mit Atomen oder Molekülen können folgende 
 \item Emission von Cerenkov-Strahlung, wenn geladene Teilchen ein Medium mit Brechungsindex n schneller als die Lichtgeschwindigkeit $\frac{c}{n}$ durchlaufen
 \end{itemize}
 All diese Effekte können einzeln oder in Kombination zum Nachweise der Teilchen ausgenutzt werden, wobei der vorletzte Prozess einen wesentlich kleineren Wirkungsquerschnitt hat und erst bei großen Energien eine merkliche Rolle spielt.
-Ein Teilchen mit einer kinetischen Energie im keV - MeV - Bereich verliert bei der Ionisation eines Atoms oder Moleküls nur einen Bruchteil seiner Energie. Es kann daher bei seinem Weg durch den Detektor viele Atome anregen. Der spezifische Energieverlust $\frac{dE}{dx}$ pro Längeneinheit, und hängt außer von der Art und Dichte der Detektormaterie stark ab von der Art des ionisierenden Teilchen und von seiner Energie.
-\begin{figure}[h]
-\includegraphics[width=8cm]{Ionisationsplot.png}
-\caption{Spezifische Ionisierung (Zahl der pro cm Weg gebildeten Ionenpaare) für Elektronen,Protonen und $\pi$-Mesonen in Luft als Funktion der kinetischen Energie.}
+Ein Teilchen mit einer kinetischen Energie im keV - MeV - Bereich verliert bei der Ionisation eines Atoms oder Moleküls nur einen Bruchteil seiner Energie. Es kann daher bei seinem Weg durch den Detektor viele Atome anregen. Der spezifische Energieverlust $\derive{E}{x}$ pro Längeneinheit, und hängt außer von der Art und Dichte der Detektormaterie stark ab von der Art des ionisierenden Teilchen und von seiner Energie.
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=8cm]{Ionisationsplot.png}
+	\caption{Spezifische Ionisierung (Zahl der pro cm Weg gebildeten Ionenpaare) für Elektronen,Protonen und $\pi$-Mesonen in Luft als Funktion der kinetischen Energie.}
 \end{figure}
-\newpage
 \section{Energieverlust von geladenen schweren Teilchen}
 Wir betrachten ein Teilchen der Ladung $Z_1 \cdot e $, das durch die Elektronenhülle eines Atoms fliegt. Ist die Energie des Teilchens groß gegen die Bindungsenergie der Elektronen in der Atomhülle, so ist der beim Stoß des schweren Teilchens auf \textbf{ein} Elektron  übertragene relative Impuls $\frac{\Delta p}{p}$ klein. Die Teilchenbahn kann durch eine Gerade angenähert werden, und die Elektronen können als frei angesehen werden.
 Dieses Modell wird mathematisch durch die Bethe-Formel beschrieben:
@@ -32,19 +36,19 @@ Dieses Modell wird mathematisch durch die Bethe-Formel beschrieben:
 \frac{dE}{dx} = - \frac{4 \pi Z1^2 e^2 n_e}{v^2 m_E} \cdot \left( \text{ln} \frac{2 m_e v^2}{\braket{E_b}} - \text{ln}(1-\beta^2) - \beta^2 \right )
 \end{equation}
 Man sieht hieraus, dass der spezifische Energieverlust $\frac{dE}{dx}$ proportional zur Elektronendichte $n_E$ im Detektor ist und mit dem Quadrat der Teilchenladung $Z_1 cdot e$ ansteigt, aber umgekehrt proportional zum Quadrat der Ionengeschwindigkeit v abnimmt. Der spezifische Energieverlust geladener schwerer Teilchen $\frac{dE}{dx} $ hängt von ihrer Energie E ab wie $ \frac{1}{E} \cdot \text{ln} (\frac{E}{E_B}) $. Er sinkt also schwach mit steigender Energie.
-\newpage
 \section{Energieverlust von Elektronen}
-\subsection{Anregung und Ionisation}
+\subsection*{Anregung und Ionisation}
 Für leichte Teilchen (Elektronen, Positronen) mit $v \ll c$ kann man die Richtungsablenkung bei Stößen mit der Elektronenhülle nicht mehr vernachlässigen. Ein parallel einfallender Strahl wird daher wesentlich stärker durch Streuung diffus. In diesem Fall wurde der spezifische Energieverlust durch Ionisation von Bethe berechnet zu: 
 \begin{equation}
 \frac{dE}{dx} \approx \frac{4\pi Z_1 e^4 n_E }{m_e v^2} \cdot  \text{ln} \frac{m_E v^2}{2 \braket{E_b} }
 \end{equation}
 Der Vergleich mit (5.1) zeigt, dass bei gleicher Geschwindigkeit v der spezifische Energieverlust pro Weglänge für schwere Teilchen (Masse $m_S$) und Elektronen (Masse $m_E$) gleich ist, bei gleicher Energie jedoch für Elektronen um den Faktor $\frac{m_E}{m_S} $ kleiner ist. Die Reichweite von Elektronen ist deshalb trotz er größeren Streuung wesentlich größer als die von schweren Teilchen der gleichen Energie. Für Teilchen mit relativistischen Energien sind dagegen die Unterschiede für $\frac{dE}{dx}$ zwischen Elektronen und schweren Teilchen nur noch klein. 
 \begin{figure}[H]
-\includegraphics[width=9cm]{Strahlungsverluste.png}
-\caption{Ionisationsverluste,Strahlungsverluste und Gesamtverluste $ \frac{dE}{dx} $ \newline (in relativen Einheiten) von Elektronen in Blei (rote Kurven) und Wasser (schwarze Kurven) als Funktion der Elektronenenergie}
+	\centering
+	\includegraphics[width=9cm]{Strahlungsverluste.png}
+	\caption{Ionisationsverluste,Strahlungsverluste und Gesamtverluste $ \frac{dE}{dx} $ \newline (in relativen Einheiten) von Elektronen in Blei (rote Kurven) und Wasser (schwarze Kurven) als Funktion der Elektronenenergie}
 \end{figure} \newpage
-\subsection{Bremsstrahlung}
+\subsection*{Bremsstrahlung}
 Durch die Ablenkung im Coulomb-Feld der Atomkerne erfahren die Elektronen eine negative Beschleunigung und strahlen deshalb elektromagnetische Wellen ab, deren Leistung proportional zum Quadrat der Beschleunigung ist. Die Rechnung ergibt für den Strahlungsenergieverlust pro Weglänge eines Elektrons mit der kinetischen Energie $E_e$ in einem Medium mit der Atomdichte $n_a$ und der Kernladung $Ze$
 \begin{equation}
 \left( \frac{dE}{dx} \right)_{Str} = \frac{4 n_A Z^2 \alpha^3 (\hslash c)^2 E_e}{m_e^2 c^4} \cdot \text{ln} \frac{a(E)}{Z^{1/3}} 
@@ -77,21 +81,22 @@ X_0 = \left( \frac{dE}{dx} \cdot \frac{1}{E_e} \right)^{-1}
 	\end{figure}
 \newpage
 \section{Wechselwirkung von radioaktiver Strahlung mit Materie}
-\subsection{$\alpha$-Strahlung}
+\subsection*{$\alpha$-Strahlung}
 $\alpha$-Strahlung besteht aus schweren Heliumkernen und verhält wechselwirkt somit wie schwere Teilchen mit Materie. Wir betrachten hier die Zunahme des Energieverlusts bei kleineren Energien.
 
-\begin{figure}[h]
-\includegraphics{alpha-Strahlung_Reichweite.png}
-\caption{Reichweite von $\alpha$-Teilchen in Luft, dargestellt als relative Abnahme der Anzahl}
+\begin{figure}[H]
+	\centering
+	\includegraphics{alpha-Strahlung_Reichweite.png}
+	\caption{Reichweite von $\alpha$-Teilchen in Luft, dargestellt als relative Abnahme der Anzahl}
 \end{figure}
 
 Die Weglänge von $\alpha$-Teilchen ist scharf begrenzt.
 
-\subsection{$\beta$-Strahlung}
+\subsection*{$\beta$-Strahlung}
 $\beta^-$-Strahlung besteht aus Elektronen, wofür das Wechselwirkungsverhalten schon kennen. \newline
 $\beta^+$-Strahlung besteht aus Positronen, die beim Durchdringen von Materie sehr bald auf ihr Antiteilchen, das Elektron, treffen und durch Annihilation meist 2 Photonen entstehen und es zu $\gamma$-Strahlung kommt.
 \newpage
-\subsection{$\gamma$--Strahlung}
+\subsection*{$\gamma$--Strahlung}
 Für den Nachweis von $\gamma$-Strahlung sind die folgenden Wechselwirkungsprozess von besonderer Bedeutung
 \begin{itemize}
 \item elastische Streuung (Rayleigh- und Thomson-Streuung)
@@ -102,7 +107,7 @@ Für den Nachweis von $\gamma$-Strahlung sind die folgenden Wechselwirkungsproze
 \end{itemize}
 Die Dominanz dieser einzelnen Effekte hängt von der Energie des Photons ab.
 
-\subsubsection{Rayleigh-Streuung,Thomson-Streuung}
+\subsubsection*{Rayleigh-Streuung,Thomson-Streuung}
 Relevant bei \textbf{kleinen Energien} ($h \nu < E_b $). \newline
 Es wird ein Photon elastisch an einem geladenen freien oder schwach gebundenem Teilchen gestreut. Das geladene Teilchen wird durch das Feld einer elektromagnetischen Welle zu harmonischen Schwingungen angeregt indem durch das elektrische Feld ien Dipolmoment indzuziert wird. Da diese Oszillation eine beschleunigte Bewegung ist, strahlen die Teilchen gleichzeitig Energie in Form einer elektromagnetischen Welle gleicher Frequenz ab (Dipolstrahlung). Man sagt die Welle wird gestreuut. \\ \newline
 \textbf{Rayleigh-Streuung} \\ \newline 
@@ -115,18 +120,18 @@ Es wird ein Photon elastisch an einem geladenen freien oder schwach gebundenem T
 Thomson-Streuung tritt auf, solange die Energie des einfallenden Photons klein genug ist (Wellenlänge des Photons ist viel größer als Atomradius). Bei kürzeren Wellenlängen, also höheren Energien, muss der Rückstoß des Elektrons berücksichtigt werden (Compton-Streuung). Die Thomson-Streuung ist also der Grenzfall der Compton-Streuung für kleine Photonenenergien.  Die Größenordnung des Wirkungsquerschnitts dieser Wechselwirkung lässt sich durch den Thomson-Querschnitt beschreiben:
 \begin{equation}
 \sigma_{T} = 6.65 \cdot 10^{-29}  m 
-\end{equation} \\ \newline
-\textbf{Gemeinsamkeiten}
+\end{equation}
 
+\subsubsection*{Gemeinsamkeiten}
 \begin{itemize}
 \item Beide Arten der Streuung beruhen auf einem elastischen Stoß.
 \item Beide Streuprozesse werden als kohärent bezeichnet, da sie die Kohärenz der elektromagnetischen Strahlung erhalten. \newline  (Kohärenz: Auslenkung zweier Wellen ändert sich zeitlich auf dieselbe Weise bis auf eine Phasenverschiebung)
 \end{itemize}
 
-\textbf{Unterschied}  \\ \newline
-Rayleigh-Streuung geschieht an einem gebundenen Elektron, Thomson-Streuung an einem freien bzw. sehr schwach gebundenen Elektron. \newpage
+\subsubsection*{Unterschied} 
+Rayleigh-Streuung geschieht an einem gebundenen Elektron, Thomson-Streuung an einem freien bzw. sehr schwach gebundenen Elektron.
 
-\subsubsection{Compton-Effekt}
+\subsubsection*{Compton-Effekt}
 \textbf{Bei höheren Photonenenergien} ($ h \nu \gg E_b$) wird der Compton-Effekt wichtig. Ein Photon streut an einem Teilchen und gibt einen Teil seiner Energie an das Teilchen ab. Durch diesen Energieverlust wird die Wellenlänge des Photons größer.\newline
 Es handelt sich hierbei um einen elastischen Stoß. Betrachtet man nur das gestreute Objekt, so sieht man, dass es Energie verliert, weshalb man hierbei von inelastischer Streuung spricht.Für sehr hohe Energien ($E_{\gamma} \gg m_E c^2$) gilt für den Wirkungsquerschnitt
 \begin{equation}
@@ -150,8 +155,8 @@ mit dem Thomson-Wirkungsquerschnitt: $\sigma_{T} = 6.65 \cdot 10^{-29} $ m
 				};
 		\caption{Feynman-Diagramm für Compton-Streuung}
 	\end{figure}
-	\newpage
-\subsubsection{Photoeffekt}
+	
+\subsubsection*{Photoeffekt}
 Als Photoeffekt bezeichnet man die Absorbtion des Photons mit der Energie $ h \nu > E_b $ durch ein Hüllenelektron, welches durch diese Energiezufuhr das Atom verlässt. Da anders als beim Compton-Effekt das Photon absorbiert wird und deshalb verschwindet, können Energie- und Impulserhaltung nur gleichzeitig erfüllt werden, wenn das Atom einen Teil des Impulses aufnimmt (Rückstoß). Deshalb gibt es keinen Photoeffekt an freien Elektronen. \newline
 Summiert man den Wirkungsquerschnitt über alle Z Hüllenelektronen so erhält man als gesamten Wechselwirkungsquerschnitt für $ E_{\gamma} > E_b $
 \begin{equation}
@@ -161,8 +166,9 @@ Sodass $ \sigma_{ph} $ sehr stark mit steigender Photonenenergie $E_{\gamma}$ ab
 \begin{equation}
 \sigma_{ph} \propto \frac{Z^5}{E_{\gamma}}
 \end{equation}
-Wir sehen hieran, das für schwere Elemente der Photoeffekt wegen seiner starken Abhängigkeit von der Kernladungszahl Z der dominierende Absorbtionsmechanismus für Photonen der Energie $E_{\gamma} < m_E c^2$ ist. \newpage
-\subsubsection{Paarbildung}
+Wir sehen hieran, das für schwere Elemente der Photoeffekt wegen seiner starken Abhängigkeit von der Kernladungszahl Z der dominierende Absorbtionsmechanismus für Photonen der Energie $E_{\gamma} < m_E c^2$ ist.
+
+\subsubsection*{Paarbildung}
 Wenn die Energie der Photonen $E_{\gamma} > 2 m_E c^2$ ist, öffnet sich ein neuer Absorbtionskanal, die Paarbildung.\newline
 Hierbei erzeugt ein Photon im Coulomb-Feld des Atomkerns ein Elektron-Positron-Paar. Auch hier können Energie und Impuls nur dann gleichzeitig erhalten werden, wenn der Atomkern einen Rückstoß aufnimmt.
 
@@ -193,8 +199,9 @@ Der Wirkungsquerschnitt für die Paarbildung ist
 \sigma_{p} \propto Z^2 \  \text{ln} (E_{\gamma})
 \end{equation}
 Dieser steigt anfangs logarithmisch mit der Photonenenergie an, um dann bei sehr hohen Energien $E_{\gamma} \gg 2 m_E c^2$ fast konstant zu werden. \newline
-Die Bedeutung der einzelnen Prozesse für die Absorbtion von Photonen in den verschiedenen Energiebreichen hängt von der Kernladungszahl Z des Absorbtionsmaterials ab. \newpage
-\subsubsection{Photoeffekt vs. Comptoneffekt vs. Paarbildung}
+Die Bedeutung der einzelnen Prozesse für die Absorbtion von Photonen in den verschiedenen Energiebreichen hängt von der Kernladungszahl Z des Absorbtionsmaterials ab. 
+\newpage
+\subsubsection*{Photoeffekt vs. Comptoneffekt vs. Paarbildung}
 
 \begin{sidewaystable}[h]
     \centering\setlength\tabcolsep{1pt}
@@ -223,19 +230,19 @@ Die Bedeutung der einzelnen Prozesse für die Absorbtion von Photonen in den ver
            \bottomrule
         \end{tabular}\hspace*{-1cm}
         \caption{Zusammenfassung und Ergänzungen}
-	\end{sidewaystable}
-	\begin{figure}[h]
-	
+\end{sidewaystable}
+
+\begin{figure}[h]
 		\begin{subfigure}{\textwidth}
-		\includegraphics[width=6.8cm]{FCP_Z.png}
-		\caption{Die dominanten Bereiche für Photoeffekt,Compton-Effekt und Paarbildung als Funktion der Ordnungszahl Z des Absorbers und der Energie $ E_{\gamma} $ der $ \gamma $ - Quanten}
+			\centering
+			\includegraphics[width=6.8cm]{FCP_Z.png}
+			\caption{Die dominanten Bereiche für Photoeffekt,Compton-Effekt und Paarbildung als Funktion der Ordnungszahl Z des Absorbers und der Energie $ E_{\gamma} $ der $ \gamma $ - Quanten}
 		\end{subfigure}
-		\\ \newline
 		\begin{subfigure}{\textwidth}
-		\includegraphics[width=6.8cm]{FCP_sigma.png}
-		\caption{Wirkungsquerschnitt $ \sigma_{ph} $ für Photoeffekt, $ \sigma_{c} $ für Compton-Effekt, und $ \sigma_{PB} $ für Paarbildung für Blei (Z=82) als Funktion der $ \gamma $ -Energie}
+			\centering
+			\includegraphics[width=6.8cm]{FCP_sigma.png}
+			\caption{Wirkungsquerschnitt $ \sigma_{ph} $ für Photoeffekt, $ \sigma_{c} $ für Compton-Effekt, und $ \sigma_{PB} $ für Paarbildung für Blei (Z=82) als Funktion der $ \gamma $ -Energie}
 		\end{subfigure}
-		\caption{Vergleich von Photoeffekt,Compton-Effekt und Paarbildung im Hinblick auf (a) Kernladungszahl (b) Wirkungsquerschnitt}
-	
-	\end{figure}
+			\caption{Vergleich von Photoeffekt,Compton-Effekt und Paarbildung im Hinblick auf (a) Kernladungszahl (b) Wirkungsquerschnitt}
+\end{figure}
 \end{document}
