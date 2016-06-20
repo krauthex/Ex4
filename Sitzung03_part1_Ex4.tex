@@ -24,7 +24,7 @@ $ \lambda $ : Zerfallskonstante beschreibt Wahrscheinlichkeit für eine bestimmt
 Die Lösung dieser Gleichung gibt die Anzahl N der Atome zum Zeitpunkt t an: 
 \begin{equation}
 N(t) = N_{0} e^{-\lambda \cdot t}
-\end{equation}  \newpage
+\end{equation}  
 Wobei man in diesem Zusammenhang noch folgende nützliche Größen definiert: 
 \begin{itemize}
 \item Mittlere Lebensdauer: $ \tau = \nicefrac{1}{\lambda} $ \newline 
@@ -49,10 +49,10 @@ Wir formulieren Fermis Goldene Regel:
 \begin{equation}
 \lambda_{A->E} = \frac{2\pi}{\hslash} \cdot |\braket{\psi_{E} | V |\psi_{A}}|^2 \cdot \rho_{E} = \frac{dP}{dt}
 \end{equation}
-Die Übergansrate hängt also davon ab wie stark die Störung V den Anfangszustand $ \psi_A $ und den Endzustand $ \psi_E $ koppelt. Außerdem skaliert die Übergangsrate mit der Anzahl der möglichen Übergänge welche durch die Endzustandsdichte $ \rho_{E} $ beschrieben wird. \newpage 
+Die Übergansrate hängt also davon ab wie stark die Störung V den Anfangszustand $ \psi_A $ und den Endzustand $ \psi_E $ koppelt. Außerdem skaliert die Übergangsrate mit der Anzahl der möglichen Übergänge welche durch die Endzustandsdichte $ \rho_{E} $ beschrieben wird. \\
 
 \textbf{Was ist} $\rho(E)$ \textbf{eigentlich ?}
-\ \\ \newline
+\\ \newline
 Wir bezeichnen den Phasenraum unseres Systems als den Raum, der durch die Ortskoordinaten \textbf{x} und die dazugehörigen Impulse \textbf{p} aufgespannt wird. In diesem Raum können wir einem Punkt ein Volumen von $ h^3 = (2\pi \hslash)^3 $ zuordnen (Unschärferelation). \newline 
 
 \textbf{1 Dimension}: \newline
@@ -76,13 +76,12 @@ Zunächst betrachten wir einen jeweils eindimensionalen Orts-und Impulsraum mit 
 Für \textbf{2 Teilchen} addieren sich die Impulse im Mittel zu 0, weshalb die Zustandsdichte konstant ist. Jedoch addieren sich die Energien zu $ E = E_1 + E_2 $
 \begin{equation}
 dE = dE_1 + dE_2 = \frac{p_1c^2}{E1} dp1 + \frac{p_2c^2}{E2} dp2
-\end {equation}
+\end{equation}
 Da $ p_1^2 = p_2^2 $ folgt $  p_1 dp_{1} = p_2 dp_{2} $ 
 \begin{align*}
 \rightarrow  dE &= \frac{E_1 + E_2}{E_1E_2} c^2 p_1 dp_1  \\
 \rightarrow  \rho_2 &=   \frac{V}{(2 \pi \hslash)^3} \frac{E_1E_2}{E_1+E_2} p_{1} \int d\Omega_{1}
 \end{align*}
-\newpage
 Wir können dies auf n Teilchen erweitern
 \begin{equation}
 \rho_{n} = \frac{V^{n-1}}{(2 \pi \hslash)^{3(n-1)}} \frac{d}{dE} \prod_{i=1}^{n-1} \int d^3p_{i} 
@@ -109,8 +108,9 @@ Im Allgemeinen hängt der Wirkungsquerschnitt  $ \sigma $ von der Art der Reakti
 \end{itemize}
 Der Gesamtwirkungsquerschnitt ergibt sich via Addition $ \sigma_{Ges} = \sigma_{A} + \sigma_{E} + \sigma_{I}  $ \newline
 Für Teilchen die sich innerhalb eines Mediums ausbreiten definiert man die mittlere freie Weglänge $ \lambda = \frac{1}{n_B \sigma}$ \newline
-Diese gibt die durchschnittliche Strecke an, die ein Teilchen im Target ohne Wechselwirkun zurücklegen kann. \newpage
-Das Volumen in dem 1 Targetteilchen ist ist also $ V = \lambda \cdot \sigma = \nicefrac{1}{n} $  \newline
+Diese gibt die durchschnittliche Strecke an, die ein Teilchen im Target ohne Wechselwirkun zurücklegen kann. \\
+
+Das Volumen in dem 1 Targetteilchen ist also $ V = \lambda \cdot \sigma = \nicefrac{1}{n} $  \newline
 Anhand der mittleren freien Weglänge lassen sich folgende Größen berechnen: 
 \begin{itemize}
 \item Anzahl der Strahlteilchen im Targetmaterial : $ N(x) = N_{0} \cdot e^{-\nicefrac{x}{\lambda}} $

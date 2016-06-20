@@ -1,6 +1,6 @@
 \documentclass[a4paper,10pt,listof=totocnumbered,headsepline,twoside,abstracton, titlepage=false]{scrreprt}
-\KOMAoptions{open=left}
-\KOMAoptions{BCOR=5mm}
+\KOMAoptions{open=right}
+\KOMAoptions{BCOR=15mm}
 \usepackage[table]{xcolor} %  http://ctan.org/pkg/xcolor
 \setlength{\parindent}{0pt} % setting the paragraph indent to zero 
 
@@ -277,6 +277,9 @@ dup
 % vector with extra space, so that the prime is actually visible. (prime has to be added manually with ^\prime)
 \newcommand{\pvec}[1]{\vec{#1}\mkern2mu\vphantom{#1}}
 
+%shorter command for overline
+\newcommand{\ol}[1]{\overline{#1}}
+
 \begin{document}
 % \setcounter{page}{-1}
 % $~~$
@@ -290,6 +293,17 @@ dup
 
 
 
+\KOMAoptions{open=left}
+
+\thispagestyle{empty}
+\mbox{}
+\clearpage
+\setcounter{page}{1}
+
+
+\KOMAoptions{open=right}
+
+
 
 
 \selectlanguage{ngerman}
@@ -297,6 +311,7 @@ dup
 
 
 \tableofcontents
+
 
 \subfile{Sitzung01_part1_Ex4.tex}
 \subfile{Sitzung01_part2_Ex4.tex}
