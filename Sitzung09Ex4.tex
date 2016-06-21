@@ -1,9 +1,209 @@
 \documentclass[Ex4_Zusammenfassung.tex]{subfiles}
 
 \begin{document}
-\section{Sitzung9}
 \textbf{von Mi$\raisebox{2pt}{\chi}$ und Pauli}
+\subsection*{Streuamplitude}
+Löst man die Schrödingergleichung für die Streuung eines Wellenpakets an einem fixen Target so erhält man als Lösung
+\begin{equation}
+\Psi(\vec x) = e^{i \vec k \cdot \vec x} + \frac{e^{ikr}}{r} \cdot f_k(\theta,\phi)
+\end{equation}
+Dies entspricht einer Superpostion von einer ebenen Welle mit einer gestreuten Kugelwelle ($r=|\vec x|$), gewichtet mit der Streuamplitude $f_k(\theta,\phi)$. Diese Amplitude korrespondiert zu der Wahrscheinlichkeit das gestreute Wellenpaket im Raumwinkel $\Omega(\theta,\phi)$ aufzufinden. Hieraus folgt
+\begin{equation}
+\frac{d\sigma}{d\Omega} = |f_k(\theta,\phi)|^2
+\end{equation}
+\section{Zwischenresumée}
+Wir hatten bisher Stoßprozesse von Elementarteilchen/Hadronen bei hohen Geschwindigkeiten ($v \approx c$) betrachtet. Wichtig ist es dabei, den Wirkungsquerschnitt einfach als "Targetflächendichtebereinigte Reaktionswahrscheinlichkeit"
+\begin{equation} 
+\sigma = P_{WW} \  \frac{1}{(\nicefrac{N}{A})_T}
+\end{equation}
+ aufzufassen, die vom Reaktionstyp abhängt. Dieser Wirkungsquerschnitt lässt sich im z.B. kugelförmigen Detektor nach dem Raumwinkel $\Omega := \int_0^{\phi} \int_0^{\theta} sin(\theta') d\theta' d\phi'$ auflösen,wobei erstmal $d\Omega = 2\pi \ d\phi \ d\theta$ aufgrund der Azimutalsymmetrie nur von $\theta$ (konventiell zur z-Achse ausgerichtet) abhängt. Wir erhalten den differentiellen Wirkungsquerschnitt $\frac{d\sigma}{d\Omega}$ und ferner
+\begin{equation}
+\frac{d\sigma}{d(q^2)} = \frac{d\sigma}{d\Omega} \frac{d\Omega}{d(q^2)} \stackrel{elastisch}{=}  \frac{d\sigma}{d\Omega} \frac{\pi}{|\vec p|^2}
+\end{equation}
+wobei der Betrag des Impulses  $|\vec p|$ des eingehenden Wellenpakets gleich dem Betrag des ausgehenden Wellenpakets ist und $q^2 = 4 |\vec p|^2 sin^2(\frac{\theta}{2}) $ der quadrierte Dreierimpulsübertrag ist. \newline
+Dies benutzt, dass der Projektilimpuls erhalten ist (niedrige Energie). Außerdem ist $\frac{d\sigma}{d\Omega} = |f(\theta,\phi)|^2$ das Betragsquadrat der Streuamplitude $f \in \mathbb{C}$ [Dimension:Länge]
 
-fehlt noch!
+\subsection*{Differenzielle Wirkungsquerschnitte zur Teilchenformbestimmung}
+Um jetzt die radiale Form von Targetteilchen zu bestimmen werden wir im differentiellen Wirkungsquerschnitt immer mehr elektromagnetische Effekte berücksichtigen.
+\begin{figure}[H]
+\begin{tabular}{lcl}
+Name & Beschreibung & Formel \\
+Rutherford & \begin{tabular}{cc} Projektil & $^{ \text{punktförmig}}_{\text{spinlos}}$ \\ Target & $^{ \text{punktförmig}}_{\text{spinlos}}$ \\ \end{tabular}  & $\frac{d\sigma^R}{d\Omega} = (zZe^2)^2 \cdot \left(\frac{1}{16 \ E_{kin}^2 \sin^4(\nicefrac{\theta}{2})} \  \text{oder} \ \frac{4 m_{Proj}^2}{q^4} \  \text{oder} \  \underbrace{\frac{4E_{end}^2}{(qc)^4}}_{relativist.}\right)$ \\ 
+Mott & \begin{tabular}{cc} Projektil & $^{ \text{punktförmig}}_{\text{mit Spin}}$ \\ Target & $^{ \text{punktförmig}}_{\text{spinlos}}$ \\ \end{tabular}  & $\frac{d\sigma^M}{d\Omega} = (zZe^2)^2 \cdot \frac{4 E_{end}^2}{(qc)^4} \cdot  \underbrace{(1-\beta^2 sin^2\left(\nicefrac{\theta}{2}\right))}_{\text{fuer} \  v \approx c \  \text{ungefaehr} \  cos^2(\frac{\theta}{2})}$
+\\ 
+Dirac & \begin{tabular}{cc} Projektil & $^{ \text{punktförmig}}_{\text{mit Spin}}$ \\ Target & $^{ \text{punktförmig}}_{\text{mit Spin}}$ \\ \end{tabular}  & $\frac{d\sigma^D}{d\Omega} = (zZe^2)^2 \cdot \frac{4 E_{end}^2}{(qc)^4} \cdot \left(1-\beta^2 \underbrace{\frac{(qc)^2}{2 E_T}}_{=2 M_T^2 c^4}  tan^2(\nicefrac{\theta}{2})\right)$\\
+Final & \begin{tabular}{cc} Projektil & $^{ \text{punktförmig}}_{\text{mit Spin}}$ \\ Target & $^{ \text{ausgedehnt}}_{\text{mit Spin}}$ \\ \end{tabular}  & $\frac{d\sigma}{d\Omega} = (zZe^2)^2 \cdot \frac{4 E_{end}^2}{(qc)^4}^2 \cdot \left( \frac{G_E^2 - \left(\nicefrac{qc}{2E_T}\right)^2 G_M^2}{1- \left(\nicefrac{qc}{2E_T}\right)^2} - \beta^2 \left(\frac{qc}{2E_T}\right)^2 G_M^2 tan^2(\nicefrac{\theta}{2})\right)$
+\\ 
+$^{\text{Rosenbluth}}_{\text{Plot-Formel}}$ & & $\frac{d\sigma}{d\Omega}= a \  (G_E^2 - b \  G_M^2) - d \  G_M^2 tan^2(\nicefrac{\theta}{2})$\\
+\end{tabular}
+\end{figure}
+\textbf{Legende:} 
+\begin{itemize} 
+\item $G_E(q^2)$ - Ladungsverteilung (dimensionslos)
+\item $G_M(q^2)$ Magnetisierung/Stromverteilung (dimensionslos)
+\item $E_{kin}$ - Energie des eingehenden Projektils 
+\item $E_ {end}$ - Energie des gestreuten Projektils
+\item $E_T = M_T c^2$ - Energie des ruhenden Targets 
+\item $\beta = \frac{v}{c} \qquad e^2=\frac{q_e^2}{4\pi \epsilon_0} \qquad z,Z$ - Ladungszahlen \qquad $a,b,c \in \mathbb{R}$
+\end{itemize}
+\section*{Struktur der Nukleonen}
+Trägt man $\frac{d\sigma}{d\Omega}$ gegen $tan^2(\nicefrac{\theta}{2})$ auf (Rosenbluth-Plot), so erhält man, dass die Formfaktoren $G_{E,M}^{p,n}$ (elektromagnetisch von Proton/Neutron) voneinander abhängen. Empirisch erhält man die sog. Dipolformel
+\begin{equation}
+G_E^p(q^2) = \frac{1}{1+ \nicefrac{q^2c^4}{0.71 (GeV)^2}} \propto G_M^p \propto G_M^n
+\end{equation}
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=1.5]
+\draw [->, >=latex, thin] (0,0) -- (0,2);
+\draw [->, >=latex, thin] (0,0) -- (2,0);
+\draw (0.1,1.9) to [out=-70,in=190] (1.9,0.01);
 
+\node at (-0.5,1.9) {$log \  G_{E,M}^{p,n}$};
+\node at (2,-0.25) {$G^2$};
+
+\end{tikzpicture}
+\end{figure}
+Als Fouriertransfomierte des elektrischen Formfaktors erhält man die Ladungsverteilung
+\begin{equation}
+\rho(r) = \rho_0  e^{-\frac{4.3}{fm} r}
+\end{equation}
+Um den Kernradius abzuschätzen kann man den rms-Radius ("Root Mean Square") dieser Ladungsverteilung berechnen. Man erhält z.B 
+\begin{itemize}
+\item Proton: $\braket{r} = \sqrt{\braket{r^2}} = \left( \int_0^{\infty} r^2 \rho(r) dr \right)^{\frac{1}{2}} =$ 0.86 fm
+\item Pion: $\braket{r} =$ 0.66 fm 
+\item Kaon: $\braket{r} =$ 0.53 fm 
+\end{itemize}
+\newpage
+Die Ergebnisse der Experimente liefern folgendes Bild:
+\begin{figure}[H]
+\begin{tikzpicture}[scale=1]
+\node at (3.5,2) {Seequarks};
+\node at (3.5,0) {Gluonen};
+\draw [->] (2.7,2) -- (0,1.8);
+\draw [->] (4.3,2) -- (7,1.8);
+\draw [->] (2.85,0) -- (0.5,0);
+\draw [->] (4.15,0) -- (6.5,0);
+
+
+\begin{subfigure}{.4\linewidth}
+\draw[thick] (0cm,0cm) circle(2.5cm);
+\draw[fill=blue] (0cm,-1.5cm) circle(0.5cm);
+\draw[fill=red] (-0.75cm,0.75cm) circle(0.5cm);
+\draw[fill=red] (0.75,0.75cm) circle(0.5cm);
+\draw[densely dotted] (1.25,-1.25) circle(0.25);
+\draw[densely dotted] (-1.25,-1.25) circle(0.25);
+\draw[densely dotted] (0,1.7) circle(0.25);
+
+\draw [decorate,decoration=snake] (0.75,0.75) -- (-0.75,0.75);
+\draw [decorate,decoration=snake] (0.75,0.75) -- (0,-1.50);
+\draw [decorate,decoration=snake] (-0.75,0.75) -- (0,-1.50);		
+\end{subfigure}
+
+\begin{subfigure}{.4\linewidth}
+\draw[thick] (7cm,0cm) circle(2.5cm);
+\draw[fill=red] (7cm,-1.5cm) circle(0.5cm);
+\draw[fill=blue] (6.25cm,0.75cm) circle(0.5cm);
+\draw[fill=blue] (7.75,0.75cm) circle(0.5cm);
+\draw[densely dotted] (8.25,-1.25) circle(0.25);
+\draw[densely dotted] (5.75,-1.25) circle(0.25);
+\draw[densely dotted] (7,1.7) circle(0.25);
+
+\draw [decorate,decoration=snake] (7.75,0.75) -- (6.25,0.75);
+\draw [decorate,decoration=snake] (7.75,0.75) -- (7,-1.50);
+\draw [decorate,decoration=snake] (6.25,0.75) -- (7,-1.50);		
+\end{subfigure}
+
+\node at (-0.75,1.0) {u};
+\node at (0.75,1.0) {u};
+\node at (0,-1.6) {d};
+
+\node at (6.25,1.0) {d};
+\node at (7.75,1.0) {d};
+\node at (7,-1.6) {u};
+\end{tikzpicture}
+
+\caption{Substruktur eines Protons(links) und Neutrons(rechts)}
+\end{figure}
+\begin{itemize}
+\item Proton: Valenzquarks uud
+\item Neutron: Valenzquarks ddu
+\end{itemize}
+Die Valenzquarks haben einen Spin und sind geladen, jedoch macht ihre Masse nur 1 \% der Gesamtmasse aus. Der Großteil der Masse steckt in den sog. "Seequarks" welche 99 \% zur Gesamtmasse beisteuern und deren Gesamtspin und Gesamtladung sich aufheben.\newline
+\textbf{Nun zurück zu den Formfaktoren:} \\ \newline
+Betrachten wir einen durchgehenden Strahl ($q^2=0$) so erhalten wir als Formfaktoren: 
+$G_E^p(0)=1 \qquad G_E^n(0)=0 \qquad G_M^p(0)=2.79 \qquad G_M^n(0) = -1.91 $ \\ \newline
+Diese sind gerade die sogenannten Spin-g-Faktoren der Nukleonen:
+\begin{itemize}
+\item Proton: $\vec \mu_p = \underbrace{+2.002 \cdot 2.79}_{\text{Landé-Faktor} \ g_p=5.59} \cdot \underbrace{\frac{q_p \hslash}{2m_p}}_{Kernmagneton \  \mu_N} \cdot \frac{\vec S}{\hslash} $
+\item Neutron: $\vec \mu_n = \overbrace{+2.002 \cdot (-1.91)}^{\text{Landé-Faktor} \ g_n=-3.83} \cdot \overbrace{\frac{q_p \hslash}{2 m_n}}^{Kernmagneton \  \mu_N} \cdot \frac{\vec S}{\hslash} $
+\end{itemize} \newpage
+\textbf{Zur Erinnerung:} \newline
+Fließt ein Kreisstrom I durch eine orientierte Fläche $\vec A$ so entsteht ein magnetisches Moment [Einheit: $Am^2$]
+\begin{equation}
+\vec \mu = I \vec A = \frac{Q}{T} \pi r^2 \vec n_A = \frac{Q}{2m} \vec L 
+\end{equation}
+Man schreibt diese Beziehung auch folgendermaßen:
+\begin{equation}
+\vec \mu_{x,L} = g_{x,L} \cdot \mu_x \cdot \frac{\vec L}{\hslash}
+\end{equation}
+Diese Größe bezeichnet man als magnetisches Moment des Teilchens x mit Drehimpuls $\vec L$ wobei $\mu_x = \frac{q_x \hslash}{2 m_x}$ das sog. Magneton des Teilchens x ist. 
+\section{Elastische Stösse}
+Für sehr große Impulsüberträge q kommt es zu inelastischen Stößen. In folgendem Diagramm wechselwirkt ein Elektron welches auf ein Proton zufliegt mit diesem wodurch die 3 Bestandteile des Kerns nach dem Stoß verschiedene Wege gehen.
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+		\begin{feynman}
+			%vertices
+			\vertex (i1) {$e \ P_e$};
+			\vertex [right=of i1] (a1temp) ;
+			\vertex [below=0.5 cm of a1temp] (a1) ;
+			\vertex [right=of a1temp] (o1) {$ e \ P'_e$};
+			\vertex [below=of a1] (a2);
+			\vertex [below=2.5cm of i1] (i2);
+			\vertex [below=0.3cm of i2] (i3);
+			\vertex [below=0.3cm of i3] (i4);
+			\vertex [below=3cm of o1] (o2) {$M_x,P'_x$};
+			\vertex [below=1.8cm of o1] (o3);
+			\vertex [below=0.3cm of o3] (o4);
+			%diagram
+			\diagram* {
+				(i1) -- [fermion] (a1) -- [fermion] (o1),
+				(a1) -- [photon, edge label=$ \gamma \  \vec q \ \nu$] (a2),
+				(i2) -- [fermion] (a2) -- [fermion] (o2.west),
+				(i3) -- [fermion] (o3),
+				(i4) -- [fermion] (o4)
+				};
+			%decorations
+			\draw [decoration={brace, mirror, raise=0.2cm}, decorate] (i2.north)  -- (i4.south) node [pos=0.5, left, xshift=-0.3cm, text width=1.5cm] {Proton $M_p$,$P_p$};
+		\end{feynman}
+	\end{tikzpicture}
+\end{figure} \newpage
+Im Ruhesystem des Protons sind die Viererimpulse: \newline
+$P_e = \twovec{E}{\vec p} \qquad P_p = \twovec{M_p}{0} \qquad P'_e = \twovec{E'}{\vec p'} \qquad P'_x = \twovec{E'_x}{\vec p'_x}$ \\ \newline
+Anhand des Energieerhaltungssatzes lässt sich der \newline Energieübertrag $\nu = E'-E = M_p - E'_x$ definieren. \newline
+Wir betrachten nun den Impulsübertrag des Elektrons in Abhängigkeit des Streuwinkels $\theta$
+\begin{align*}
+q_e^2 &= (P_e-P'_e)^2 = (E-E')^2 - (\vec p - \vec p')^2 = E^2 - \vec p^2 + E'^2 - \vec p'^2 - 2EE'+ 2|\vec p| |\vec p'| cos(\theta) \\ 
+ &= 2 m_e^2 - 2 \sqrt{m_e^2 + \vec p^2} \sqrt{m_e^2 + \vec p'^2} + 2|\vec p| |\vec p'| cos(\theta) \stackrel{m_e \ klein}{\approx} -2 |\vec p| |\vec p'|(1-cos(\theta)) \\
+ &= -4 |\vec p| |\vec p'| sin^2(\nicefrac{\theta}{2}) < 0
+\end{align*}
+Somit ist der Impulsübertrag des Elektrons $\vec q_e$ ortsartig. Wir verfahren nun analog mit dem Impulsübertrag des Protons.
+\begin{equation*}
+q_p^2 = (E'_x-M_p)^2 - |\vec p'_x|^2 = M_x^2 + M_p^2 - 2 M_p E_x
+\end{equation*}
+Mit dem Energieerhaltungssatz folgt
+\begin{align*}
+E + M_p &= E' + E'_x \\
+E -E' &= E'_x - M_p = \nu
+\end{align*}
+Wir halten damit fest:
+\begin{equation}
+q^2 = M_x^2 + M_p^2 - 2 M_p(M_p + \nu) = M_x^2 - M_p^2 - 2M_p \nu
+\end{equation}
+Wir können also anhand des Energieübertrages die Konstituentenmasse $M_x$ berechnen.
+\subsection*{Charakterisierung des Stoßes}
+Mit $q^2$ und $\nu= \frac{M_x^2-M_p^2-q^2}{2 M_p}$ lässt sich die Elastizität des Stoßes über die Björken'sche Skalenvariable x charakterisieren:
+\begin{equation}
+x := \frac{-q^2}{2 M_p \nu} \in [\stackrel{inelastisch}{0}, \stackrel{elastisch}{1}]
+\end{equation}
 \end{document}
