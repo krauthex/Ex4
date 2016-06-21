@@ -1,0 +1,139 @@
+\documentclass[Ex4_Zusammenfassung.tex]{subfiles}
+
+\begin{document}
+\chapter{Symmetrien und Erhaltungsgrößen}
+\textbf{von HerMitsch und S\o{}ni} \\ \newline
+Als Symmetrie bezeichnet man eine Invarianz von Zuständen oder physikalischen Gesetzen(Bewegungsgleichungen) unter Symmetrietransformationen.
+Beispiele hierfür sind:
+\begin{itemize}
+\item Bewegungsgl. im Zentralfeld invariant unter Rotation
+\item Relativistische Bewegungsgl. invariant unter Lorentztransformation
+\item Schrödingergl. invariant unter Phasentransformation
+\end{itemize}
+In diesem Zusammenhang wurde von Emmy Noether das folgende Theorem entwickelt:
+\begin{tcolorbox}[title= Noether-Theorem,colback=red!50!white]
+Zu jeder Symmetrietransformation existiert eine Erhaltungsgröße. \newline
+Zu jeder Erhaltungsgröße existiert eine Symmetrietransformation
+\end{tcolorbox}
+
+Wir betrachten die zeitliche Veränderung des Erwartungswerts einer Observarblen (repräsentiert durch den Operator O) in einem System mit dem Hamiltonian H. Falls der Operator O zeitunabhängig ist gilt:
+\begin{equation}
+\partial_t \braket{\hat{O}} = \frac{1}{i\hslash} \braket{[O,H]}
+\end{equation}
+\textbf{Beweis:}
+	\begin{align*}
+	\partial_t \braket{\hat{O}} &= \ \partial_t \braket{\psi(t)|\hat{O}|\psi(t)} \\ 
+	&=\braket{\partial_t \psi(t)|\hat{O}|\psi(t)} + \braket{\psi(t)|\hat{O}|\partial_t \psi(t)} \\ \stackrel{^{SGL}_{\bra{\psi} \  = \ (\ket{\psi})^{\dag}}}{=} &-\frac{1}{i\hslash} \braket{\psi(t)|H\hat{O}|\psi(t)} + \frac{1}{i\hslash} \braket{\psi(t)|\hat{O} H |\psi(t)} \\ 
+	&= \frac{1}{i\hslash} \braket{\psi(t)|[O,H]|\psi(t)}
+	\end{align*}
+Das bedeutet, dass eine Observarble O eine Erhaltungsgröße ist, falls $[H,O] = 0$.  In diesem Fall gibt es erhaltene Quantenzahlen. 
+\section{Symmetrietransformation}
+Eine Symmetrietransformation U ist einen umkehrbare, simultane (wirkt auf alle Vektoren des Raums), eindeutige Abbildung der Zustände und Operatoren, die alle physikalische Aussagen des Systems unverändert lässt.
+\begin{align}
+\ket{\psi} &\longmapsto \ket{\psi'} = U \ket{\psi} \\
+\hat{O} &\longmapsto \hat{O}' = U \hat{O} U^{\dag}
+\end{align}
+
+\begin{itemize}
+\item Falls U unitär ist d.h. $U U^{\dag} = \mathds{1}$, ist die Norm des Zustands $\ket{\psi}$ erhalten.
+\item Eigenvektoren des Operators O mit reellem Eigenwert o sind auch Eigenvektoren des Operators O' mit Eigenwert o.
+\begin{equation}
+\hat{O}' \ket{\psi'} = U \hat{O}'  U^{\dag} U \ket{\psi} = U \hat{O} \ket{\psi} = U o \ket{\psi} = o \ket{\psi'}
+\end{equation}
+\item $ [U,H] = 0 \longleftrightarrow U \ket{\psi}$ erfüllt SGL. 
+\end{itemize}
+Wir suchen also im folgenden unitäre Transformationen U die mit dem Hamiltonian H kommutieren. Hierfür betrachten wir im folgenden zwei Fälle:
+\subsection{Diskrete Transformation, U hermitesch}
+Wählen wir die Observarble selbst als Transformation $U=O$ so ist Hermitizität gewährleistet, d.h. $\braket{O} = \braket{O}^{*}$ \newline Da die Definitionsbereiche von O und $O^{\dag}$ übereinstimmen folgt hieraus dass $O=O^{\dag}$ \newline Kombinieren wir dies mit der Unitaritätsbedingung so erhalten wir 
+\begin{equation}
+O^2 = OO^{\dag} = \mathds{1}
+\end{equation}
+Da wir $[U,H]=[O,H]=0$ fordern, existiert eine gemeinsame Eigenvektorbasis von O und H deren Elemente $\ket{\psi}$ wir im folgenden betrachten.
+Wir können an dieser Stelle 2 wichtige Folgerungen ziehen:
+\begin{enumerate}
+\item $O^2 \ket{\psi} = \ket{\psi} = o^2 \ket{\psi} \longrightarrow o = \pm 1$
+\item $ \braket{\psi|\hat{O}|\psi} = \braket{\psi' \hat{O}^{\dag}|\hat{O}|\hat{O}^{\dag} \psi'} =  \braket{\psi'|\hat{O} \hat{O} \hat{O}^{\dag}|\psi'} = \braket{\psi'|\hat{O}|\psi'}$
+\end{enumerate}
+Bei $U=O$ handelt es sich um eine \textbf{diskrete Transformation}, das heißt, dass nur eine diskrete Verschiebung der Variable generiert werden kann. Beispiele für diskrete Transformationen sind 
+\begin{itemize}
+\item Translation um eine Gitterkonstante bei einem kubischen Gitterkristall
+\item Paritätstransformation  (mehr dazu später)
+\item Raumspiegelung,Zeitspiegelung
+\item Ladungskonjugation
+\end{itemize}
+\textbf{Erinnerung Produktzustände} \newline
+Betrachtet man Zustände aus verschiedenen Hilberträumen $\ket{\psi}_i \in \mathcal{H}_i$ so kann man diese über das Tensorprodukt koppeln zu einem Produktzustand:
+\begin{equation}
+(\psi_1,\psi_2,...,\psi_N) \mapsto \prod_{i=1}^N \ket{\psi}_i \in \bigotimes_{i=1}^N \mathcal{H}_i
+\end{equation}
+Wir fragen uns nun wie Operatoren die auf dem Hilbertraum $\mathcal{H}_j$ definiert sind auf Zustände aus diesem Tensorprodukt wirken. Man definiert die Operation auf dem Produktraum wie folgt
+\begin{equation}
+O \prod_{i=1}^N \ket{\psi}_i = O \ket{\psi}_j \prod_{j\neq i} \ket{\psi}_i
+\end{equation}
+
+Betrachten wir einen Produktzustand $\ket{\psi} = \ket{\psi}_1 \ket{\psi}_2$ (z.B 2 Teilchen), wobei $\ket{\psi}_{1,2}$ Eigenzustände zur Observarblen O sind,und transformieren diesen Zustand mit unserer simultanen Symmetrietransformation U=O, so wirkt diese Transformation sowohl auf $\ket{\psi}_1$ als auch $\ket{\psi}_2$ da sie simultan ist.
+\begin{equation}
+\ket{\psi'} = U\ket{\psi} = O\ket{\psi}_1 \ O\ket{\psi}_2 = o_1 \ket{\psi}_1 \ o_2 \ket{\psi}_2 = o_{ges} \ket{\psi}
+\end{equation}
+Dies lässt sich für einen Produktzustand aus N Hilberträumen $\ket{\psi} = \prod_{i=1}^N \ket{\psi}_i$ induktiv fortführen. Identifiziert man jeden Eigenwert $o_i$ eines Eigenzustands $\ket{\psi}_i \in \mathcal{H}_i$ mit einer Quantenzahl $n_i$ so erhalt man eine \textbf{multiplikative Erhaltungsgröße n } als Produkt der Quantenzahlen $n = \prod_{i=1}^N n_i$.
+
+\subsection{Kontinuierliche Transformation,U nicht hermitesch}
+Falls U nicht hermitesch ist, kann es einen hermitschen Operator (Generator) $\hat{O}$ geben, sodass
+\begin{equation}
+U = \mathds{1} + i \epsilon \hat{O}
+\end{equation}
+O kann hier auch wieder eine Observarble sein, die per Definition die Hermitizitätsbedingung erfüllt. Diese Transformation U erfüllt außerdem unsere Unitaritätsbedingung wie man wie folgt sieht:
+\begin{equation}
+U^{\dag} U = (\mathds{1} - i \epsilon \hat{O}^{\dag}) (\mathds{1} + i \epsilon \hat{O}) = 1 + i \epsilon \underbrace{(\hat{O} - \hat{O}^{\dag})}_{=0} + \mathcal O(\epsilon^2) = \mathds{1} 
+\end{equation}
+Da auch hier $[U,H]=0$ gefordert wird folgt $[O,H]=0$. Es existiert also auch hier eine gemeinsame Basis von Eigenvektoren von H und O und da auch $[U,O]=0$ gilt folgt:
+\begin{equation}
+\hat{O}' = U \hat{O} U^{\dag} = U U^{\dag} \hat{O} = \hat{O}
+\end{equation}
+Wir schließen daraus, dass die Erwartungswerte von O unter dieser Symmetrietransformation erhalten bleiben.\\ \newline
+Man kann eine finite Transformation um $\Delta$ als n-fache Serie von infinitesimal kleinen Transformation um $\epsilon$ darstellen mit
+\begin{equation}
+\Delta = \lim_{n \rightarrow \infty} \lim_{\epsilon \rightarrow 0} n \cdot \epsilon
+\end{equation}
+Wir erhalten als finite Symmetrietransformation U um $\Delta$
+\begin{equation}
+U(\Delta)= \lim_{n\rightarrow \infty} \left( \mathds{1} + i \underbrace{\frac{\Delta}{n}}_{\epsilon}\right)^n = e^{i\Delta \hat{O}}
+\end{equation}
+Analog zur diskreten Transformation betrachten wir wieder einen Produktzustand aus 2 Eigenzuständen von O (z.B 2 Teilchen) $\ket{\psi} = \ket{\psi}_1 \ket{\psi}_2 \in \mathcal{H}_1 \bigotimes \mathcal{H}_2$ und lassen unsere Symmetrietransformation auf diesen Zustand wirken.
+\begin{equation}
+U \ket{\psi} = U \ket{\psi}_1 U \ket{\psi}_2 = e^{i\Delta(\hat{O}_1 + \hat{O}_2)} \ket{\psi}_1 \ket{\psi}_2
+\end{equation}
+Wobei $\hat{O}_i = \hat{O}_{|_{\mathcal{H}_i}}$ \newline
+Identifizieren wir wieder zu jedem Eigenzustand $\ket{\psi}_i \in \mathcal{H}_i$ mit Eigenwert $o_i$ bezüglich der Observarblen $\hat{O}_i$ eine Quantenzahl $n_i$ so bekommen wir eine \textbf{additive Erhaltungsgröße n} als Summe der Quantenzahlen $ n = \sum_i n_i$ \\ \newline
+Beispiele für kontinuierliche Symmetrietransformationen sind:
+\begin{itemize}
+\item Infinitesimale Raumtranslationen, Infinitesimale Rotationen
+\item Zeitentwicklungen, die die Schrödinger-Gleichung unverändert lassen
+\end{itemize}
+
+\section{Beispiele}
+\subsection{Ladungserhaltung}
+In der Elektrodynamik ist die Ladungserhaltung verbunden mit einer Eichinvarianz der elektromagnetischen Potentiale $\phi$ und A unter einer Eichtransformation über das Differential eines Skalarfelds $\chi(\vec x,t)$
+\begin{align}
+\phi & \mapsto \phi' = \phi - \frac{\partial \chi}{\partial t} \\
+A & \mapsto A' = A + \nabla \chi 
+\end{align}
+In der Quantenmechanik entspricht diese Eichinvarianz einer Phasenverschiebung des Zustands $\ket{\psi}$ um einen Phasenfaktor $e^{i\chi}$
+\begin{equation}
+\psi \mapsto \psi' = e^{i\chi} \psi
+\end{equation}
+Diese Symmetrietransformation ist möglich, dass es sich bei der Elektrodynamik um eine renormierbare Feldtheorie handelt. Die Potentiale sind langreichweitig, sodass die zur Theorie gekoppelte Größe - die Ladung - erhalten ist.
+
+\subsection{Baryonenzahl}
+\begin{itemize}
+\item (Anti)-Quarks: Baryonenzahl $A = \pm \frac{1}{3}$
+\item (Anti)-Baryonen: $A= \pm 1$
+\item Mesonen: $A=0$ 
+\end{itemize}
+Nach der Großen vereinheitlichten Theorie (GUT) ist die Baryonenzahl keine exakte Erhaltungsgröße, so dass Protonen mit der Zeit zerfallen, allerdings mit einer sehr großen Halbwertszeit ($\tau(p \rightarrow e^+ + \pi^0) > 10^{33} a$).
+Falls die Baryonenzahl als Folge einer lokalen Eichinvarianz erhalten sein sollte, erwarte wir damit verbunden ein koppelndes langreichweitiges Feld. Es gibt keine experimentelle Evidenz für ein solches Feld.
+Ein Baryonenkoppelfeld würde das Verhältnis von gravitativer Masse zu träger Masse verändern,dafür gibt es jedoch keinen Hinweis $\frac{\Delta R}{R} < 10^{-12}$.
+
+\subsection{Leptonenzahl}
+Für Leptonen($e^-,\mu-,\tau^-$) ist die Leptonenzahl $L=\pm 1$. Diese Zahl ist für jede Generation konstant, wenn man Neutrinooszillationen herausnimmt. Hierbei taucht die Frage auf ob Neutrino und Antineutrino verschieden sind, welcher wir bald auf den Grund gehen werden.
+\end{document}
