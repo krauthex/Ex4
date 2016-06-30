@@ -26,6 +26,7 @@
 %math packages
 \usepackage{amssymb}
 \usepackage{amsmath}
+\usepackage{amsthm}
 \usepackage{dsfont}
 \usepackage{tcolorbox}
 
@@ -282,6 +283,22 @@ dup
 %shorter command for overline
 \newcommand{\ol}[1]{\overline{#1}}
 
+% absolute value
+\newcommand{\abs}[1]{\left\vert #1 \right\vert}
+
+%example tcolorbox
+\newcommand{\bsp}[1]{%
+	\begin{tcolorbox}[title=Beispiel ,colback=yellow!50!white]
+		#1
+	\end{tcolorbox}
+}
+
+% kugelflächenfunktion
+\newcommand{\kff}[2]{Y_\ell^m \lp #1, #2\rp}
+
+% euler's number e as not italic letter
+\newcommand{\me}[1]{\mathrm{e}^{#1}}
+
 \begin{document}
 % \setcounter{page}{-1}
 % $~~$
@@ -331,5 +348,7 @@ dup
 \subfile{Sitzung10Ex4.tex}
 \subfile{Sitzung11Ex4.tex}
 \subfile{Sitzung12Ex4.tex}
+\subfile{Sitzung13Ex4.tex}
+\subfile{Sitzung14Ex4.tex}
 %Unterschrift
 \end{document}

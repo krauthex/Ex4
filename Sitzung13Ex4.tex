@@ -1,0 +1,135 @@
+\documentclass[Ex4_Zusammenfassung.tex]{subfiles}
+
+\begin{document}
+\section{Leptonenzahlerhaltung}
+Die Leptonenzahl jeder Generation muss erhalten sein. Die einzige Ausnahme sind Neutrino--Oszillationen. Ein Neutrino, welches ursprünglich mit einem der drei Flavours $(e,\mu,\tau)$ erzeugt wurde, kann bei einer späteren Messung einen anderen Flavour ergeben. Dies ist eine Verletzung der Leptonenzahlerhaltung. Die die Wahrscheinlichkeiten für jeden Flavour sich periodisch mit der Ausbreitung des Neutrinos ändert, spricht man von \textbf{Neutrino--Oszillationen}.\\
+
+Es stellt sich die Frage, ob Neutrino und Antineutrino identisch sind. 
+
+Beim doppelten $\beta^-$--Zerfall zerfallen zwei Neutronen in zwei Protonen und erzeugen dabei jeweils ein Elektron und ein Elektron--Antineutrino. Wären Neutrino und Antineutrino identisch, wären sie ihre eigenen Antiteilchen und könnten sich auslöschen. Dieser Fall wurde noch nie beobachtet. 
+\begin{figure}[h]
+	\centering
+	\begin{tikzpicture}
+		\begin{feynman}
+			%vertices
+			\vertex (i1) {$n$};
+			\vertex [right=of i1] (a1);
+			\vertex [right=of a1] (o1) {$p$};
+			\vertex [below=3.5cm of i1] (i2) {$n$};
+			\vertex [right=of i2] (a2);
+			\vertex [right=of a2] (o2) {$p$};
+			\vertex [below=1cm of a1] (a1midtemp);
+			\vertex [right=0.5cm of a1midtemp] (a1mid);
+			\vertex [above=1cm of a2] (a2midtemp);
+			\vertex [right=0.5cm of a2midtemp] (a2mid);
+			\vertex [below=0.5cm of o1] (o1mid) {$e^-$};
+			\vertex [below=1cm of o1mid] (o2mid) {$\ol{\nu}_e$};
+			\vertex [above=0.5cm of o2] (o4mid) {$e^-$};
+			\vertex [above=1cm of o4mid] (o3mid) {$\ol{\nu}_e$};
+			%diagram
+			\diagram* {
+				(i1) -- [fermion] (a1) -- [fermion] (o1),
+				(i2) -- [fermion] (a2) -- [fermion] (o2),
+				(a1) -- [scalar, bend right] (a1mid),
+				(a2) -- [scalar, bend left] (a2mid),
+				(o1mid) -- [anti fermion] (a1mid) -- [anti fermion] (o2mid),
+				(o3mid) -- [fermion] (a2mid) -- [fermion] (o4mid)
+				};
+		\end{feynman}
+	\end{tikzpicture}
+	\caption{Doppelter $\beta^-$--Zerfall}
+\end{figure}
+
+Sind nun Neutrinos verschiedener Generationen wirklich verschieden?
+
+Schießt man hochenergetische Protonen auf ein Bor--Target, entstehen unter andereme Pionen, welche dann zerfallen:
+\begin{equation}
+	\pi^- \rightarrow \mu^- + \ol{\nu}_\mu
+\end{equation}
+Lenkt man den Neutrinostrahl nun auf ein Wasserstofftarget, wo er wechselwirkt, sind folgende Reaktionen möglich:
+\begin{align}
+	\ol{\nu}_\mu + p &\rightarrow n + \mu^+ \qquad \text{(auf jeden Fall)}\\
+	\ol{\nu}_\mu + p &\rightarrow n + e^+ \qquad \text{(nur, falls } \ol{\nu}_\mu = \ol{\nu}_e\text{)}
+\end{align}
+Der zweite Fall wurde noch nie beobachtet.
+
+\section{Strangeness--Erhaltung}
+Erzeugung von $\Lambda$ und $K^0$ über starke Wechselwirkung:
+\begin{equation}
+	\underset{uuu}{p} + \underset{\ol{u}d}{\pi}^- \rightarrow \underset{uds}{\Lambda} + \underset{\ol{s}d}{K}^0
+\end{equation}
+$\Lambda$ und $K^0$ zerfallen getrennt über die schwache Wechselwirkung:
+\begin{equation}
+	\underset{uds}{\Lambda} \rightarrow \underset{uud}{p} + \underset{\ol{u}d}{\pi}^- \qquad \underset{\ol{s}d}{K}^0 \rightarrow \underset{\ol{d}u}{\pi}^+ + \underset{\ol{u}d}{\pi}^-
+\end{equation}
+Um das Zerfallsverhalten zu erklären, wurde die Strangeness eingeführt. Dabei wurden die Werte willkürlich zugeordnet:
+\begin{table}[H]
+	\centering
+	$
+	\begin{array}{lrcrl}
+	S(K^+) & 1 && K^+= & u\ol{s} \\ 
+	S(K^-) & -1 && K^-=& s\ol{u} \\ 
+	S(K^0) & 1 &&K^0= & d\ol{s}
+	\end{array} 
+	$
+\end{table}
+Daraus ist ersichtlich, dass $S(s)=-1$.
+
+Offensichtlich ist die Strangeness bei der starken Wechselwirkung erhalten, bei der schwachen jedoch nicht. Dabei ändert sich $S$ um höchstens $\pm 1$, kann aber, abhängig von der Reaktion, auch $0$ sein.
+\begin{align}
+	&\underset{\Delta S = 1}{\underset{sss}{\Omega}^- \rightarrow \underset{ssu}{\Xi}^0 + \underset{d\ol{u}}{\pi}^- }\\
+	&\underset{\Delta S = 1}{\underset{ssu}{\Xi}^0 \rightarrow \underset{uds}{\Lambda} + \underset{d\ol{d}}{\pi}^0}\\
+	& \underset{\Delta S = 1}{\underset{uds}{\Lambda} \rightarrow \underset{uud}{p} + \underset{d\ol{u}}{\pi}^-}
+\end{align}
+Gleiches gilt für die Flavourquantenzahlen $C,T \text{ und }B$, die man analog beschreiben kann. 
+
+\subsection{Isospin}
+Wird analog zum Spin durch die beiden Quantenzahlen $I$ und $I_3$ beschrieben, wobei es zu jedem Wert von $I\ 2I+1$ Orientierungen von $I_3$ gibt.
+\begin{table}[H]
+	\centering
+	$
+	\begin{array}{l|rrc}
+	& I & I_3 & \text{Dirac--Notation} \\ \hline
+	\text{Proton} & \nicefrac{1}{2} & \nicefrac{1}{2} & p \equiv \ket{\nicefrac{1}{2},\nicefrac{1}{2}}  \\ 
+	\text{Neutron} & \nicefrac{1}{2} & -\nicefrac{1}{2} & n \equiv \ket{\nicefrac{1}{2}, \nicefrac{1}{2}}
+	\end{array} 
+	$
+	\caption{Die Dirac--Notation ist hierbei $\ket{I,I_3}$.}
+\end{table}
+Die Ladung lässt sich durch den $I_3$ durch
+\begin{equation}
+	Q = e \lp I_3 + \frac{1}{2} \rp
+\end{equation}
+berechnen. Hierbei ist $e$ die Elementarladung.\\
+
+\subsection{Für Atomkerne}
+gilt:
+\begin{gather}
+	\text{Massenzahl } A = Z + N\\
+	I_3 = \frac{1}{2} \lp Z - N \rp = Z - \frac{1}{2} A \\
+	Q = Ze = e \sum_{i=1}^{A} \lp I_3^{(i)} + \frac{1}{2} \rp = e \lp I_3 + \frac{1}{2} A \rp
+\end{gather}
+wobei $I_3=\sum_{i=1}^{A} I_3^{(i)}$ ist. 
+
+Die Länge des Gesamtisospins $I$ ist
+\begin{equation}
+	I_{\text{max}} = \frac{1}{2} (Z+N) \qquad I_{\text{min}} = \frac{1}{2} \abs{Z-N}
+\end{equation}
+
+\subsubsection*{Zerfallsbeispiel}
+\begin{equation}
+	\underset{uds}{\Lambda} \rightarrow \underset{uud}{p} + \underset{d\ol{u}}{\pi}^-
+\end{equation}
+\begin{table}[H]
+	\centering
+	$
+	\kern 4em
+	\begin{array}{crccrcl}
+	I_3 & 0 && \nicefrac{1}{2} & -1 && \Delta I_3 = - \nicefrac{1}{2} \\ 
+	I & 0 && \nicefrac{1}{2} & 1 && \Delta I = \nicefrac{1}{2} \\ 
+	S & -1 && 0 & 0 && \Delta S = 1
+	\end{array} 
+	$
+\end{table}
+Hieraus ist ersichtlich, dass die schwache Wechselwirkung $I_3,\ I$ und $S$ verletzt.
+\end{document}

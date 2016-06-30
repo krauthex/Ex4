@@ -80,28 +80,30 @@ Dies lässt sich für einen Produktzustand aus N Hilberträumen $\ket{\psi} = \p
 \subsection{Kontinuierliche Transformation,U nicht hermitesch}
 Falls U nicht hermitesch ist, kann es einen hermitschen Operator (Generator) $\hat{O}$ geben, sodass
 \begin{equation}
-U = \mathds{1} + i \epsilon \hat{O}
+	U = \mathds{1} + i \epsilon \hat{O}
 \end{equation}
 O kann hier auch wieder eine Observarble sein, die per Definition die Hermitizitätsbedingung erfüllt. Diese Transformation U erfüllt außerdem unsere Unitaritätsbedingung wie man wie folgt sieht:
 \begin{equation}
-U^{\dag} U = (\mathds{1} - i \epsilon \hat{O}^{\dag}) (\mathds{1} + i \epsilon \hat{O}) = 1 + i \epsilon \underbrace{(\hat{O} - \hat{O}^{\dag})}_{=0} + \mathcal O(\epsilon^2) = \mathds{1} 
+	U^{\dag} U = (\mathds{1} - i \epsilon \hat{O}^{\dag}) (\mathds{1} + i \epsilon \hat{O}) = 1 + i \epsilon \underbrace{(\hat{O} - \hat{O}^{\dag})}_{=0} + \mathcal O(\epsilon^2) = \mathds{1} 
 \end{equation}
 Da auch hier $[U,H]=0$ gefordert wird folgt $[O,H]=0$. Es existiert also auch hier eine gemeinsame Basis von Eigenvektoren von H und O und da auch $[U,O]=0$ gilt folgt:
 \begin{equation}
-\hat{O}' = U \hat{O} U^{\dag} = U U^{\dag} \hat{O} = \hat{O}
+	\hat{O}' = U \hat{O} U^{\dag} = U U^{\dag} \hat{O} = \hat{O}
 \end{equation}
 Wir schließen daraus, dass die Erwartungswerte von O unter dieser Symmetrietransformation erhalten bleiben.\\ \newline
 Man kann eine finite Transformation um $\Delta$ als n-fache Serie von infinitesimal kleinen Transformation um $\epsilon$ darstellen mit
 \begin{equation}
-\Delta = \lim_{n \rightarrow \infty} \lim_{\epsilon \rightarrow 0} n \cdot \epsilon
+	\Delta = \lim_{n \rightarrow \infty} \lim_{\epsilon \rightarrow 0} n \cdot \epsilon
 \end{equation}
 Wir erhalten als finite Symmetrietransformation U um $\Delta$
 \begin{equation}
-U(\Delta)= \lim_{n\rightarrow \infty} \left( \mathds{1} + i \underbrace{\frac{\Delta}{n}}_{\epsilon}\right)^n = e^{i\Delta \hat{O}}
+	U(\Delta)= \lim_{n\rightarrow \infty} \left( \vphantom{\frac{\Delta}{n}} \right. %
+	\mathds{1} + i \underbrace{\frac{\Delta}{n}}_{\epsilon}%
+	\left. \vphantom{\frac{\Delta}{n}} \right)^n = e^{i\Delta \hat{O}}
 \end{equation}
 Analog zur diskreten Transformation betrachten wir wieder einen Produktzustand aus 2 Eigenzuständen von O (z.B 2 Teilchen) $\ket{\psi} = \ket{\psi}_1 \ket{\psi}_2 \in \mathcal{H}_1 \bigotimes \mathcal{H}_2$ und lassen unsere Symmetrietransformation auf diesen Zustand wirken.
 \begin{equation}
-U \ket{\psi} = U \ket{\psi}_1 U \ket{\psi}_2 = e^{i\Delta(\hat{O}_1 + \hat{O}_2)} \ket{\psi}_1 \ket{\psi}_2
+	U \ket{\psi} = U \ket{\psi}_1 U \ket{\psi}_2 = e^{i\Delta(\hat{O}_1 + \hat{O}_2)} \ket{\psi}_1 \ket{\psi}_2
 \end{equation}
 Wobei $\hat{O}_i = \hat{O}_{|_{\mathcal{H}_i}}$ \newline
 Identifizieren wir wieder zu jedem Eigenzustand $\ket{\psi}_i \in \mathcal{H}_i$ mit Eigenwert $o_i$ bezüglich der Observarblen $\hat{O}_i$ eine Quantenzahl $n_i$ so bekommen wir eine \textbf{additive Erhaltungsgröße n} als Summe der Quantenzahlen $ n = \sum_i n_i$ \\ \newline
