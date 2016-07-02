@@ -2,25 +2,30 @@
 
 
 \begin{document}
-\chapter{Einleitung - Ex3 Zusammenfassung}
-\textbf{Von Michi und Pauli} \newline
+\chapter{Wichtige Erkenntnisse der Atom-- \& Quantenphysik (Ex \rom{3})}
+\textbf{Von \michi \& \paul} \newline
 
-Wir hatten die QUANTENMECHANIK eingeführt, siehe Theo 4:\\
+Wir hatten die \textbf{Quantenmechanik} eingeführt:
 
-$ \fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
-	{\centering 
-		\textbf{Axiom 4:  Es gilt die  Schrödingergleichung: \ } 
-		$  \hat{H} \ket{\psi} = i \hslash \partial_t \ket{\psi}\ $ \\
-		wobei $ \hat{H} := \frac{\hat{p}^2}{2m} + \hat{V} = - \frac{\hslash^2}{2m} \nabla^2 + V$
-		 } } $ \\
+\colbox{\textbf{Axiom 4} (aus Theo \rom{4})}{%
+	Es gilt die Schrödingergleichung:
+	\begin{equation}
+		\hat{H} \ket{\psi} = i \hslash \partial_t \ket{\psi}
+	\end{equation}
+	wobei 
+	\begin{equation*}
+		\hat{H} := \frac{\hat{p}^2}{2m} + \hat{V} = - \frac{\hslash^2}{2m} \nabla^2 + V
+	\end{equation*}
+}
 
 Diese hatten wir für das Wasserstoffatom (H-At.) \textbf{analytisch} gelöst. (Coulombpotential, Kugelkoordinaten, Separation: Schwerpunkt/Relativbew., Winkel-/Radialanteil). Die Lösungen sind Polynome mit ganzzahligen Parametern, "Quantenzahlen":
 \begin{align*}
 	\psi_{n,l,m_l}\lp r, \vartheta, \varphi \rp &= R_{n,l} (r) \cdot \Theta_l^{m_l} (\vartheta) \cdot \phi_{m_l} (\varphi)\\
-	\psi_{n,l,m_l} &\propto\  \mathrm{e}^{- \frac{Zr}{na_0}}\  \underbrace{L_{n-l-1}^{2l+1} \lp \frac{2Zr}{na_0} \rp \cdot P_l^{m_l} (\cos{\vartheta})}_{\mathclap{\text{zugeordnete Laguerre- bzw. Legendrepolynome.}}} \cdot \frac{1}{\sqrt{2\pi}} \mathrm{e}^{im_l \varphi}\\
+	\psi_{n,l,m_l} &\propto\  \mathrm{e}^{- \frac{Zr}{na_0}}\  \underbrace{L_{n-l-1}^{2l+1} \lp \frac{2Zr}{na_0} \rp \cdot P_l^{m_l} (\cos{\vartheta})}_{\mathclap{\text{zugeordnete Laguerre- bzw. Legendrepolynome.}}} \cdot \frac{1}{\sqrt{2\pi}} \mathrm{e}^{im_l \varphi}
 \end{align*}
+wobei hier $Z=1$ die Ladungszahl, und $a_0$ der Bohr'sche Atomradius ist. 
 
-Es gilt für physikalische Lösungen: $\boxed{ | m_l | \leq l < n } $\\ 
+Es gilt für physikalische Lösungen: $\boxed{ | m_l | \leq l < n } $
 
 \section{Notation der Quantenzahlen}
 Hauptquantenzahlen $n\ \in \{ 1, 2, 3, ... \} = \{K, L, M, ...\}$ ''Schale'' \\
@@ -35,7 +40,7 @@ Dem Übergang entspricht dann die Differenz $E_n - E_m$.
 \section{Korrekturterme der Energieniveaus}
 Die Energieniveaus (EN) werden korrigiert durch:
 \begin{align*}
-	\hat{H} &= \hat{H}_0 + \underbrace{ \Delta \hat{E}_{\text{rel}} + \Delta \hat{E}_{S-B} + \Delta \hat{E}_{\text{Darwin}} }_{\mathclap{\sum\ = \text{ Feinstruktur } \Delta E_{FS}} } + \Delta \hat{E}_{\text{Lamb}} + \Delta \hat{E}_{\text{HFS}} + \Delta \hat{E}_{\text{Zeeman}}\\
+	\hat{H} &= \hat{H}_0 + \underbrace{ \Delta \hat{E}_{\text{rel}} + \Delta \hat{E}_{S-B} }_{\mathclap{\sum\ = \text{ Feinstruktur } \Delta E_{FS}} } + \Delta \hat{E}_{\text{Darwin}} + \Delta \hat{E}_{\text{Lamb}} + \Delta \hat{E}_{\text{HFS}} + \Delta \hat{E}_{\text{Zeeman}}\\
 	\hat{H}_0 &= \frac{\hat{p}^2}{2m_e} + \hat{V}\\
 	& \kern -3.1em \begin{rcases}
 	\Delta \hat{E}_{\text{rel}} = - \frac{p^4}{8 m_e^3 c^2} \\
@@ -64,12 +69,12 @@ Für mehrere Elektronen $ \lp e^- \rp $ müssen wir Näherungen machen, denn die
 \end{enumerate}
 
 \section{Das Pauli-Prinzip}
-Die relativistische Quantenmechanik fordert für Teilchen mit Spin $\frac{1}{2},\ \frac{3}{2},\ ... $ [ bzw. 0, 1, 2, ... ] eine unter Teilchenvertauschung $\hat{P}_{ij} $ antisymmetrische [bzw, symmetrische] \textbf{Gesamtwellenfunktion} $ \ket{\psi} = \ket{\psi_{\text{Ort}}} \otimes \ket{\chi_{\text{Spin}}} $. Wir nennen diese Teilchen \textbf{Fermionen} [bzw. \textbf{Bosonen}]. Aus diesem Postulat folgt das:\\
+Die relativistische Quantenmechanik fordert für Teilchen mit Spin $\frac{1}{2},\ \frac{3}{2},\ ... $ $\left[\text{bzw. } 0, 1, 2, ... \right]$ eine unter Teilchenvertauschung $\hat{P}_{ij} $ antisymmetrische [bzw. symmetrische] \textbf{Gesamtwellenfunktion} $ \ket{\psi} = \ket{\psi_{\text{Ort}}} \otimes \ket{\chi_{\text{Spin}}} $. Wir nennen diese Teilchen \textbf{Fermionen} [bzw. \textbf{Bosonen}]. Aus diesem Postulat folgt das
 
 
-\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
-	{\centering 
-		\textbf{Paul\tiny{i}\small{-Prinzip:} \ } Man kann nie mehr als ein Fermion im gleichen (Orts- \& Spin-) Zustand haben.} }\\
+\colbox{\textbf{Paul\tiny{i}\small{-Prinzip}}}{%
+	Man kann nie mehr als ein Fermion im gleichen (Orts- \& Spin-) Zustand haben.
+	} 
 
 Für zwei $e^-$ (z.B. Helium) gilt daher:
 \begin{align*}
@@ -81,11 +86,13 @@ Für zwei $e^-$ (z.B. Helium) gilt daher:
 	\end{rcases} 
 	\widehat{=} 
 		\begin{array}{l}
-			\ket{S=1,\ M_S=0}\\
+			\ket{S=1,\ M_S=1}\\
 			\ket{1,\ 0}\\
 			\ket{1,\ -1}
 		\end{array}
 \end{align*}
 
-$\ket{\chi_+,\ -}$ ist ein \textbf{symm}etrisches Triplett [2S+1=3 heißt Multiplizität].
+$\ket{\chi_+,\cdot}$ ist ein \textbf{symm}etrisches Triplett $\left[2S+1 =3\right]$.
+
+$2S+1$ heißt auch Multiplizität.
 \end{document}

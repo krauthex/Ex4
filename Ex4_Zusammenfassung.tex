@@ -20,8 +20,8 @@
 \usepackage{pdfpages}
 
 %Title, Author
-\title{ExkRementalpfü\$ic! 4 - Boykott-Gruppenseminar}
-\author{$\mathop{\text{\small{no} \Large Fabs}}\limits_{\text{were given}}$ \and $\overline{\text{Chris}}$ \and Mi$\raisebox{3pt}{\chi}$ \and Pauli \and Anton \and S\o{}ni \and HeinStein \and Martina \and HerMitsch}
+\title{Ex \rom{4}\\  Boykott--Gruppenseminar\\ Kern-- \& Teilchenphysik}
+\author{$\mathop{\text{\small{no} \Large Fabs}}\limits_{\text{were given}}$ \and $\overline{\text{Chris}}$ \and Mi$\raisebox{2pt}{\chi}$ \and Pauli \and Anton \and S\o{}ni \and HeinStein \and mARTina \and HerMitsch}
 \date{\today}
 %math packages
 \usepackage{amssymb}
@@ -29,11 +29,13 @@
 \usepackage{amsthm}
 \usepackage{dsfont}
 \usepackage{tcolorbox}
+\tcbuselibrary{breakable}
 
 % for tabular
 \usepackage{arydshln}
 
 \usepackage{amsmath, mathtools, wasysym, braket}
+%\usepackage{breqn}
 \usepackage[load-configurations=astronomy]{siunitx}
 \DeclareSIUnit\parsec{pc}
 \DeclareSIUnit\dex{dex}
@@ -288,16 +290,40 @@ dup
 
 %example tcolorbox
 \newcommand{\bsp}[1]{%
-	\begin{tcolorbox}[title=Beispiel ,colback=yellow!50!white]
+	\begin{tcolorbox}[title=Beispiel ,colback=white!50!white, breakable]
 		#1
 	\end{tcolorbox}
 }
 
+\newcommand{\satz}[1]{%
+	\begin{tcolorbox}[title=Satz]
+		#1
+	\end{tcolorbox}
+	}
+
+\newcommand{\colbox}[2]{%
+	\begin{tcolorbox}[title=#1]
+		#2
+	\end{tcolorbox}	
+	}
 % kugelflächenfunktion
 \newcommand{\kff}[2]{Y_\ell^m \lp #1, #2\rp}
 
 % euler's number e as not italic letter
 \newcommand{\me}[1]{\mathrm{e}^{#1}}
+
+%%%%% menschen
+\newcommand{\fabs}{$\mathop{\text{\small{no} \Large Fabs}}\limits_{\text{were given}}$ }
+\newcommand{\chris}{$\overline{\text{Chris}}$ }
+\newcommand{\michi}{Mi$\raisebox{2pt}{\chi}$ }
+\newcommand{\paul}{Pauli }
+\newcommand{\anton}{Anton }
+\newcommand{\soeren}{S\o{}ni }
+\newcommand{\hein}{HeinStein }
+\newcommand{\martina}{mARTina }
+\newcommand{\mitsch}{HerMitsch }
+
+\newtheorem{theorem}{Satz}
 
 \begin{document}
 % \setcounter{page}{-1}
@@ -329,8 +355,22 @@ dup
 
 
 
-\tableofcontents
 
+
+%\frontmatter
+
+
+\chapter*{}
+Dieses Skript ist entstanden in einem gemeinsamen Projekt, die Inhalte der Vorlesung von Frau Prof. Stachel im Sommersemester 2016 an der Uni Heidelberg selbstständig zu erarbeiten. An zusätzlichen Ressourcen wurden vor allem die Demtröder--Bände und Wikipedia (genauer: das Internet) herangezogen, ohne diese explizit anzugeben. \\
+
+Über unsere Seminargruppe hinaus ist dieses Skript für alle Menschen gedacht, die an den Inhalten Interesse haben und/oder beispielsweise eine ähnliche Vorlesung besuchen. \\
+
+Für Fehler, Anregungen, gute Witze, liebe Grüße, Danksagungen, Spenden und Kolloquiumseinladungen bitte ein formloses Schreiben an: 
+
+\href{spamfilter@akreuzkamp.de}{spamfilter@akreuzkamp.de}
+
+%\mainmatter
+\tableofcontents
 
 \subfile{Sitzung01_part1_Ex4.tex}
 \subfile{Sitzung01_part2_Ex4.tex}
@@ -350,5 +390,6 @@ dup
 \subfile{Sitzung12Ex4.tex}
 \subfile{Sitzung13Ex4.tex}
 \subfile{Sitzung14Ex4.tex}
+\subfile{Sitzung15Ex4.tex}
 %Unterschrift
 \end{document}

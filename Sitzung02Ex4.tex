@@ -3,24 +3,25 @@
 \begin{document}
 
 
-\section{LS-Kopplung, jj-Kopplung}
-\textbf{Von Heinstein und Anton}
-\subsection{LS-Kopplung}
+\section{LS--Kopplung, jj--Kopplung}
+\textbf{von \hein \& \anton}
+
+\subsection{LS--Kopplung}
 \begin{itemize}
-	\item Wasserstoff: Potential $\rightarrow$ Störungen $\rightarrow$ Spin-Bahn-Kopplung
-	\item Spin-Bahn-Kopplung: nicht $\ell$ und $s$ sondern $j$ relevant
+	\item Wasserstoff: Potential $\rightarrow$ Störungen $\rightarrow$ Spin--Bahn--Kopplung
+	\item Spin--Bahn--Kopplung: nicht $\ell$ und $s$ sondern $j$ relevant
 	\item Viele Elektronen: $J$ relevant
 \end{itemize}
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\centering
 	\begin{tikzpicture}
-		\node at (0,0) (nodeS1) {$S_1$};
-		\node at (0,-1) (nodeS2) {$S_2$};
-		\node at (0,-2) (nodeS3) {$S_3$};
-		\node at (2, 0) (nodeL1) {$L_1$};
-		\node at (2, -1) (nodeL2) {$L_2$};
-		\node at (2, -2) (nodeL3) {$L_3$};
+		\node at (0,0) (nodeS1) {$s_1$};
+		\node at (0,-1) (nodeS2) {$s_2$};
+		\node at (0,-2) (nodeS3) {$s_3$};
+		\node at (2, 0) (nodeL1) {$\ell_1$};
+		\node at (2, -1) (nodeL2) {$\ell_2$};
+		\node at (2, -2) (nodeL3) {$\ell_3$};
 		\node at (5.3, 0) (nodeK) {Kopplung};
 		
 		\draw (nodeS1) -- (nodeS2);
@@ -60,13 +61,15 @@
 		\draw (4,0) -- (nodeK);
 		
 	\end{tikzpicture}
-	\caption{L-S-Kopplung}
+	\caption{L--S--Kopplung}
 \end{figure}
 
-\subsubsection{SATZ:}
-Sei die Spin-Bahnkopplung eines Elektektrons \footnote{\includegraphics[scale=0.4]{elektektron.png} kek!}$\ll$ Bahn-Bahn-Kopplung und Spin-Spin-Kopplung zwischen den Elektronen. 
-Dann ist der Gesamtdrehimpuls: 
-$$\vec{J} = \vec{L} + \vec{S} = \sum_i \vec{\ell}_i + \sum_i \vec{s}_i$$ \\
+\satz{%
+	Sei die Spin--Bahnkopplung eines Elektektrons \footnotemark$\ll$ Bahn--Bahn--Kopplung und Spin--Spin--Kopplung zwischen den Elektronen. 
+	Dann ist der Gesamtdrehimpuls: 
+	$$\vec{J} = \vec{L} + \vec{S} = \sum_i \vec{\ell}_i + \sum_i \vec{s}_i$$
+}\footnotetext{\includegraphics[scale=0.4]{elektektron.png} kek!}
+ 
 $ \underbrace{	
 		\begin{matrix}
 			s_1 & & \ell_1\\
@@ -78,69 +81,75 @@ $ \underbrace{
 		}_{L + S = J} $
 \qquad Anzahl der Feinstrukturaufspaltungen: $\min \lp 2s+1; 2\ell+1 \rp $.\\
 
-Entscheidend für die Feinstrukturaufspaltung ist die Zusammensetzung von $L$ und $S$.
+Entscheidend für die Feinstrukturaufspaltung ist die Zusammensetzung von $L$ und $S$. Die Feinstruktur ist sehr klein verglichen mit den Energiedifferenzen zwischen verschiedenen $L$ oder $S$.\\
 
-%\newpage
-\subsubsection*{Beispiel:}
-Elektronenkonfiguration: $L=2$, $S=1$ $\rightarrow$ $J=1, 2, 3$.\\
-Anzahl der $J_S$: $\min \lp 2S+1; 2L+1 \rp$ \\
-Hier: 3
-
-\begin{figure}[h]
-	\centering
-	\begin{tikzpicture}
-		% Termschema
-		\node at (5,1) (J3) {$J=3$};
-		\node at (5,0) (J2) {$J=2$};
-		\node at (5,-1) (J1) {$J=1$};
-		
-		\draw (0,0) -- (2,0) node [midway, above] (TextNode) {$L=2$} node [midway, below] (TextNode) {$S=1$} -- (3,1) -- (J3);
-		\draw (2,0) -- (J2);
-		\draw (2,0) -- (3, -1) -- (J1);
-	\end{tikzpicture}
-	\caption{Termschema}
-	\begin{tikzpicture}
-		%Vektordiagramme
-		\node at (0,-2) (J3) {$J=3$};
-		\draw [->, >=latex] (J3) -- (0,0) node [midway, right] (TextNode) {$L=2$};
-		\draw [->, >=latex] (0,0) -- (0,1) node [midway, right] (TextNode) {$S=1$}; 
-		
-		\node at (2, -2) (J2) {$J=2$};
-		\draw [->, >=latex] (J2.north) -- (3,-1) node [midway, below, sloped] {$L=2$};
-		\draw [->, >=latex] (3,-1) -- (2,0) node [midway, above, sloped] {$S=1$};
-		\draw [dashed, ->, >=latex] (J2) -- (2,0); 
-		
-		\node at (4.5, -2) (J1) {$J=1$};
-		\draw [->, >=latex] (J1) -- (4.5,0) node [midway, left] {$L=2$};
-		\draw [dashed, ->, >=latex] ([xshift=0.2 cm] J1.north) -- (4.7, -1);
-		\draw [->, >=latex] (4.7, 0) -- (4.7, -1) node [midway, right] {$S=1$}; 
-	\end{tikzpicture}
-	\caption{Vektordiagramme der möglichen Additionen}
-\end{figure}
-
-Die Feinstruktur ist sehr klein verglichen mit den Energiedifferenzen zwischen verschiedenen $L_S$ oder $S$.\\
+Für ein gesamtes L--S--Kopplungs--Termschema geht man die Hund'schen Regeln von 1--3 durch und findet durch die ''Grundzustände'' die niedrigeren Energieniveaus. Bei der L--Aufspaltung ist dabei die Parität der Gesamtwellenfunktion von $(-1)^{L+S+1} \stackrel{!}{=} -1$ zu beachten, das heißt, es existieren nur Energieniveaus für $L+S \in 2\mathbb{Z}$ gerade. Für die letzte Aufspaltung (J) gibt es immer $\min \lp 2S+1,\ 2L+1 \rp$ Terme. Auch wird hierbei nicht berücksichtigt, dass sich die Terme in der Realität auch überkreuzen können. \\  
 
 Im allgemeinen Fall gilt für die Energien: 
+\begin{align}
+	E_J\lp n,L,S \rp &= E\lp n,L,S \rp + C \vec{L}\cdot\vec{S} \\
+	&= E\lp n,L,S \rp + \frac{C\hslash^2}{2}\lp J(J+1) - S(S+1) - L(L+1) \rp
+\end{align}
+daraus folgt für die Abstände der Energieniveaus:
 \begin{equation}
-	E_j\lp n,L,S \rp = E\lp n,L,S \rp + c\cdot L\cdot S = E\lp n,L,S \rp + \frac{c}{2}\lp J(J+1) - S(S+1) - L(L+1) \rp
+	\Delta \lp E_J,\ E_{J-1} \rp = JC\hslash^2
 \end{equation}
-	In diesem Beispiel folgt also mit L=1,S=1
-\begin{equation}
-	E_j(n,L,S) = E(n,L,S) + \frac{c}{2} \lp J(J+1) -8 \rp \hslash^2
-\end{equation}
-\begin{align*}
-	\rightarrow J=3 &: E(n,L,S) + 2c\hslash^2\\
-	J=2 &: E(n,L,S) - 1c\hslash^2\\
-	J=1 &: E(n,L,S) - 3c\hslash^2
-\end{align*}
+wobei $C$ eine Konstante der Dimension $\left[\frac{\text{Energie}}{\hslash^2} \right]$ und C am größten für kleine $n$ ist. Daraus folgt, dass bei großen $n$ die Feinstruktur nur noch sehr klein ist.
 
-c ist am größten für kleine n. $\rightarrow$ Bei großen n nur noch sehr kleine Feinstruktur.
-\subsection{jj-Kopplung}
+\bsp{%
+	Elektronenkonfiguration: $L=2$, $S=1$ $\rightarrow$ $J=1, 2, 3$.\\
+	Anzahl der $J$: $\min \lp 2S+1; 2L+1 \rp=3$ \\
+	
+	 \par\medskip
+	 \begin{minipage}{\linewidth}
+	%\begin{figure}[h]
+		\centering
+		\begin{tikzpicture}
+			% Termschema
+			\node at (5,1) (J3) {$J=3$};
+			\node at (5,0) (J2) {$J=2$};
+			\node at (5,-1) (J1) {$J=1$};
+			
+			\draw (0,0) -- (2,0) node [midway, above] (TextNode) {$L=2$} node [midway, below] (TextNode) {$S=1$} -- (3,1) -- (J3);
+			\draw (2,0) -- (J2);
+			\draw (2,0) -- (3, -1) -- (J1);
+		\end{tikzpicture}
+		\captionof{figure}{Termschema}
+		\begin{tikzpicture}
+			%Vektordiagramme
+			\node at (0,-2) (J3) {$J=3$};
+			\draw [->, >=latex] (J3) -- (0,0) node [midway, right] (TextNode) {$L=2$};
+			\draw [->, >=latex] (0,0) -- (0,1) node [midway, right] (TextNode) {$S=1$}; 
+			
+			\node at (2, -2) (J2) {$J=2$};
+			\draw [->, >=latex] (J2.north) -- (3,-1) node [midway, below, sloped] {$L=2$};
+			\draw [->, >=latex] (3,-1) -- (2,0) node [midway, above, sloped] {$S=1$};
+			\draw [dashed, ->, >=latex] (J2) -- (2,0); 
+			
+			\node at (4.5, -2) (J1) {$J=1$};
+			\draw [->, >=latex] (J1) -- (4.5,0) node [midway, left] {$L=2$};
+			\draw [dashed, ->, >=latex] ([xshift=0.2 cm] J1.north) -- (4.7, -1);
+			\draw [->, >=latex] (4.7, 0) -- (4.7, -1) node [midway, right] {$S=1$}; 
+		\end{tikzpicture}
+		\captionof{figure}{Vektordiagramme der möglichen Additionen}
+	\end{minipage}
+	\par\medskip
+	 
+	\begin{align}
+		E_J(n,L,S) &= E(n,L,S) + \frac{C\hslash^2}{2} \lp J(J+1) -8 \rp 
+		\intertext{Hier wurde einfach in obige Formel eingesetzt.}
+		E_3(n,2,1) &= E(n,2,1) + 2C\hslash^2 \\
+		E_2(n,2,1) &= E(n,2,1) - C\hslash^2  \\
+		E_1(n,2,1) &= E(n,2,1) -3C\hslash^2  \\
+	\end{align}
+}
 
-\subsubsection{SATZ:}
-Sei die Spin-Bahn-Kopplung eines Elektrons $\gg$ Bahn-Bahn-Kopplung und Spin-Spin-Kopplung verschiedener Elektronen. Dann ist der Gesamtdrehimpuls:
-$$ \vec{J} = \sum_i \vec{j}_i = \sum_i \left(\vec{s}_i + \vec{\ell}_i \right)$$
+\subsection{jj--Kopplung}
 
+\satz{%
+	Sei die Spin-Bahn-Kopplung eines Elektrons $\gg$ Bahn-Bahn-Kopplung und Spin-Spin-Kopplung verschiedener Elektronen. Dann ist der Gesamtdrehimpuls:
+	$$ \vec{J} = \sum_i \vec{j}_i = \sum_i \left(\vec{s}_i + \vec{\ell}_i \right)$$
+}
 \begin{itemize}
 	\item Bei jj-Kopplung sind $L$ und $S$ nicht definiert, daher nur Gesamtdrehimpuls $J$
 	\item Multiplett-Zustände nicht mehr erkennbar.
@@ -166,13 +175,14 @@ $$ \vec{J} = \sum_i \vec{j}_i = \sum_i \left(\vec{s}_i + \vec{\ell}_i \right)$$
 \end{figure}
 
 \section{Clebsch-Gordan Koeffizienten \small{(ein kleiner Ausflug...)}}
-\textbf{von Mi$\raisebox{2pt}{\chi}$}\\
+\textbf{von \michi}\\
+
 Allgemeiner Basiswechsel in der Quantenmechanik:\\
-Sei Vektor $\ket{\psi\ }$ in einer Basis $\mathcal{B}:= \left\{ \ket{b_1},\ ...,\ \ket{b_n}  \right\}$ gegeben durch:
+Sei der Vektor $\ket{\psi\ }$ in einer Basis $\mathcal{B}:= \left\{ \ket{b_1},\ ...,\ \ket{b_n}  \right\}$ gegeben durch:
 \begin{equation}
 	\ket{\psi\ } = \sum_{i=1}^{n} a_i \ket{b_i}
 \end{equation}
-$\Rightarrow$ Basisdarstellung in einer zweiten Basis $\mathcal{C}:= \left\{ \ket{c_1},\ ...,\ \ket{c_m} \right\}$ erhält man durch Multiplikation mit dem Eins--Operator in $\mathcal{C}$--Darstellung:
+Daraus folgt: die Basisdarstellung in einer zweiten Basis $\mathcal{C}:= \left\{ \ket{c_1},\ ...,\ \ket{c_m} \right\}$ erhält man durch Multiplikation mit dem Eins--Operator in $\mathcal{C}$--Darstellung:
 \begin{equation}
 	\mathds{1}_{ \left\{ \mathcal{C} \right\} } = \sum_{j=1}^{m} \ket{c_i} \bra{c_i}
 \end{equation}
@@ -181,7 +191,7 @@ $\Rightarrow$ Basisdarstellung in einer zweiten Basis $\mathcal{C}:= \left\{ \ke
 	\label{eq:1}
 	&= \lp \sum_{j=1}^{m} \ket{c_j} \bra{c_j} \rp \sum_{i=1}^{n} a_i \ket{b_i} = \sum_{i,j} \underbrace{\vphantom{\sum} a_i \braket{c_j | b_i}}_{\mathclap{\text{Neue Koeffizienten von $\ket{\psi}$ in $\mathcal{C}$--Basis} }} \ket{c_j}
 \end{align}
-Die $\braket{c_j|b_i}$ nennt man auch ''Transformationsfunktionen''.\\
+Die $\braket{c_j|b_i}$ nennt man auch \textbf{Transformationsfunktionen}.\\
 
 Wende dies nun auf die Addition von Drehimpulsen an:\\
 Seien $\vec{X}_1,\ \vec{X}_2$ zwei verallgemeinerte Drehimpulse ($\vec{X}_i$ könnten z.B. Spins $ \vec{S}$, Bahndrehimpulse $\vec{L}$ oder totale Drehimpulse $\vec{J}$ sein). Dann existieren die zugehörigen Operatoren:
@@ -220,9 +230,9 @@ Die Transformationsfunktion $\braket{x_1, m_1, x_2,m_2|X, M_X, x_1, x_2}$ gibt u
 \end{equation}
 ist die Wahrscheinlichkeit, dass ein System der beiden Drehimpulse $\vec{X}_1,\ \vec{X}_2$ in der Konfiguration $m_1,\ m_2$ gefunden werden kann, wenn es den Gesamtdrehimpulsbetrag $X$ und Gesamt--z--Projektion $M_X$ hat. (Bedingte Wahrscheinlichkeit).\\
 
-Die Berechnung der Clebsch-Gordan-Koeffizienten ist recht kompliziert\footnote{\href{https://de.wikipedia.org/wiki/Clebsch-Gordan-Koeffizient}{https://de.wikipedia.org/wiki/Clebsch-Gordan-Koeffizient}} \footnote{\href{https://en.wikipedia.org/wiki/Table_of_Clebsch?Gordan_coefficients}{https://en.wikipedia.org/wiki/Table\_of\_Clebsch?Gordan\_coefficients}}, weßhalb man sie auch in Tabellen nachschlagen kann (und sollte!).
+Die Berechnung der Clebsch-Gordan-Koeffizienten ist recht kompliziert\footnote{\href{https://de.wikipedia.org/wiki/Clebsch-Gordan-Koeffizient}{https://de.wikipedia.org/wiki/Clebsch-Gordan-Koeffizient}} \footnote{\href{https://en.wikipedia.org/wiki/Table_of_Clebsch?Gordan_coefficients}{https://en.wikipedia.org/wiki/Table\_of\_Clebsch?Gordan\_coefficients}}, weshalb man sie auch in Tabellen nachschlagen kann (und sollte!).
 \subsection{Anleitung zum Lesen der Tabellen}
-Meist ist eine Vielzahl kleinerer Tabellen angegeben. In der linken, oberen Ecke jeder dieser Tabellen steht ''$(x_1)\ x\ (x_2)$'', also die zwei Beträge der zu addierenden Drehimpulse.\\
+Meist ist eine Vielzahl kleinerer Tabellen angegeben. In der linken, oberen Ecke jeder dieser Tabellen steht ''$(x_1)\ \times\ (x_2)$'', also die zwei Beträge der zu addierenden Drehimpulse.\\
 Jede dieser Tabellen ist in mehrere Untertabellen gegliedert, diese haben die Form:
 \begin{figure}[H]
 	\centering

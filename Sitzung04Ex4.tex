@@ -4,10 +4,12 @@
 \begin{document}
 
 \chapter{Teilchendetektoren}
-\textbf{Heinstein,Martina} \newline
+\textbf{von \hein \& \martina} \\
+
 Teilchendetektoren messen Produkte von Kollisionen und Zerfällen.
 
-\subsubsection{Aufgaben}
+In diesem Kapitel wird die Lichtgeschwindigkeit $c=1$ gesetzt und somit auch oft weggelassen.
+\subsubsection*{Aufgaben}
 \begin{itemize}
 	\item Nachweis entstandener Teilchen
 	\item Messung von Energie/Impuls
@@ -15,31 +17,19 @@ Teilchendetektoren messen Produkte von Kollisionen und Zerfällen.
 	\item Teilchenidentifikation (Bestimmung $M^2 = E^2 - \vec{p}^2$)
 \end{itemize}
 
-\subsubsection{Kapitel}
-\begin{enumerate}[\hspace{0.5cm}{4.}1]
-\item Impulsmessung
-\item Energiemessung
-\item Messung von Photonen
-\item Teilchen
-\end{enumerate}
-
 \section{Impulsmessung}
-Ablenkung von geladenen Teilchen im Magnetfeld.\\
-$\rightarrow$ Homogenes B-Feld\\
-$\rightarrow$ Kreisbahn mit Radius $r=\frac{p}{q\cdot B}$
+Ablenkung von geladenen Teilchen im homogenen B--Feld (Magnetfeld). Das Teilchen bewegt sich dadurch auf einer Kreisbahn mit Radius $r=\frac{p}{q\cdot B}$. Stellt man diese Gleichung nach $p	$ um, erhält man den Impuls. 
 
 \subsection{Gasdetektor}
-\begin{itemize}
-	\item Kondensator $\rightarrow$ E-Feld
-	\item Ionisationsgas, nicht elektronegativ\\ $\Delta U = -\frac{N\cdot e }{C}$, wobei $N$ die Teilchenanzahl, $e$ die Elementarladung und $C$ die Kapazität des Kondensators ist. ( siehe Abb. ~\ref{Gasdetektor} )
-\end{itemize}
+In einem Kondensator (erzeugt E--Feld) befindet sich ein nicht elektronegatives Ionisationsgas.
+Die Spannungsänderung nach der Zeit ist gegeben durch \linebreak $\Delta U = -\frac{N\cdot e }{C}$, wobei $N$ die Teilchenanzahl, $e$ die Elementarladung und $C$ die Kapazität des Kondensators ist (siehe Abb. ~\ref{Gasdetektor}).
 
 \begin{figure}[H]
 	\centering
 	\begin{tikzpicture}
 		\node at (0,0) (x0) {$x_0$};
 		\node at (0,1.5) (x) {$x$};
-		\node at (0,-1) (null) {$0$};
+		\node at (0,-1) (null) {$0$};	
 		\node at (6,0.3) (teilchen) {ionisierendes Teilchen};
 		\node at (2.5, 0.2) (ladung1) {$++-+--+-$};
 		\node at (2.5, -0.2) (ladung2) {$--+-++-+$};
@@ -73,10 +63,10 @@ $\rightarrow$ Kreisbahn mit Radius $r=\frac{p}{q\cdot B}$
 
 \subsection{Proportionalzählrohr}
 \begin{itemize}
-	\item sehr dünner Anodendraht  $ \rightarrow  \si{$ \mu {m} $} $ 
-	\item $E(r) = \frac{U_0}{r \cdot \ln \left| \frac{R}{r_A} \right|} \Rightarrow$ starkes Feld im Zentrum (siehe Abb.~\ref{Proportionalzaehlrohr} )
+	\item sehr dünner Anodendraht  $\lp \approx \mu m \rp$ 
+	\item $E(r) = \frac{U_0}{r \cdot \ln \left| \frac{R}{r_A} \right|} \Rightarrow$ starkes Feld im Zentrum (siehe Abb.~\ref{Proportionalzaehlrohr})
 	\item \textbf{Sau} starke Beschleunigung in Nähe des Anodendrahtes
-	\item Reicht aus, im Gas zu ionisieren $\rightarrow$ Sekundärelektronen\\
+	\item Reicht aus um Gas zu ionisieren $\rightarrow$ Sekundärelektronen\\
 		$\Delta U = - \frac{ANe}{C}, \quad A=10^4 - 10^5$ Verstärkungsfaktor
 	
 \end{itemize}
@@ -97,41 +87,43 @@ $\rightarrow$ Kreisbahn mit Radius $r=\frac{p}{q\cdot B}$
 \end{figure}
 
 \subsection{Halbleiterzähler}
-Ein Halbleiterzähler ist ein pn-Übergang, an den in Sperrrichtung eine Spannung angelegt wird. Dadurch entsteht eine Verarmungszone, in der keine freien Ladungsträger vorhanden sind.\\
-Durchgehende Teilchen erzeugen durch Ionisation in dieser Zone Elektronen-Loch-Paare, die im E-Feld zu den Anschlusspolen wandern und ein Signal erzeugen. 
+Ein Halbleiterzähler ist ein pn--Übergang, an den in Sperrrichtung eine Spannung angelegt wird. Dadurch entsteht eine Verarmungszone, in der keine freien Ladungsträger vorhanden sind.\\
+Durchgehende Teilchen erzeugen durch Ionisation in dieser Zone Elektronen--Loch--Paare, die im E--Feld zu den Anschlusspolen wandern und ein Signal erzeugen. 
 
 \subsection{Szintillationszähler}
-\begin{itemize}
-	\item Teilchen oder $\gamma$-Teilchen gibt Energie ab, die in Form von sichtbarem Sicht wieder frei wird.
-	\item Auslesen durch Photodetektor
-\end{itemize}
+Ein Szintillationsdetektor dient der Energie-- und Intensitätsbestimmung von ionisierender Strahlung. Diese Strahlung erzeugt im Szintillator einen kurzen Lichtblitz, welcher über einen Photomultiplier durch einen Photodetektor gemessen wird. 
 
 \section{Energiemessung}
 
 \begin{itemize}
-	\item Absorbtion eines hadronischen Schauers in Kaloriemeter
+	\item Absorbtion eines hadronischen Schauers in einem sog. Kalorimeter
 	\item \boxed{\text{Hadronen: z.B. Protonen, Neutronen.. (aus Quarks zusammengesetzte Teilchen)}}
 \end{itemize}
 
-\subsection{hadronischer Schauer}
+\subsection{Hadronischer Schauer}
 Beim Einfall hochenergetischer Teilchen entstehen Sekundärteilchen, die selbst so lange Teilchen generieren, bis die Energie erschöpft ist. \\
 
-\textbf{Beispiel:}\\
-Mittlere Weglänge eines Teilchens in Blei: $5.6 \si{mm} = \lambda$\\
-Ideale Länge: $20 \lambda \rightarrow 112 \si{mm}$ Blei\\
-Abwechselnd: $2 \si{mm}$ Blei und  $5 \si{mm}$ Szintillationszähler\\
-$\rightarrow 392 \si{mm}$ Länge (elektromagnetisches Kaloriemeter, ECAL)\\
+\bsp{%
+	Mittlere Weglänge eines Teilchens in Blei: $5.6 \si{mm} = \lambda$
+	
+	Ideale Detektorlänge: $20 \lambda \rightarrow 112 \si{mm}$ Blei
+	
+	Abwechselnd: $2 \si{mm}$ Blei und  $5 \si{mm}$ Szintillationszähler
+	
+	$\rightarrow 392 \si{mm}$ Länge (elektromagnetisches Kalorimeter, ECAL)\\
+	
+	Hadronen: Absorbtionslänge $\lambda = 18.5 \si{cm} \rightarrow 10 \lambda = 1.85 \si{m}+$ECAL
+}
 
-Hadronen: Absorbtionslänge $\lambda = 18.5 \si{cm} \rightarrow 10 \lambda = 1.85 \si{m}+$ECAL
 
 \subsection{Messung von Photonen}
 \begin{itemize}
-	\item Röntgen- \& Gammastrahlen in Halbleiterkristallen (Si, Ge, ...) $\rightarrow$ gute Auflösung
+	\item Röntgen-- \& Gammastrahlen in Halbleiterkristallen (Si, Ge, ...) $\rightarrow$ gute Auflösung
 	\item Messung durch szintillierende Kristalle ($NaT, PbWO_4$)
 		\begin{itemize}
 			\item niedrige Energie $\rightarrow$ schlechte Auflösung
 			\item hohe Energie ($>100 \si{MeV}$)+ ausreichende Dichte $\rightarrow$ gute Messung
-			\item ''Kristallkaloriemeter'': $\frac{\sigma_E}{E} = \frac{0.04}{\sqrt{E}} + 0.01 
+			\item ''Kristallkalorimeter'': $\frac{\sigma_E}{E} = \frac{0.04}{\sqrt{E}} + 0.01 
 				\begin{cases}
 					\text{für }1 \si{GeV}&: \frac{\sigma_E}{E}=4.1\% \\
 					\text{für }100 \si{GeV} &: \frac{\sigma_E}{E} = 1.1\%
@@ -142,7 +134,7 @@ Hadronen: Absorbtionslänge $\lambda = 18.5 \si{cm} \rightarrow 10 \lambda = 1.8
 \section{Teilchenidentifikation}
 \begin{itemize}
 	\item Massenbestimmung durch Messung von Impuls \& Flugzeit\\
-		$pc = \beta E = \beta \gamma m_0 c^2$\\
+		$pc = \beta E = \beta \gamma m c^2$\\
 		Impulsbereich limitiert durch Auflösung von Zeitmessung \& Flugstrecken\\
 		Grenze der Methode: Impuls etwa in $\frac{\si{GeV}}{c}$
 	\item Massenbestimmung durch Zerfallsprodukte (Masse \& Impulse erhalten!)\\

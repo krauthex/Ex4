@@ -3,7 +3,7 @@
 
 \begin{document}
 \section{Grundlagen zu Wirkungsquerschnitt, Streuung und der Rutherford-Versuch}
-\textbf{von Michi \& Pauli}\\
+\textbf{von \michi \& \paul}\\
 
 Die Wahrscheinlichkeit $w$, dass ein einfallendes Teilchen mit einem Targetteilchen wechselwirkt, errechnet sich aus:
 \begin{equation}
@@ -22,7 +22,7 @@ Experimentell im Beschleuniger zu bestimmen ist die Reaktionsrate $W$:
 \begin{equation}
 	W = \frac{\md N_{\text{\rom{3}}}}{\md t} = \sigma L
 \end{equation}
-wobei $L$ die Luminosität des Beschleunigers ist.\\
+wobei $L$ die Luminosität des Beschleunigers ist. Dies ist schematisch in Abb. \ref{streuung} dargestellt.
 
 \subsection{Differentieller Wirkungsquerschnitt: $\derive{\sigma}{\Omega}$}
 \begin{equation}
@@ -38,7 +38,8 @@ Ebenso gilt allgemein:
 \end{equation}
 
 %%%% Big Fat Drawing incoming!
-\begin{figure}[H]
+
+\begin{figure}[h]
 	\centering
 	\begin{tikzpicture}
 		% Nodes
@@ -69,6 +70,7 @@ Ebenso gilt allgemein:
 		\draw [dotted, rotate around={180:(3,0.2)}, yshift=0cm, xshift=-0.16cm] (3, 0.2) arc (90:240:0.5cm and 1cm);
 	\end{tikzpicture}
 	\caption{Streuung eines Teilchenstrahles (Beam) an einem Target bzw. an einer Targetfläche ($F_T$). }
+	\label{streuung}
 \end{figure}
 
 \subsection{Rutherford-Querschnitt}
@@ -107,7 +109,7 @@ Hierbei wurde verwendet, dass
 
 \subsection{Raumwinkel $\Omega$}
 \begin{equation}
-	\Omega := \mathop{\int}_{\varphi_1}^{\varphi_2} \mathop{\int}_{\vartheta_1}^{\vartheta_2} \sin \vartheta^\prime \md \vartheta^\prime \md \varphi^\prime
+	\Omega := \mathop{\int}_{\varphi_1}^{\varphi_2} \kern -0.2em \mathop{\int}_{\vartheta_1}^{\vartheta_2} \sin \vartheta^\prime \md \vartheta^\prime \md \varphi^\prime
 \end{equation}
 für Rutherford folgt hieraus: 
 \begin{align}
@@ -121,10 +123,10 @@ wobei $\si{sr}$ für Steradianten steht.
 
 \subsection{Differentieller Wirkungsquerschnitt Part \rom{2}}
 \begin{equation}
-	\derive{\sigma}{q^2} = \derive{\sigma}{\Omega} \derive{\Omega}{q^2} = \derive{\sigma}{\Omega} \frac{2 \pi \sin \vartheta \md \vartheta}{\md\lp 4 p^2 \sin^2 \frac{\vartheta}{2} \rp} = \derive{\sigma}{\Omega} \frac{\pi}{\left\vert \vec{p} \right\vert^2}
+	\derive{\sigma}{q^2} = \derive{\sigma}{\Omega} \derive{\Omega}{q^2} = \derive{\sigma}{\Omega} \frac{2 \pi \sin \vartheta\ \md \vartheta}{\md\lp 4 p^2 \sin^2 \frac{\vartheta}{2} \rp} = \derive{\sigma}{\Omega} \frac{\pi}{\left\vert \vec{p} \right\vert^2}
 \end{equation}
+Herleitung:
 \begin{equation}
-	\text{Herleitung:}
 	\lp \derive{\vartheta}{('')} = \lp \derive{\lp 4p^2 \sin^2 \lp \frac{\vartheta}{2} \rp \rp}{\vartheta} \rp^{-1} = 4p^2 \sin \frac{\vartheta}{2} \cos \frac{\vartheta}{2} = 2 p^2 \sin \vartheta \rp 
 \end{equation}
 

@@ -2,7 +2,8 @@
 \begin{document}
 
 \chapter{Strukturinformation aus Streuexperimenten}
-\textbf{von Martina} \\ \newline 
+\textbf{von \martina} \\ 
+ 
 \textbf{Definition Struktur:} 
 Räumliche Verteilung von Masse,Ladung und Magnetisierung  \\ \newline 
 Um etwas über die räumliche Struktur zu erfahren, misst man den Wirkungsquerschnitt (Streuwahrscheinlichkeit in Form einer Fläche) in Abhängigkeit vom Streuwinkel (der mit dem Impulsübertrag zusammenhängt). \newline
@@ -25,11 +26,11 @@ Wobei v' die Geschwindigkeit des abgelenkten Teilchens nach der Streuung ist (si
 \begin{figure}[h]
 \centering
 	\begin{tikzpicture}
-	\draw[->] (0,0) -- (2,0);
-	\draw[->] (2,0) -- (0.5,-1);
-	\draw[->] (0.5,-1) -- (0,0);
+	\draw[->, -latex] (0,0) -- (2,0);
+	\draw[->, -latex] (2,0) -- (0.5,-1);
+	\draw[->, -latex] (0.5,-1) -- (0,0);
 	\draw [dotted] (2,0) -- (3.5,0);
-	\draw[->] (2,0) -- (3.5,1);
+	\draw[->, -latex] (2,0) -- (3.5,1);
 	\draw (2.5,0) arc(0:35:0.5cm);
 	
 	\node at (1,0.25) {$  \vec p$};

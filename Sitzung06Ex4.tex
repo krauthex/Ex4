@@ -2,6 +2,9 @@
 
 
 \begin{document}
+\clearpage
+\section{Übersicht des Elementarteilchen--Zoos}
+\textbf{von \hein \& \soeren}\\
 
 \begin{table}[H]
 	\centering
@@ -53,13 +56,13 @@
 
 \subsection{Anmerkungen}
 \begin{itemize}
-	\item Es gibt insgesamt 8 Gluonen, die sich in ihrer Farbladung unterscheiden
-	\item Das Higgs-Boson ist ein weiteres Elementarteilchen, das sich keiner der 3 Gruppen zuordnen lässt und Teil des Higgs-Feldes ist. (Annahme: durch Wechselwirkung mit dem Higgsfeld erhalten Teilchen ihre Masse.)
+	\item Es gibt 8 unabhängige Gluonen, die sich in ihrer Farbladung unterscheiden
+	\item Das Higgs--Boson ist ein weiteres Elementarteilchen, das sich keiner der 3 Gruppen zuordnen lässt und Teil des Higgs--Feldes ist. (Annahme: durch Wechselwirkung mit dem Higgsfeld erhalten Teilchen ihre Masse.)
 \end{itemize}
 
 \section{Leptonen}
 \begin{itemize}
-	\item 3 Generationen
+	\item Es gibt 3 Generationen: $e,\ \mu,\ \tau$
 	\item In jeder Generation ein Teilchen mit $q=-e$ und eines mit $q=0$ sowie deren Antiteilchen
 	\item Antiteilchen haben entgegengesetztes Vorzeichen bei Ladung und Leptonenzahl
 \end{itemize}
@@ -68,7 +71,7 @@
 	\centering
 	$
 	\begin{array}{cccc}
-		\text{Generation} & q=-1 & q=0 & \text{Leptonenzahl } \lp = n_l - n_{\bar{l}} \rp \\ \hline
+		\text{Generation} & q=-1 & q=0 & \text{Leptonenzahl } \lp = n_L - n_{\bar{L}} \rp \\ \hline
 		1 & e^- & \nu_e & L_e = 1,\ L_\mu = 0,\ L_\tau = 0 \\ 
 		2 & \mu^- & \nu_\mu & L_e = 0,\ L_\mu = 1,\ L_\tau = 0 \\ 
 		3 & \tau^- & \nu_\tau & L_e = 0,\ L_\mu = 0,\ L_\tau = 1
@@ -77,27 +80,28 @@
 	\captionof{table}{Übersicht der 3 Leptonen--Generationen und ihrer Eigenschaften}
 \end{table}
 
-Die Antileptonen werden wie folgt notiert: $e^+,\ \mu^+,\ \tau^+,\ \overline{\nu}_e,\ \overline{\nu}_\mu,\ \overline{\nu}_\tau$.
+Die Antileptonen werden wie folgt notiert: $e^+,\ \mu^+,\ \tau^+,\ \overline{\nu}_e,\ \overline{\nu}_\mu,\ \overline{\nu}_\tau$. Sie haben \textbf{negative} Leptonenzahl.
 
-\subsection{Beispiel eines Zerfalls}
-Myon zerfällt zu einem Elektron und zwei Neutrinos:
-
-\begin{table}[H]
-	\centering
-	$
-	\begin{array}{c|rcrrr}
-	& \mu^- & \rightarrow & e^-\ + & \overline{\nu_e}\ + & \nu_\mu \\ \hline
-	q & -1 &  & -1 & 0 & 0 \\ 
-	L_e & 0 &  & 1 & -1 & 0 \\ 
-	L_\mu & 1 &  & 0 & 0 & 1
-	\end{array} 
-	$
-	\captionof{table}{Myonenzerfall}
-\end{table}
-
-Ladung und Leptonenzahl bleiben \textbf{erhalten}. Masse der Produkte darf die des Edukts nicht überschreiten.
-
+\bsp{
+	Myon zerfällt zu einem Elektron und zwei Neutrinos:
+	
+	\begin{table}[H]
+		\centering
+		$
+		\begin{array}{c|rcrrr}
+		& \mu^- & \rightarrow & e^-\ & +\ \overline{\nu}_e\ & +\ \nu_\mu \\ \hline
+		q & -1 &  & -1 & 0 & 0 \\ 
+		L_e & 0 &  & 1 & -1 & 0 \\ 
+		L_\mu & 1 &  & 0 & 0 & 1
+		\end{array} 
+		$
+		\captionof{table}{Myonenzerfall}
+	\end{table}
+	
+	Ladung und Leptonenzahl bleiben \textbf{erhalten}. Die Masse der Produkte darf die des Edukts nicht überschreiten (''kinematisch erlaubt'').
+}
 \section{Quarks}
+Für Quarks und Hadronen (Quark--Komposita) führen wir weitere Quantenzahlen ein. Da up-- und down--Quark sehr ähnliche Eigenschaften (Masse) besitzen, können sie durch eine gemeinsame Quantenzahl beschrieben werden (wird in folgenden Kapiteln präzisiert).
 \begin{table}[H]
 	\centering
 	$
@@ -114,24 +118,28 @@ Ladung und Leptonenzahl bleiben \textbf{erhalten}. Masse der Produkte darf die d
 	\caption{Übersicht der 3 Quark-Generationen und deren Eigenschaften}
 \end{table}
 
-Hierbei steht $I_3$ für den sog. Isospin, und S, C, B, T für die Quantenzahlen.\\
+Hierbei steht $I_3$ (auch $I_z$) für die z--Projektion des sog. Isospins $I$ und S, C, B, T für weitere Quantenzahlen: Strangeness, Charmness, Bottomness und Topness. \\
 
-Antiquarks haben umgekehrtes Vorzeichen bei Ladung und Quantenzahlen/Isospin. $I_3$, S, C, B, T sind Flavour-Quantenzahlen:
-\subsection{Flavour-Quantenzahlen $I_3,\ S,\ C,\ B,\ T$}
+Antiquarks haben umgekehrtes Vorzeichen bei Ladung und Quantenzahlen/Isospin. $I_3$, S, C, B, T sind Flavour--Quantenzahlen:
+\subsection{Flavour--Quantenzahlen $I_3,\ S,\ C,\ B,\ T$}
+Die z--Projektion des Isospins ist definiert durch
 \begin{align}
-		&I_3 = \frac{1}{2} \lp \lp n_u - n_{\overline{u}} \rp - \lp n_d - n_{\overline{d}} \rp \rp \\
-		&\rightarrow up-Quark:\ I_3 = \frac{1}{2};\ down-Quark:\ I_3=-\frac{1}{2}
+		&I_3 = \frac{1}{2} \lp \lp n_u - n_{\overline{u}} \rp - \lp n_d - n_{\overline{d}} \rp \rp 
+		\intertext{Hieraus folgt für up-- und down--Quarks:}
+		&up-Quark:\ I_3 = \frac{1}{2};\ down-Quark:\ I_3=-\frac{1}{2}
 \end{align}
 \begin{align}
-	C &= n_C - n_{\overline{C}} \rightarrow charme-Quark:\ C=1\\
-	S &= n_S - n_{\overline{S}} \rightarrow strange-Quark:\ S=-1\\
-	T &= n_T - n_{\overline{T}} \rightarrow top-Quark:\ T=1\\
-	B &= n_B - n_{\overline{B}} \rightarrow bottom-Quark:\ B=-1\\
+	C &= n_c - n_{\overline{c}} \rightarrow charm-Quark:\ C=1\\
+	S &= n_s - n_{\overline{s}} \rightarrow strange-Quark:\ S=-1\\
+	T &= n_t - n_{\overline{t}} \rightarrow top-Quark:\ T=1\\
+	B &= n_b - n_{\overline{b}} \rightarrow bottom-Quark:\ B=-1
 \end{align}
+wobei $n$ jeweils die Anzahl der (Anti--)Quarks beschreibt.
 
 \subsection{Farbladung}
-Quarks können 3 verschiedene Farbladungen annehmen: $r,\ g,\ b$\\
-Antiquarks können 3 Antifarben annehmen: $\overline{r},\ \overline{g},\ \overline{b}$\\
+Die Farbladung ist eine weitere Quantenzahl. 
+Quarks können 3 verschiedene Farbladungen annehmen: $r,\ g,\ b$ (rot, grün, blau)\\
+Antiquarks können 3 Antifarben annehmen: $\overline{r},\ \overline{g},\ \overline{b}$ (cyan, magenta, gelb)\\
 
 Alle gebundenen Zustände sind farbneutral (\textbf{Confinement-Hypothese}).\\
 Dies kann auf 2 Arten erreicht werden:
@@ -147,9 +155,8 @@ Gluonen tragen jeweils eine Farb- und Antifarbladung.\\
 $\rightarrow\ 3^2 = 9$ Kombinationsmöglichkeiten\\
 $\rightarrow$ davon ist aber eine neutral $\rightarrow$ 8 Möglichkeiten
 
-\section{Charakterisierung durch WW}
 \begin{itemize}
-	\item Leptonen unterliegen der schwachen WW, der Gravitation und, falls sie geladen sind, der el.mag. WW.
+	\item Leptonen unterliegen der schwachen WW, der Gravitation und -- falls sie geladen sind -- der elektromagnetischen Wechselwirkung.
 	\item Quarks unterliegen allen Wechselwirkungen
 \end{itemize}
 \end{document}

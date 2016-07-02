@@ -4,47 +4,50 @@
 \begin{document}
 
 \section{Darstellung der Teilchen-WW mit Feynman-Diagrammen}
-\textbf{S\o{}ni,Martina}
-	\subsection{Regeln}
+\textbf{von \soeren \& \martina}\\
+
+Zur Berechnung der Wirkungsquerschnitte bzw. Übergangswahrscheinlichkeiten gibt es in der Quantenelektrodynamik (QED) Potenzreihen, die sich durch sogenannte Feynman--Diagramme verbildlichen lassen. Wir werden uns damit beschäftigen, welche Wechselwirkungen überhaupt möglich sind und die niedrigsten Ordnungen davon auch aufzeichnen. Wir kennen stets nur die Reaktionsedukte und --produkte und bauen uns daraus folgendes Modell auf:  
+
+\subsection{Regeln}
 	
 	\begin{itemize}
 		\item Meist ist die Zeitachse eingezeichnet, übrige Richtungen beziehen sich auf den Raum
-		\item Teilchen werden durch Linien symbolisiert, dabei gibt die Pfeilrichtung an, ob es sich um das Teilchen selbst (Pfeil in Richtung der Zeitachse) oder sein Antiteilchen (Pfeil entgegengesetzt zur Zeitachse gerichtet).\\
-		Die reellen Teilchen erfüllen alle $E^2 - p^2 = m^2\ (c=1)$.
-		\item virtuelle Teilchen hingegen sind durch im Feynman-Diagramm abgeschlossene Linie dargestellt und erfüllen $E^2 - p^2 = m^2$ \textbf{nicht}!
-		\item Linienformen können angeben, um welche Teilchen es sich handelt. So haben die Eichbosonen $\gamma,\ W^+,\ W^-,\ Z^0$ allgemein eine Wellenlinie (~\ref{Linie Eichbosonen} ) bzw. Gluonen eine schraubenförmige Linie (~\ref{Linie Gluon} ). Oftmals werden aber auch geschtrichelte Linien für Propagatoren der schwachen Wechselwirkung (~\ref{Linie WeakWW} ) und die Wellenlinien für Photonen ( ~\ref{Linie Photon} ) verwendet.
-		\item Vertices, die Knotenpunkte zwischen den Linien, geben durch ihre Anzahl die Ordnung der Feynman-Diagramme an.
+		
+		\item Teilchen werden durch Linien symbolisiert, dabei gibt die Pfeilrichtung an, ob es sich um das Teilchen selbst 	(Pfeil in Richtung der Zeitachse) oder sein Antiteilchen (Pfeil entgegengesetzt zur Zeitachse gerichtet).\\
+		Die reellen Teilchen erfüllen alle $E^2 - p^2 = m^2\ (c=1)$. 
+		
+		\item virtuelle Teilchen hingegen sind durch im Feynman--Diagramm abgeschlossene Linie dargestellt und erfüllen $E^2 - p^2 = m^2$ \textbf{nicht}!
+		
+		\item Linienformen können angeben, um welche Teilchen es sich handelt. So haben Fermionen (Quarks, Leptonen) eine durchgezogene Linie, die Eichbosonen $\gamma,\ W^+,\ W^-,\ Z^0$ allgemein eine Wellenlinie und Gluonen eine schraubenförmige Linie. Oftmals werden aber auch geschtrichelte Linien für Propagatoren der schwachen Wechselwirkung und die Wellenlinien nur für Photonen verwendet (so wird es auch in diesem Skript gehandhabt).\\
+		PLACEHOLDER FÜR LINIENTYPEN IN FM--DIAGRAMMEN.\\
+		
+		\item Vertices, die Knotenpunkte zwischen den Linien, geben durch ihre Anzahl die Ordnung der Feynman--Diagramme an. Sie verbinden (in echten Feynman--Diagrammen) genau drei Linien. 
+		
 		\item Propagatoren, die Linien zwischen Vertices, sind virtuell und haben keine Vorzugsrichtung.
 	\end{itemize}
-	
-	\begin{figure}[h]
-		\centering
-		\feynmandiagram [horizontal=f1 to f2] {
-			f1 -- [photon] f2
-		};
-		\caption{Photon}
-		\label{Linie Photon}
-		\text{und}
 
-		\feynmandiagram [horizontal=f1 to f2] {
-			f1 -- [scalar]	f2
-		};
-		\caption{$W^-,W^+,Z^0$}
-		\label{Linie WeakWW} 
-		\text{oder}
-		
-		\feynmandiagram [horizontal=f1 to f2] {
-					f1 -- [photon] f2
-				};
-				\caption{Eichbosonen}
-				\label{Linie Eichbosonen}
-		
-		\feynmandiagram [horizontal=f1 to f2] {
-			f1 -- [gluon] f2
-		};
-		\caption{Gluon}
-		\label{Linie Gluon}
-	\end{figure}
+
+
+%\begin{figure}[h]
+%		\centering
+%		\feynmandiagram [horizontal=f1 to f2] {%
+%			f1 -- [photon, edge label=Photon] f2,
+%		};
+%		\caption{Photon}
+%		%\label{Linie Photon}
+%		%\text{und}
+%			\feynmandiagram [horizontal=f1 to f2] {%
+%				f1 -- [scalar, edge label=$W^{-},W^{+},Z^{0}$] f2,
+%			};
+%		\caption{$W^-,W^+,Z^0$}
+%		%\label{Linie WeakWW} 
+%	
+%		\feynmandiagram [horizontal=f1 to f2] {%
+%			f1 -- [gluon, edge label=Gluon] f2,
+%		}
+%		\caption{Gluon}
+%	%	\label{Linie Gluon}
+%\end{figure}
 	
 	$
 	\begin{array}{c|ccc}
@@ -56,8 +59,25 @@
 	\end{array} 
 	$
 	\captionof{figure}{Tabelle über die WW von Eichbosonen}
+
+\subsection{Erhaltungsgrößen (in nachfolgenden Kapiteln präzisiert)}
+Die folgenden Sätze gelten nicht für alle verschiedenen Wechselwirkungen. Welche Wechselwirkungen es gibt, wird später genauer erklärt. Hier soll lediglich eine Sammlung der Erhaltungsgrößen stehen. 
+
+\begin{enumerate}
+	\item kinematisch erlaubt, d.h. Energie und Impuls erhalten
 	
-	\subsection{Beispiele}
+	\item Leptonenzahl und Baryonenzahl erhalten. Dazu muss man anmerken, dass nur die Neutrino--Oszillation die Baryonenzahlerhaltung verletzt.
+	
+	\item Gesamtdrehimpuls $(\pvec{J})$ erhalten
+	
+	\item Parität P und Ladungskonjugation C erhalten (gilt nicht bei schwacher Wechselwirkung)
+	
+	\item Ladung erhalten
+	
+	\item Quarkflavour erhalten (gilt nicht bei schwacher Wechselwirkung)
+\end{enumerate}
+
+\subsection{Beispiele}
 	
 	\begin{enumerate}
 		\item Positron (Antifermion) + Elektron(Fermion) in Feynman-Diagramm 2. Ordnung:
@@ -93,8 +113,14 @@
 				\caption{zeitartig $q^2 >0$ (links) / raumartig $q^2 < 0$ (rechts)}
 			\end{figure}
 			%
-			Wichtig: Das Zeitintervall der Wechselwirkung ist durch die Heisenberg'sche Unschärferelation beschränkt: $\Delta E \cdot \Delta t \ge \hslashtwo$\\
-			für el.mag. WW: $E = h \cdot \nu \Rightarrow \Delta t \ge (2\pi \nu)^{-1}$\\
+			Wichtig: Das Zeitintervall der Wechselwirkung ist durch die Heisenberg'sche Unschärferelation
+			\begin{equation}
+				 \Delta E \cdot \Delta t \ge \hslashtwo
+			\end{equation}
+			beschränkt.
+			
+			Für elektromagnetische WW: $E = h \cdot \nu \Rightarrow \Delta t \ge \frac{1}{4\pi \Delta \nu}$
+			
 			Diese Unschärfe erlaubt die Superposition aller möglichen Prozesse, die wir durch die Feynman-Diagramme darstellen können.
 
 			\item Compton-Effekt:
@@ -141,11 +167,17 @@
 	
 	\subsection{Feynman-Kalkül}
 	
-	Prozesse sind auf beliebig vielen Arten darstellbar (mehr Vertices möglich). Jeder Vertex liefert die Wurzel aus einer Kopplungskonstante: $\sqrt{\alpha}$.\\
-	Z.B. $\alpha = \frac{e^2}{\hslash c}$ für el.mag. WW ist es die Feinstrukturkonstante.\\
-	Je mehr Vertices ein Diagramm enthällt, desto geringer ist sein Beitrag zur Gesamtamplitude der superponierten Zustände (alle bis heute erzielten Forschungsergebnisse mit Termen nur bis 4. Ordnung errechnet).\\
-	Austauschteilchen in Berechnung von Matrixelement durch Propagator beschrieben:
-	$$ \text{Es gilt: } \frac{1}{m^2 + q^2} \text{, Matrixelement } M \propto \frac{1}{\alpha q^2} \Rightarrow \sigma \propto \frac{\alpha^2}{q^4}$$
+	Prozesse sind auf beliebig vielen Arten darstellbar (mehrere Vertices möglich). Jeder Vertex liefert die Wurzel aus einer Kopplungskonstanten $\sqrt{\alpha_{\text{WW}}(q)}$, wobei hier $q$ für die Ladung des Teilchens und WW für die Art der Wechselwirkung steht.
+	
+	Beispielsweise ist es für die elektromagnetische WW die Feinstrukturkonstante $\alpha = \frac{e^2}{\hslash c}$.\\
+	
+	Je mehr Vertices ein Diagramm enthält, desto geringer ist sein Beitrag zur Gesamtamplitude der superponierten Zustände (alle bis heute erzielten Forschungsergebnisse mit Termen nur bis 4. Ordnung errechnet).
+	
+	Austauschteilchen in Berechnung von Matrixelement durch Propagator beschrieben. Es gilt:
+	\begin{equation}
+		 \frac{1}{m^2 + q^2} \text{, Matrixelement } M \propto \frac{1}{\alpha q^2} \Rightarrow \sigma \propto \frac{\alpha^2}{q^4}
+	\end{equation}
 		
+		PLACEHOLDER FÜR (SINNVOLLE) ERKLÄRUNG HIERZU.
 	
 \end{document}

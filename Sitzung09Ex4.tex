@@ -1,7 +1,6 @@
 \documentclass[Ex4_Zusammenfassung.tex]{subfiles}
 
 \begin{document}
-\textbf{von Mi$\raisebox{2pt}{\chi}$ und Pauli}
 \subsection{Streuamplitude}
 Löst man die Schrödingergleichung für die Streuung eines Wellenpakets an einem fixen Target so erhält man als Lösung
 \begin{equation}
@@ -11,6 +10,7 @@ Dies entspricht einer Superpostion von einer ebenen Welle mit einer gestreuten K
 \begin{equation}
 \frac{d\sigma}{d\Omega} = |f_k(\theta,\phi)|^2
 \end{equation}
+
 \section{Zwischenresumée}
 Wir hatten bisher Stoßprozesse von Elementarteilchen/Hadronen bei hohen Geschwindigkeiten ($v \approx c$) betrachtet. Wichtig ist es dabei, den Wirkungsquerschnitt einfach als "Targetflächendichtebereinigte Reaktionswahrscheinlichkeit"
 \begin{equation} 
@@ -21,18 +21,18 @@ Wir hatten bisher Stoßprozesse von Elementarteilchen/Hadronen bei hohen Geschwi
 \frac{d\sigma}{d(q^2)} = \frac{d\sigma}{d\Omega} \frac{d\Omega}{d(q^2)} \stackrel{elastisch}{=}  \frac{d\sigma}{d\Omega} \frac{\pi}{|\vec p|^2}
 \end{equation}
 wobei der Betrag des Impulses  $|\vec p|$ des eingehenden Wellenpakets gleich dem Betrag des ausgehenden Wellenpakets ist und $q^2 = 4 |\vec p|^2 sin^2(\frac{\theta}{2}) $ der quadrierte Dreierimpulsübertrag ist. \newline
-Dies benutzt, dass der Projektilimpuls erhalten ist (niedrige Energie). Außerdem ist $\frac{d\sigma}{d\Omega} = |f(\theta,\phi)|^2$ das Betragsquadrat der Streuamplitude $f \in \mathbb{C}$ [Dimension:Länge]
+Dies benutzt, dass der Projektilimpuls erhalten ist (niedrige Energie). Außerdem ist $\frac{d\sigma}{d\Omega} = |f(\theta,\phi)|^2$ das Betragsquadrat der Streuamplitude $f \in \mathbb{C}$ [Dimension: Länge]
 
 \subsection{Differenzielle Wirkungsquerschnitte zur Teilchenformbestimmung}
 Um jetzt die radiale Form von Targetteilchen zu bestimmen werden wir im differentiellen Wirkungsquerschnitt immer mehr elektromagnetische Effekte berücksichtigen.
 \begin{figure}[H]
 \begin{tabular}{lcl}
-Name & Beschreibung & Formel \\
-Rutherford & \begin{tabular}{cc} Projektil & $^{ \text{punktförmig}}_{\text{spinlos}}$ \\ Target & $^{ \text{punktförmig}}_{\text{spinlos}}$ \\ \end{tabular}  & $\frac{d\sigma^R}{d\Omega} = (zZe^2)^2 \cdot \left(\frac{1}{16 \ E_{kin}^2 \sin^4(\nicefrac{\theta}{2})} \  \text{oder} \ \frac{4 m_{Proj}^2}{q^4} \  \text{oder} \  \underbrace{\frac{4E_{end}^2}{(qc)^4}}_{relativist.}\right)$ \\ 
-Mott & \begin{tabular}{cc} Projektil & $^{ \text{punktförmig}}_{\text{mit Spin}}$ \\ Target & $^{ \text{punktförmig}}_{\text{spinlos}}$ \\ \end{tabular}  & $\frac{d\sigma^M}{d\Omega} = (zZe^2)^2 \cdot \frac{4 E_{end}^2}{(qc)^4} \cdot  \underbrace{(1-\beta^2 sin^2\left(\nicefrac{\theta}{2}\right))}_{\text{fuer} \  v \approx c \  \text{ungefaehr} \  cos^2(\frac{\theta}{2})}$
+Name & Beschreibung & Formel \\ \hline
+Rutherf. & \begin{tabular}{cc} Projektil & $^{ \text{punktf.}}_{\text{spinlos}}$ \\ Target & $^{ \text{punktf.}}_{\text{spinlos}}$ \\ \end{tabular}  & $\frac{d\sigma^R}{d\Omega} = (zZe^2)^2 \cdot \left(\frac{1}{16 \ E_{kin}^2 \sin^4(\nicefrac{\theta}{2})} \  \text{oder} \ \frac{4 m_{Proj}^2}{q^4} \  \text{oder} \  \underbrace{\frac{4E_{end}^2}{(qc)^4}}_{relativist.}\right)$ \\ 
+Mott & \begin{tabular}{cc} Projektil & $^{ \text{punktf.}}_{\text{mit Spin}}$ \\ Target & $^{ \text{punktf.}}_{\text{spinlos}}$ \\ \end{tabular}  & $\frac{d\sigma^M}{d\Omega} = (zZe^2)^2 \cdot \frac{4 E_{end}^2}{(qc)^4} \cdot  \underbrace{(1-\beta^2 sin^2\left(\nicefrac{\theta}{2}\right))}_{\text{fuer} \  v \approx c \  \text{ungefaehr} \  cos^2(\frac{\theta}{2})}$
 \\ 
-Dirac & \begin{tabular}{cc} Projektil & $^{ \text{punktförmig}}_{\text{mit Spin}}$ \\ Target & $^{ \text{punktförmig}}_{\text{mit Spin}}$ \\ \end{tabular}  & $\frac{d\sigma^D}{d\Omega} = (zZe^2)^2 \cdot \frac{4 E_{end}^2}{(qc)^4} \cdot \left(1-\beta^2 \underbrace{\frac{(qc)^2}{2 E_T}}_{=2 M_T^2 c^4}  tan^2(\nicefrac{\theta}{2})\right)$\\
-Final & \begin{tabular}{cc} Projektil & $^{ \text{punktförmig}}_{\text{mit Spin}}$ \\ Target & $^{ \text{ausgedehnt}}_{\text{mit Spin}}$ \\ \end{tabular}  & $\frac{d\sigma}{d\Omega} = (zZe^2)^2 \cdot \frac{4 E_{end}^2}{(qc)^4}^2 \cdot \left( \frac{G_E^2 - \left(\nicefrac{qc}{2E_T}\right)^2 G_M^2}{1- \left(\nicefrac{qc}{2E_T}\right)^2} - \beta^2 \left(\frac{qc}{2E_T}\right)^2 G_M^2 tan^2(\nicefrac{\theta}{2})\right)$
+Dirac & \begin{tabular}{cc} Projektil & $^{ \text{punktf.}}_{\text{mit Spin}}$ \\ Target & $^{ \text{punktf.}}_{\text{mit Spin}}$ \\ \end{tabular}  & $\frac{d\sigma^D}{d\Omega} = (zZe^2)^2 \cdot \frac{4 E_{end}^2}{(qc)^4} \cdot \left(1-\beta^2 \underbrace{\frac{(qc)^2}{2 E_T}}_{=2 M_T^2 c^4}  tan^2(\nicefrac{\theta}{2})\right)$\\ 
+Final & \begin{tabular}{cc} Projektil & $^{ \text{punktf.}}_{\text{mit Spin}}$ \\ Target & $^{ \text{ausgedehnt}}_{\text{mit Spin}}$  \end{tabular}  & $ \frac{d\sigma}{d\Omega} = (zZe^2)^2 \cdot \frac{4 E_{end}^2}{(qc)^4}^2 \cdot \left( \frac{G_E^2 - \left(\nicefrac{qc}{2E_T}\right)^2 G_M^2}{1- \left(\nicefrac{qc}{2E_T}\right)^2} - \beta^2 \left(\frac{qc}{2E_T}\right)^2 \cdot G_M^2 tan^2(\nicefrac{\theta}{2})\right)$
 \\ 
 $^{\text{Rosenbluth}}_{\text{Plot-Formel}}$ & & $\frac{d\sigma}{d\Omega}= a \  (G_E^2 - b \  G_M^2) - d \  G_M^2 tan^2(\nicefrac{\theta}{2})$\\
 \end{tabular}
@@ -73,7 +73,7 @@ Um den Kernradius abzuschätzen kann man den rms-Radius ("Root Mean Square") die
 \item Pion: $\braket{r} =$ 0.66 fm 
 \item Kaon: $\braket{r} =$ 0.53 fm 
 \end{itemize}
-\newpage
+
 Die Ergebnisse der Experimente liefern folgendes Bild:
 \begin{figure}[H]
 \begin{tikzpicture}[scale=1]
@@ -136,8 +136,9 @@ Diese sind gerade die sogenannten Spin-g-Faktoren der Nukleonen:
 \begin{itemize}
 \item Proton: $\vec \mu_p = \underbrace{+2.002 \cdot 2.79}_{\text{Landé-Faktor} \ g_p=5.59} \cdot \underbrace{\frac{q_p \hslash}{2m_p}}_{Kernmagneton \  \mu_N} \cdot \frac{\vec S}{\hslash} $
 \item Neutron: $\vec \mu_n = \overbrace{+2.002 \cdot (-1.91)}^{\text{Landé-Faktor} \ g_n=-3.83} \cdot \overbrace{\frac{q_p \hslash}{2 m_n}}^{Kernmagneton \  \mu_N} \cdot \frac{\vec S}{\hslash} $
-\end{itemize} \newpage
-\textbf{Zur Erinnerung:} \newline
+\end{itemize}
+\textbf{Zur Erinnerung:} 
+
 Fließt ein Kreisstrom I durch eine orientierte Fläche $\vec A$ so entsteht ein magnetisches Moment [Einheit: $Am^2$]
 \begin{equation}
 \vec \mu = I \vec A = \frac{Q}{T} \pi r^2 \vec n_A = \frac{Q}{2m} \vec L 
@@ -177,15 +178,16 @@ Für sehr große Impulsüberträge q kommt es zu inelastischen Stößen. In folg
 			\draw [decoration={brace, mirror, raise=0.2cm}, decorate] (i2.north)  -- (i4.south) node [pos=0.5, left, xshift=-0.3cm, text width=1.5cm] {Proton $M_p$,$P_p$};
 		\end{feynman}
 	\end{tikzpicture}
-\end{figure} \newpage
+\end{figure}
+
 Im Ruhesystem des Protons sind die Viererimpulse: \newline
 $P_e = \twovec{E}{\vec p} \qquad P_p = \twovec{M_p}{0} \qquad P'_e = \twovec{E'}{\vec p'} \qquad P'_x = \twovec{E'_x}{\vec p'_x}$ \\ \newline
 Anhand des Energieerhaltungssatzes lässt sich der \newline Energieübertrag $\nu = E'-E = M_p - E'_x$ definieren. \newline
 Wir betrachten nun den Impulsübertrag des Elektrons in Abhängigkeit des Streuwinkels $\theta$
 \begin{align*}
-q_e^2 &= (P_e-P'_e)^2 = (E-E')^2 - (\vec p - \vec p')^2 = E^2 - \vec p^2 + E'^2 - \vec p'^2 - 2EE'+ 2|\vec p| |\vec p'| cos(\theta) \\ 
- &= 2 m_e^2 - 2 \sqrt{m_e^2 + \vec p^2} \sqrt{m_e^2 + \vec p'^2} + 2|\vec p| |\vec p'| cos(\theta) \stackrel{m_e \ klein}{\approx} -2 |\vec p| |\vec p'|(1-cos(\theta)) \\
- &= -4 |\vec p| |\vec p'| sin^2(\nicefrac{\theta}{2}) < 0
+	q_e^2 &= (P_e-P'_e)^2 = (E-E')^2 - (\vec p - \vec p')^2 = E^2 - \vec p^2 + E'^2 - \vec p'^2 - 2EE'+ 2|\vec p| |\vec p'| cos(\theta) \\ 
+	 &= 2 m_e^2 - 2 \sqrt{m_e^2 + \vec p^2} \sqrt{m_e^2 + \vec p'^2} + 2|\vec p| |\vec p'| cos(\theta) \stackrel{m_e \ klein}{\approx} -2 |\vec p| |\vec p'|(1-cos(\theta)) \\
+	 &= -4 |\vec p| |\vec p'| sin^2(\nicefrac{\theta}{2}) < 0
 \end{align*}
 Somit ist der Impulsübertrag des Elektrons $\vec q_e$ ortsartig. Wir verfahren nun analog mit dem Impulsübertrag des Protons.
 \begin{equation*}
