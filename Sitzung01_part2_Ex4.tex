@@ -8,7 +8,7 @@ In der Kern-- und Teilchenphysik versuchen wir die Struktur der Materie auf klei
 
 Jetzt aber zum Inhalt: wir setzen die Grundlagen der Quantenmechanik (z.B. aus Ex \rom{3}) voraus und betrachten zunächst noch einmal die Elektronenhüllen von Atomen. Richtig los geht es mit Stoßprozessen von Teilchen, wie wir sie nur mithilfe großer Beschleuniger erzeugen und auswerten können. Wir werden dann in Detektoren eine Winkelverteilung der Stoßprodukte beobachten und Größen wie Energie und Ladung ermitteln, um Rückschlüsse auf die Wechselwirkungen während des Stoßprozesses zu ziehen. Wegen der Unschärfe sind die Prozesse eine Art ''Black Box'' Problem, welches wir mit Feynman--Diagrammen darzustellen versuchen. 
 
-\subsection*{Frau Prof. Stachel's Notation für Konstanten}
+\subsection*{Notation und Werte für Konstanten (lt. Vorlesung)}
 \begin{align*}
 	e^2 &= \frac{q_e^2}{4\pi \epsilon_{0}} = \SI{1.44}{MeV fm}  \\
 	\SI{1}{eV} &= \SI{1.6E-19}{J}  \\
@@ -91,21 +91,25 @@ Die Elektronen werden für die Grundzustände so aufgefüllt, dass die Bindungse
 	Pro Unterzustand hat man $ N_e = 2(2l+1) $ Elektronen. 
 	Die Gesamtzahl der Elektronen in der n-ten Schale entspricht somit $ N_e = 2 \sum_{l}^{n-1} 2l+1 =   2n^2 $
 
-Innerhalb einer Unterschale gelten für die Grundzustände die hierarchischen \newline \textbf{Hund'schen Regeln}: 
-\begin{enumerate}
-\item Der Gesamtspin wird maximal. Das heißt hier ist $S = |\sum_i m_{s,i}| \stackrel{!}{=}$ max. 
-\item Der Gesamtdrehimpuls  wird maximal. Das heißt hier ist  $L = |\sum_i m_{l,i}| \stackrel{!}{=}$ max.
-\item Ist die Unterschale bis zu (einschließlich) halb voll, so wird J minimal. Das heißt hier ist  $ J := \lvert M_L + M_S \rvert \stackrel{!}{=} \lvert L-S \rvert $ , bei mehr als halb vollen Unterschalen muss $ J \stackrel{!}{=} L+S $ sein. 
-\end{enumerate} 
+Innerhalb einer Unterschale gelten für die Grundzustände die hierarchischen Hund'schen Regeln:
+\colbox{\textbf{Hund'sche Regeln}}{ 
+	\begin{enumerate}
+		\item Der Gesamtspin wird maximal. Das heißt hier ist $S = |\sum_i m_{s,i}| \stackrel{!}{=}$ max. 
+		\item Der Gesamtdrehimpuls  wird maximal. Das heißt hier ist  $L = |\sum_i m_{l,i}| \stackrel{!}{=}$ max.
+		\item Ist die Unterschale bis zu (einschließlich) halb voll, so wird J minimal. Das heißt hier ist  $ J := \lvert M_L + M_S \rvert \stackrel{!}{=} \lvert L-S \rvert $ , bei mehr als halb vollen Unterschalen muss $ J \stackrel{!}{=} L+S $ sein. 
+	\end{enumerate} 
+}
 
 Diese Regeln bestimmen die Feinstruktur des Elements. Regt man das Element an, so gelten diese Regeln nicht mehr. Möchte man im sogenannten Termschema verschiedene Zustände ihrer Energie nach ordnen (Energieniveaus), so ermittelt man den Grundzustand und verletzt dann die Regeln von unten nach oben.
-Die  Schalen-/Orbitalübergänge werden von den sog. \textbf{Auswahlregeln} beherrscht, die wohlgemerkt nicht hierarchisch sind. 
-\begin{enumerate}
-\item $ \Delta L \  \in $ \{-1,1\}  bei L-S-Kopplung
-\item $ \Delta M_L \   \in  $ \{-1,0,1\}  
-\item $ \Delta S =0 $ für leichte Atome $(Z <40)$
-\item $\Delta J \  \in $  \{-1,0,1\}   wobei $ \ J =0 \  \rightarrow J=0 \  \textbf{verboten} $
-\end{enumerate}
+Die  Schalen-/Orbitalübergänge werden von den sog. \textbf{Auswahlregeln} beherrscht, die wohlgemerkt nicht hierarchisch sind.
+\colbox{\textbf{Auswahlregeln}}{
+	\begin{enumerate}
+		\item $ \Delta L \  \in $ \{-1,1\}  bei L-S-Kopplung
+		\item $ \Delta M_L \   \in  $ \{-1,0,1\}  
+		\item $ \Delta S =0 $ für leichte Atome $(Z <40)$
+		\item $\Delta J \  \in $  \{-1,0,1\}   wobei $ \ J =0 \  \rightarrow J=0 \  \textbf{verboten} $
+	\end{enumerate}
+}
 
 \section{Vielelektronenprobleme} 
 Für Elemente mit mehr als einem Elektron gibt es keine analytische Lösung der Schrödinger-Gleichung, auch numerische Verfahren sind mit zunehmender Elektronenzahl extrem aufwändig. Wir machen deshalb folgende Näherungen:

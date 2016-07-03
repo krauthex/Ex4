@@ -4,21 +4,147 @@
 \section{Paritätsverletzung in der schwachen Wechselwirkung}
 \subsubsection*{von \mitsch \& \anton}
 
+\subsection{Einleitung: das Wu--Experiment}
+
+Hier passieren noch Dinge.
 
 \subsection{Helizität}
 Die Helizität ist definiert als die Projektion des Spins auf die Bewegungsrichtung (Impulsrichtung). Sie ist gegeben durch
 \begin{equation}
 	h:=\frac{\vec{s}\cdot \vec{p}}{\abs{\vec{p}}\cdot \abs{\vec{s}}}
 \end{equation}
-Sie hat folgende Eigenschaften:
+
+\subsubsection{Eigenschaften}
 \begin{itemize}
 	\item Die Helizität ist eine quantenmechanische Observable
 	\item Sie ist eine Erhaltungsgröße (im selben Bezugssystem)
-	\item Sie besitzt die Parität -1 und die C--Parität 1 (darauf wird später eingegangen)
+	\item Sie besitzt die Parität $-1$ und die C--Parität $+1$ (darauf wird später eingegangen)
 \end{itemize}
 
 \subsection{Chiralität}
+Die Chiralität bezeichnet in der Physik ein abstraktes Konzept der relativistischen Quantenmechanik und Quantenfeldtheorie. Für masselose Teilchen (Photon, Gluon und das hypothetische Graviton) ist die Chiralität das Selbe, wie die Helizität. Nur für massebehaftete Teilchen ist die Unterscheidung von Helizität und Chiralität wichtig.\\
 
-	
-	
+Ein masseloses Teilchen bewegt sich mit Lichtgeschwindigkeit. Deshalb kann sich ein realer Beobachter (dessen Geschwindigkeit immer kleiner als Lichtgeschwindigkeit sein muss) niemals in einem Bezugssystem befinden, in dem das masselose Teilchen seine Richtung umzukehren scheint. Dies bedeutet, dass alle Beobachter die gleiche Chiralität sehen. Aus diesem Grund ist die Ausrichtung des Spins des (masselosen) Teilchens nicht beeinflussbar durch einen Lorentz--Boost in Richtung der Teilchenbewegung. Somit ist das Vorzeichen der Projektion (Helizität) fest für alle Bezugssyteme und daher ist die Helizität (wie oben schon genannt) eine (relativistische) Erhaltungsgröße. 
+
+Für massebehaftete Teilchen ist es durchaus möglich, dass sich ein realer Beobachter in einem Bezugssystem befindet, in dem es scheint, als drehte das Teilchen seine Bewegungsrichtung um. Hier ändert sich das Vorzeichen der Helizität, wodurch die Unterscheidung zur Chiralität wichtig wird. (Der Chiralitäts--Operator wird auch die $\gamma^5$--Matrix genannt\footnote{\href{https://de.wikipedia.org/wiki/Dirac-Matrizen\#Die\_.CE.B35-Matrix}{https://de.wikipedia.org/wiki/Dirac-Matrizen\#Die\_.CE.B35-Matrix}}.)
+
+\subsubsection{Eigenschaften}
+\begin{itemize}
+	\item Für masselose Teilchen das Selbe wie Helizität
+	\item Sie ist unabhängig vom Bezugssystem
+	\item Sie ist eine quantenmechanische Observable mit dem Spektrum $\left\{ -1, 1\right\}$
+	\item Man unterscheidet zwischen links-- und rechtshändiger Chiralität: 
+		\begin{itemize}
+			\item linkshändig: $\hat{=} -1$, was bedeutet, dass der Spin dem Impuls entgegengerichtet ist
+			\item rechtshändig: $\hat{=} 1$, was bedeutet, dass der Spin dem Impuls gleichgerichtet ist
+		\end{itemize}
+	\item Sie ist nur für masselose Teilchen erhalten
+	\item Sie besitzt die Parität $-1$ und die C--Parität $+1$
+	\item Sie ist für Energieeigenzustände bei massiven Teilchen stets eine Superposition aus links-- und rechtshändigem Anteil
+\end{itemize}
+
+\colbox{\textbf{CP--Symmetrie}}{
+	Die schwache Wechselwirkung wirkt nur auf linkshändige Teilchen und rechtshändige Antiteilchen. Im gespiegelten System wirkt die schwache Wechselwirkung nun nur auf den zuvor rechtshändigen (und jetzt linkshändigen) Anteil. Werden zusätzlich alle Teilchen durch ihre Antiteilchen ersetzt, wirkt die schwache Wechselwirkung auf den rechtshändigen (zuvor linkshändigen) Anteil. Somit ist die ursprüngliche Physik wiederhergestellt. Dies nennt man CP--Symmetrie.
+	}
+
+\subsection{Ladungskonjugation (genannt C--Parität)}
+Die C--Parität ist definiert als die Vorzeichenspiegelung bei allen Ladungen (elektrische, Farb--, ...) bei allen betrachteten Teilchen. 
+
+\subsubsection{Eigenschaften}
+\begin{itemize}
+	\item Die C--Parität ändert Energie, Impuls, Masse, Spin, Helizität und Chiralität nicht
+	\item Sie ist eine Observable mit dem Spektrum $\mathrm{spec}\left\{ -1, 1\right\}$
+	\item Sie entspricht dem Ersetzen jedes Teilchens mit seinem Antiteilchen
+	\item Der $\hat{C}$--Operator ist unitär
+\end{itemize}
+Wir beobachten, dass die CP--Symmetrie auch nicht immer erhalten ist. 
+
+\subsection{Zeitumkehrinvarianz, Zeitumkehroperator $T$}
+Der Zeitumkehroperator $T$ dreht die Richtung der Zeit um. Dies interpretieren wir als eine Inversion der Bewegungsrichtung. Betrachten wir nun einige physikalische Größen und ihre Vorzeichenänderungen unter verschiedenen Transformationen:
+\begin{table}[H]
+	\centering
+	$
+	\begin{array}{cccc}
+	\text{Größe} & \text{Parität} & \text{C--Parität} & T \\ \hline
+	q & + & - & + \\ 
+	t & + & + & - \\ 
+	\vec{r} & - & + & + \\ 
+	\vec{p} & - & + & - \\ 
+	\vec{a} & - & + & + \\ 
+	\vec{L},\ \vec{S} & + & + & - \\ 
+	\vec{E} & - & - & + \\ 
+	\vec{B} & + & - & -
+	\end{array}  
+	$
+	\caption{Übersicht verschiedener physikalischer Größen und ihre Vorzeichen(änderungen)}
+\end{table}
+Newton \& Maxwell sind somit zeitumkehrinvariant.Wir beobachten, dass dies ebenso für die starke Wechselwirkung zutrifft.\\
+
+Nun stellt sich die Frage, ob $T$ tatsächlich eine Symmetrie ist. Wenn ja, dann gilt
+\begin{equation}
+	\left[ T,H\right] =0 \Leftrightarrow \psi \text{ und } T \psi \text{ lösen die selbe Schrödinger--Gleichung}
+\end{equation}
+1ter Versuch: 
+\begin{equation}
+	T\psi(t) = \psi(-t)
+\end{equation}
+Somit folgt für die Schrödinger--Gleichung: (im folgenden wird $-t$ als $t^\prime$ bezeichnet)
+\begin{align}
+	i \hslash \partial_{t^\prime} \psi(t^\prime) &= H\psi(t^\prime)\\
+	-i \hslash \partial_t \psi(t^\prime) &= H\psi(t^\prime)\ \quad \text{\Lightning}
+\end{align}
+2ter Versuch: 
+
+Sei
+\begin{equation}
+	T\psi(t) = \psi^*(t^\prime)
+\end{equation}
+Dann folgt für die Schrödinger--Gleichung
+\begin{align}
+	i \hslash \partial_{t^\prime} \psi^*(t^\prime) &= H \psi^* (t^\prime)\\
+	-i \hslash \partial_t \psi^*(t^\prime) &= H\psi^*(t^\prime)
+\end{align}
+was der Schrödingergleichung für $\bra{\psi}$ entspricht (und somit richtig ist). Daraus ist ersichtlich, dass $T$ antiunitär ist, was bedeutet:
+\begin{equation}
+	\braket{T \psi_1 | T \psi_2} = \braket{\psi_1 | \psi_2}^*
+\end{equation}
+Ebenso wissen wir, dass
+\begin{align}
+	\psi = \sum_n c_n \varphi_n
+	\intertext{wobei $\varphi_n$ die Eigenbasisvektoren sind. Wenden wir nun T darauf an, erhalten wir}
+	T\psi = \sum_n c_n^* \varphi_n
+\end{align}
+Da der Zustand verändert wird, $\nexists$ Observable, die mit T verbunden ist.
+
+\subsection{Elektrisches Dipolmoment von Elementarteilchen}
+Wir behaupten: Elementarteilchen dürfen kein elektrisches Dipolmoment besitzen.
+
+Um das heraus zu finden, betrachten wir Folgendes:
+Das elektrische Dipolmoment zeig in Richtung des Spins, als einzige ausgezeichnete Richtung bei Elementarteilchen. Das folgt daraus, dass der Satz von Quantenzahlen vollständig den Zustand eines Elementarteilchens beschreibt (sonst würden wir nur eine neue Quantenzahl benötigen). Also ist das el. Dipolmoment
+\begin{equation}
+	\vec{d} = \abs{\vec{d}} \frac{\vec{s}}{\abs{\vec{s}}}
+\end{equation}
+mit den möglichen Ausrichtungen parallel $\lp \uparrow_d \uparrow_s \rp$ und $\lp \downarrow_d \uparrow_s \text{ bzw. } \uparrow_d \downarrow_s\rp$.
+
+Nun wenden wir $P$ oder $T$ an $\lp \vec{d} = \Delta q \lp \vec{r}_1 - \vec{r}_2 \rp \rp$:
+\begin{align}
+	\uparrow_d \uparrow_s\ &\stackrel{T}{\rightarrow}\ \uparrow_d \downarrow_s \\
+	\uparrow_d \uparrow_s\ &\stackrel{P}{\rightarrow}\ \downarrow_d \uparrow_s
+\end{align}
+d.h. neuer Freiheitsgrad eines Zustandes kommt vor und nach dem Pauli--Prinzip wären Zustände mit gleicher Spinrichtung 2 mal besetzbar. \Lightning
+
+Hieraus folgt, dass 
+\begin{equation}
+	\vec{d} = 0
+\end{equation}
+für Elementarteilchen.
+
+\subsection{CPT--Theorem}
+\colbox{\textbf{CPT--Theorem}}{
+	Für ''praktisch jeden'' darstellbaren Hamilton--Operator gilt: 
+	\begin{equation}
+		\left[ C\cdot P \cdot T, H\right] = 0 
+	\end{equation}
+	Jede Lorentz--invariante, relativistische, kausale Feldtheorie ist $CPT$--invariant. Dies impliziert Gleichheit der Masse, Betrag der Ladung und Lebensdauer von Materie und Antimaterie.
+}
 \end{document}

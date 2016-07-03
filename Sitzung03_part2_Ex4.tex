@@ -18,47 +18,48 @@ Zur Berechnung der Wirkungsquerschnitte bzw. Übergangswahrscheinlichkeiten gibt
 		
 		\item virtuelle Teilchen hingegen sind durch im Feynman--Diagramm abgeschlossene Linie dargestellt und erfüllen $E^2 - p^2 = m^2$ \textbf{nicht}!
 		
-		\item Linienformen können angeben, um welche Teilchen es sich handelt. So haben Fermionen (Quarks, Leptonen) eine durchgezogene Linie, die Eichbosonen $\gamma,\ W^+,\ W^-,\ Z^0$ allgemein eine Wellenlinie und Gluonen eine schraubenförmige Linie. Oftmals werden aber auch geschtrichelte Linien für Propagatoren der schwachen Wechselwirkung und die Wellenlinien nur für Photonen verwendet (so wird es auch in diesem Skript gehandhabt).\\
-		PLACEHOLDER FÜR LINIENTYPEN IN FM--DIAGRAMMEN.\\
+		\item Linienformen können angeben, um welche Teilchen es sich handelt. So haben Fermionen (Quarks, Leptonen) eine durchgezogene Linie, die Eichbosonen $\gamma,\ W^+,\ W^-,\ Z^0$ allgemein eine Wellenlinie und Gluonen eine schraubenförmige Linie. Oftmals werden aber auch geschtrichelte Linien für Propagatoren der schwachen Wechselwirkung und die Wellenlinien nur für Photonen verwendet (so wird es auch in diesem Skript gehandhabt).
+		\begin{figure}[H]
+			\centering
+			\qquad 
+			\begin{subfigure}[b]{0.3\textwidth}
+				\feynmandiagram [horizontal=f1 to f2] {%
+					f1 -- [photon] f2,
+				};
+				\subcaption{Photon}
+			\end{subfigure}
+			\begin{subfigure}[b]{0.3\textwidth}
+				\feynmandiagram [horizontal=f1 to f2] {%
+					f1 -- [scalar] f2,
+				};
+				\subcaption{Eichboson}
+			\end{subfigure}
+			\begin{subfigure}[b]{0.3\textwidth}
+				\feynmandiagram [horizontal=f1 to f2] {%
+					f1 -- [gluon] f2,
+				};
+				\subcaption{Gluon}
+			\end{subfigure}
+		\end{figure}
 		
 		\item Vertices, die Knotenpunkte zwischen den Linien, geben durch ihre Anzahl die Ordnung der Feynman--Diagramme an. Sie verbinden (in echten Feynman--Diagrammen) genau drei Linien. 
 		
 		\item Propagatoren, die Linien zwischen Vertices, sind virtuell und haben keine Vorzugsrichtung.
 	\end{itemize}
-
-
-
-%\begin{figure}[h]
-%		\centering
-%		\feynmandiagram [horizontal=f1 to f2] {%
-%			f1 -- [photon, edge label=Photon] f2,
-%		};
-%		\caption{Photon}
-%		%\label{Linie Photon}
-%		%\text{und}
-%			\feynmandiagram [horizontal=f1 to f2] {%
-%				f1 -- [scalar, edge label=$W^{-},W^{+},Z^{0}$] f2,
-%			};
-%		\caption{$W^-,W^+,Z^0$}
-%		%\label{Linie WeakWW} 
-%	
-%		\feynmandiagram [horizontal=f1 to f2] {%
-%			f1 -- [gluon, edge label=Gluon] f2,
-%		}
-%		\caption{Gluon}
-%	%	\label{Linie Gluon}
-%\end{figure}
 	
+\begin{table}[H]
+	\centering
 	$
 	\begin{array}{c|ccc}
-		\textbf{Eichbosonen} & \textbf{Anzahl} & \textbf{WW} & \textbf{auf Materieteilchen} \\
+		\textbf{Eichboson} & \textbf{Anzahl} & \textbf{WW} & \textbf{auf Materieteilchen} \\
 		\hline
-		\textbf{Gluon} & 8 & starke\ WW & Quarks \\ 
-		W^+,\ W^-,\ Z^0 & 3 & schwache\ WW & Quarks,\ Leptonen \\ 
-		\textbf{Photonen} & 1 & el.mag.\ WW & Quarks,\ Leptonen
+		\textbf{Gluon} & 8 & \text{starke WW} & \text{Quarks} \\ 
+		W^+,\ W^-,\ Z^0 & 3 & \text{schwache WW} & \text{Quarks, Leptonen} \\ 
+		\textbf{Photon} & 1 & \text{el.mag. WW} & \text{Quarks, Leptonen}
 	\end{array} 
 	$
-	\captionof{figure}{Tabelle über die WW von Eichbosonen}
+	\caption{Wechselwirkung von Eichbosonen auf Materieteilchen}
+\end{table}
 
 \subsection{Erhaltungsgrößen (in nachfolgenden Kapiteln präzisiert)}
 Die folgenden Sätze gelten nicht für alle verschiedenen Wechselwirkungen. Welche Wechselwirkungen es gibt, wird später genauer erklärt. Hier soll lediglich eine Sammlung der Erhaltungsgrößen stehen. 
@@ -178,6 +179,6 @@ Die folgenden Sätze gelten nicht für alle verschiedenen Wechselwirkungen. Welc
 		 \frac{1}{m^2 + q^2} \text{, Matrixelement } M \propto \frac{1}{\alpha q^2} \Rightarrow \sigma \propto \frac{\alpha^2}{q^4}
 	\end{equation}
 		
-		PLACEHOLDER FÜR (SINNVOLLE) ERKLÄRUNG HIERZU.
+		[PLACEHOLDER FÜR (AUSFÜHRLICHERE) ERKLÄRUNG HIERZU.]
 	
 \end{document}
