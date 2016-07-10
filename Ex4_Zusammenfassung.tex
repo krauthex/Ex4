@@ -73,6 +73,7 @@
 
 %graphic
 % \usepackage{color}
+\usepackage{wrapfig}
 \usepackage{graphicx,epstopdf}
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.8}
@@ -326,6 +327,14 @@ dup
 
 \newtheorem{theorem}{Satz}
 
+
+% customizing the dictum and chapter preamble thingy
+\setkomafont{dictumtext}{\itshape\small}
+\setkomafont{dictumauthor}{\normalfont}
+\renewcommand*\dictumwidth{\linewidth}
+\renewcommand*\dictumauthorformat[1]{--- #1}
+\renewcommand*\dictumrule{}
+
 \begin{document}
 % \setcounter{page}{-1}
 % $~~$
@@ -355,11 +364,18 @@ dup
 \selectlanguage{ngerman}
 
 
-
+\setchapterpreamble[oc][.75\textwidth]{%
+	\dictum[Paul A.M. Dirac]{Im Anfang war das Wort... oder der Sinn? Nein, es hieß: Im Anfang war die Kraft! Oder war es doch die Tat? Äh Moment... wie ging das nochmal? Ach verdammt, ich kann mir diese Sprüche immer so schlecht merken.
+	}}
+	
+\setchapterpreamble[uc][0.75\textwidth]{%
+	\dictum[Yvonne L.]{Am Anfang war das Experiment.}
+	}
 \chapter*{}
-Dieses Skript ist entstanden in einem gemeinsamen Projekt, die Inhalte der Vorlesung von Frau Prof. Stachel im Sommersemester 2016 an der Uni Heidelberg selbstständig zu erarbeiten. An zusätzlichen Ressourcen wurden vor allem die Demtröder--Bände und Wikipedia (genauer: das Internet) herangezogen, ohne diese explizit anzugeben. \\
+\vspace{4em}
+Dieses Skript ist entstanden in einem gemeinsamen Experiment, die Inhalte der Vorlesung von Frau Prof. Stachel im Sommersemester 2016 an der Uni Heidelberg selbstständig zu erarbeiten. An zusätzlichen Ressourcen wurden vor allem die Demtröder--Bände und Wikipedia (genauer: das Internet) herangezogen, ohne diese explizit anzugeben. \\
 
-Über unsere Seminargruppe hinaus ist dieses Skript für alle Menschen gedacht, die an den Inhalten Interesse haben und/oder beispielsweise eine ähnliche Vorlesung besuchen. \\
+Über unsere Seminargruppe hinaus ist dieses Skript für alle Menschen gedacht, die an den Inhalten Interesse haben und/oder eine ähnliche Vorlesung besuchen. \\
 
 Für Fehler, Anregungen, gute Witze, liebe Grüße, Danksagungen, Spenden und Kolloquiumseinladungen bitte ein formloses Schreiben an: 
 
@@ -387,5 +403,6 @@ Für Fehler, Anregungen, gute Witze, liebe Grüße, Danksagungen, Spenden und Ko
 \subfile{Sitzung13Ex4.tex}
 \subfile{Sitzung14Ex4.tex}
 \subfile{Sitzung15Ex4.tex}
+\subfile{Sitzung16Ex4.tex}
 %Unterschrift
 \end{document}
