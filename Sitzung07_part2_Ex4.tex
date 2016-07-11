@@ -72,7 +72,7 @@ f(\vec q \ ^2) &= -\frac{m}{2\pi \hslash^2} \int V(r) \  \text{exp} \left(\frac{
  \begin{equation}
  V(r)=\frac{zZe^2}{r} e^{-\nicefrac{r}{a}} 
  \end{equation}
- mit dem Skalierungsfaktor $a\approx 1 \AA$ \newline
+ mit dem Skalierungsfaktor $a\approx 1  \text{\AA}$ \newline
  Somit erhalten wir als differentiellen Wirkungsquerschnitt 
 \begin{equation}
 \frac{d\sigma}{d\Omega} = |f(q^2)|^2 = \frac{4m^2z^2Z^2e^4}{q^4}
@@ -90,28 +90,28 @@ Im Laborsystem muss bei relativistischen Teilchen der Rückstoß berücksichtigt
 \subsection{Streuung relativistischer Spin \nicefrac{1}{2}-Teilchen an Punktladung Ze}
 Berücksichtigt man den Spins eines Teilchens, so muss man das durch den Spin hervorgerufene Magnetische Moment bei Streubetrachtungen hinzuziehen. Dadurch erhält man den \textbf{Mott-Querschnitt}
 \begin{equation}
-\frac{d\sigma^m}{d(q^2)} = \frac{4 \pi Z^2 e^4}{q^4}\left(1-\beta^2 \text{sin}\left(\frac{\theta}{2}\right)\right)
+\derive{\sigma^M}{(q^2)} = \frac{4 \pi Z^2 e^4}{q^4}\left(1-\beta^2 \sin^2 \left(\frac{\theta}{2}\right)\right)
 \end{equation} \newpage
 
 \subsection{Streuung an ausgedehnter Ladungsverteilung}
 Für das Potential gilt die Poisson-Gleichung
 \begin{equation}
-- \triangledown^2 V = 4 \pi \rho(r) Ze^2
+- \nabla^2 V = 4 \pi \rho(r) Ze^2
 \end{equation}
 Unter Verwendung einer Green'schen Identität lässt sich das Integral für die Streuamplitude umschreiben 
 \begin{equation}
-\int d \vec r \  \text{exp} \left(i \frac{ \vec q \cdot \vec r }{\hslash} \right) V(r) = - \frac{\hslash^2}{q^2} \int d \vec r \  \text{exp} \left(i \frac{\vec q \cdot \vec r }{\hslash}\right) \triangledown^2 V(r)
+\int \md \vec r \  \text{exp} \left(i \frac{ \vec q \cdot \vec r }{\hslash} \right) V(r) = - \frac{\hslash^2}{q^2} \int \md \vec r \  \text{exp} \left(i \frac{\vec q \cdot \vec r }{\hslash}\right) \nabla^2 V(r)
 \end{equation}
 Und man erhält als differentiellen Wirkungsquerschnitt:
 \begin{equation}
-\frac{d\sigma}{d\Omega} = |f(q^2)|^2 = \frac{4m^2Z^2e^4}{q^4} \left|\int d \vec r \  \text{exp}\left(i \frac{ \vec q \cdot \vec r }{\hslash} \right) \rho(r)  \right|^2
+\derive{\sigma}{\Omega} = |f(q^2)|^2 = \frac{4m^2Z^2e^4}{q^4} \left|\int \md \vec r \  \text{exp}\left(i \frac{ \vec q \cdot \vec r }{\hslash} \right) \rho(r)  \right|^2
 \end{equation}
 Das letzte Integral hat eine wichtige Bedeutung, weshalb man es als den Formfaktor definiert. Dieser ist die Fouriertransformierte der Ladungsverteilung und enthält die ganze Streuinformation des Wirkungsquerschnitts.
 \begin{equation}
-F(q^2) = \int d \vec r \   \text{exp}\left(i \frac{ \vec q \cdot \vec r }{\hslash} \right) \rho(r)
+F(q^2) = \int \md \vec r \   \text{exp}\left(i \frac{ \vec q \cdot \vec r }{\hslash} \right) \rho(r)
 \end{equation}
 Man kann damit den Wirkungsquerschnitt recht einfach aus dem Rutherford-Querschnitt erhalten:
 \begin{equation}
-\frac{d\sigma}{d\Omega} = \frac{d\sigma^R}{d\Omega} |F(q^2)|^2
+\derive{\sigma}{\Omega} = \derive{\sigma^R}{\Omega} |F(q^2)|^2
 \end{equation}
 \end{document}

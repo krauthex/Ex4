@@ -27,14 +27,14 @@ Dies benutzt, dass der Projektilimpuls erhalten ist (niedrige Energie). Außerde
 Um jetzt die radiale Form von Targetteilchen zu bestimmen werden wir im differentiellen Wirkungsquerschnitt immer mehr elektromagnetische Effekte berücksichtigen.
 \begin{figure}[H]
 \begin{tabular}{lcl}
-Name & Beschreibung & Formel \\ \hline
-Rutherf. & \begin{tabular}{cc} Projektil & $^{ \text{punktf.}}_{\text{spinlos}}$ \\ Target & $^{ \text{punktf.}}_{\text{spinlos}}$ \\ \end{tabular}  & $\frac{d\sigma^R}{d\Omega} = (zZe^2)^2 \cdot \left(\frac{1}{16 \ E_{kin}^2 \sin^4(\nicefrac{\theta}{2})} \  \text{oder} \ \frac{4 m_{Proj}^2}{q^4} \  \text{oder} \  \underbrace{\frac{4E_{end}^2}{(qc)^4}}_{relativist.}\right)$ \\ 
-Mott & \begin{tabular}{cc} Projektil & $^{ \text{punktf.}}_{\text{mit Spin}}$ \\ Target & $^{ \text{punktf.}}_{\text{spinlos}}$ \\ \end{tabular}  & $\frac{d\sigma^M}{d\Omega} = (zZe^2)^2 \cdot \frac{4 E_{end}^2}{(qc)^4} \cdot  \underbrace{(1-\beta^2 sin^2\left(\nicefrac{\theta}{2}\right))}_{\text{fuer} \  v \approx c \  \text{ungefaehr} \  cos^2(\frac{\theta}{2})}$
+\textbf{Name} & \textbf{Beschreibung} & \textbf{Formel} \\ 
+Rutherf. & \begin{tabular}{cc} Projektil & $^{ \text{punktf.}}_{\text{spinlos}}$ \\ Target & $^{ \text{punktf.}}_{\text{spinlos}}$ \\ \end{tabular}  & $\derive{\sigma^R}{\Omega} = (zZe^2)^2 \cdot \left(\frac{1}{16 \ E_{kin}^2 \sin^4(\nicefrac{\theta}{2})} \  \text{oder} \ \frac{4 m_{Proj}^2}{q^4} \  \text{oder} \  \underbrace{\frac{4E_{end}^2}{(qc)^4}}_{relativist.}\right)$ \\ 
+Mott & \begin{tabular}{cc} Projektil & $^{ \text{punktf.}}_{\text{mit Spin}}$ \\ Target & $^{ \text{punktf.}}_{\text{spinlos}}$ \\ \end{tabular}  & $\derive{\sigma^M}{\Omega} = (zZe^2)^2 \cdot \frac{4 E_{end}^2}{(qc)^4} \cdot  \underbrace{(1-\beta^2 sin^2\left(\nicefrac{\theta}{2}\right))}_{\mathclap{\text{für} \  v \approx c \  \text{ungefähr} \cos^2(\frac{\theta}{2})} } $
 \\ 
-Dirac & \begin{tabular}{cc} Projektil & $^{ \text{punktf.}}_{\text{mit Spin}}$ \\ Target & $^{ \text{punktf.}}_{\text{mit Spin}}$ \\ \end{tabular}  & $\frac{d\sigma^D}{d\Omega} = (zZe^2)^2 \cdot \frac{4 E_{end}^2}{(qc)^4} \cdot \left(1-\beta^2 \underbrace{\frac{(qc)^2}{2 E_T}}_{=2 M_T^2 c^4}  tan^2(\nicefrac{\theta}{2})\right)$\\ 
-Final & \begin{tabular}{cc} Projektil & $^{ \text{punktf.}}_{\text{mit Spin}}$ \\ Target & $^{ \text{ausgedehnt}}_{\text{mit Spin}}$  \end{tabular}  & $ \frac{d\sigma}{d\Omega} = (zZe^2)^2 \cdot \frac{4 E_{end}^2}{(qc)^4}^2 \cdot \left( \frac{G_E^2 - \left(\nicefrac{qc}{2E_T}\right)^2 G_M^2}{1- \left(\nicefrac{qc}{2E_T}\right)^2} - \beta^2 \left(\frac{qc}{2E_T}\right)^2 \cdot G_M^2 tan^2(\nicefrac{\theta}{2})\right)$
+Dirac & \begin{tabular}{cc} Projektil & $^{ \text{punktf.}}_{\text{mit Spin}}$ \\ Target & $^{ \text{punktf.}}_{\text{mit Spin}}$ \\ \end{tabular}  & $\derive{\sigma^D}{\Omega} = \derive{\sigma^M}{\Omega} \cdot \left(1-\beta^2 \underbrace{\frac{(qc)^2}{2 E_T}}_{=2 M_T^2 c^4}  tan^2(\nicefrac{\theta}{2})\right)$\\ 
+Final & \begin{tabular}{cc} Projektil & $^{ \text{punktf.}}_{\text{mit Spin}}$ \\ Target & $^{ \text{ausgedehnt}}_{\text{mit Spin}}$  \end{tabular}  & $ \derive{\sigma}{\Omega} = \derive{\sigma^M}{\Omega} \cdot \left( \frac{G_E^2 - \left(\nicefrac{qc}{2E_T}\right)^2 G_M^2}{1- \left(\nicefrac{qc}{2E_T}\right)^2} - \beta^2 \left(\frac{qc}{2E_T}\right)^2 \cdot G_M^2 tan^2(\nicefrac{\theta}{2})\right)$
 \\ 
-$^{\text{Rosenbluth}}_{\text{Plot-Formel}}$ & & $\frac{d\sigma}{d\Omega}= a \  (G_E^2 - b \  G_M^2) - d \  G_M^2 tan^2(\nicefrac{\theta}{2})$\\
+$^{\text{Rosenbluth}}_{\text{Plot-Formel}}$ & & $\derive{\sigma}{\Omega}= a \  (G_E^2 - b \  G_M^2) - d \  G_M^2 tan^2(\nicefrac{\theta}{2})$\\
 \end{tabular}
 \end{figure}
 \textbf{Legende:} 
@@ -47,10 +47,11 @@ $^{\text{Rosenbluth}}_{\text{Plot-Formel}}$ & & $\frac{d\sigma}{d\Omega}= a \  (
 \item $\beta = \frac{v}{c} \qquad e^2=\frac{q_e^2}{4\pi \epsilon_0} \qquad z,Z$ - Ladungszahlen \qquad $a,b,c \in \mathbb{R}$
 \end{itemize}
 \section{Struktur der Nukleonen}
-Trägt man $\frac{d\sigma}{d\Omega}$ gegen $tan^2(\nicefrac{\theta}{2})$ auf (Rosenbluth-Plot), so erhält man, dass die Formfaktoren $G_{E,M}^{p,n}$ (elektromagnetisch von Proton/Neutron) voneinander abhängen. Empirisch erhält man die sog. Dipolformel
+Trägt man $\nicefrac{\md \sigma}{\md \Omega}$ gegen $\tan^2(\nicefrac{\theta}{2})$ auf (Rosenbluth-Plot), so erhält man, dass die Formfaktoren $G_{E}^{p},\ G_M^p,\ G_M^n$ (elektromagnetisch von Proton/Neutron) voneinander abhängen. Empirisch erhält man die sog. Dipolformel
 \begin{equation}
-G_E^p(q^2) = \frac{1}{1+ \nicefrac{q^2c^4}{0.71 (GeV)^2}} \propto G_M^p \propto G_M^n
+	G :\propto G_E^p(q^2) = \frac{1}{1+ \nicefrac{q^2c^4}{0.71 (GeV)^2}} \propto G_M^p \propto G_M^n
 \end{equation}
+Der Formfaktor $G_E^n$ ist \textbf{nicht} proportional, er nimmt für kleine $r$ stärker ab.
 \begin{figure}[H]
 \centering
 \begin{tikzpicture}[scale=1.5]
@@ -58,8 +59,8 @@ G_E^p(q^2) = \frac{1}{1+ \nicefrac{q^2c^4}{0.71 (GeV)^2}} \propto G_M^p \propto 
 \draw [->, >=latex, thin] (0,0) -- (2,0);
 \draw (0.1,1.9) to [out=-70,in=190] (1.9,0.01);
 
-\node at (-0.5,1.9) {$log \  G_{E,M}^{p,n}$};
-\node at (2,-0.25) {$G^2$};
+\node at (-0.5,1.9) {$\log G$};
+\node at (2,-0.25) {$q^2$};
 
 \end{tikzpicture}
 \end{figure}
@@ -122,7 +123,7 @@ Die Ergebnisse der Experimente liefern folgendes Bild:
 \node at (7,-1.6) {u};
 \end{tikzpicture}
 
-\caption{Substruktur eines Protons(links) und Neutrons(rechts)}
+\caption{Substruktur eines Protons (links) und Neutrons (rechts)}
 \end{figure}
 \begin{itemize}
 \item Proton: Valenzquarks uud

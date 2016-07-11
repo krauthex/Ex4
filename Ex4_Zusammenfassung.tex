@@ -20,8 +20,9 @@
 \usepackage{pdfpages}
 
 %Title, Author
-\title{Ex \rom{4}\\  Boykott--Gruppenseminar\\ Kern-- \& Teilchenphysik}
+\title{KEINE PANIK \vspace{4em} \\ Ex \rom{4}\\  Gruppenseminar\\ Kern-- \& Teilchenphysik}
 \author{$\mathop{\text{\small{no} \Large Fabs}}\limits_{\text{were given}}$ \and $\overline{\text{Chris}}$ \and Mi$\raisebox{2pt}{\chi}$ \and Pauli \and Antonkern \and S\o{}ni \and HeinStein \and mARTina \and HerMitsch}
+\publishers{\vspace{6em} gesetzt in \LaTeX\ von $\mathop{\text{\small{no} \Large Fabs}}\limits_{\text{were given}}$ \& \chris}
 \date{\today}
 %math packages
 \usepackage{amssymb}
@@ -315,7 +316,7 @@ dup
 \newcommand{\me}[1]{\mathrm{e}^{#1}}
 
 %%%%% menschen
-\newcommand{\fabs}{$\mathop{\text{\small{no} \Large Fabs}}\limits_{\text{were given}}$ }
+\newcommand{\fabs}{$\mathop{\text{\small{no} \normalsize{Fabs}}}\limits_{\text{were given}}$ }
 \newcommand{\chris}{$\overline{\text{Chris}}$ }
 \newcommand{\michi}{Mi$\raisebox{2pt}{\chi}$ }
 \newcommand{\paul}{Pauli }
@@ -335,6 +336,9 @@ dup
 \renewcommand*\dictumauthorformat[1]{--- #1}
 \renewcommand*\dictumrule{}
 
+
+% start chapters at zero
+\setcounter{chapter}{-1}
 \begin{document}
 % \setcounter{page}{-1}
 % $~~$
@@ -345,6 +349,9 @@ dup
 
 
 \maketitle
+
+
+
 \KOMAoptions{open=left}
 
 \thispagestyle{empty}
@@ -370,11 +377,15 @@ dup
 	}
 \chapter*{}
 \vspace{4em}
-Dieses Skript ist entstanden in einem gemeinsamen Experiment, die Inhalte der Vorlesung von Frau Prof. Stachel im Sommersemester 2016 an der Uni Heidelberg selbstständig zu erarbeiten. An zusätzlichen Ressourcen wurden vor allem die Demtröder--Bände und Wikipedia (genauer: das Internet) herangezogen, ohne diese explizit anzugeben. \\
+Dieses Skript ist entstanden in einem gemeinsamen Experiment, die Inhalte der Vorlesung von Frau Prof. Stachel im Sommersemester 2016 an der Uni Heidelberg selbstständig zu erarbeiten. Die wesentlichen Vorteile dieses Skripts gegenüber dem herkömmlichen vorlesungsbegleitenden Material sind: erstens ist es ein bisschen lustiger, und zweitens stehen auf seinem Umschlag in großen freundlichen Buchstaben die Worte \textit{KEINE PANIK}.  
 
-Über unsere Seminargruppe hinaus ist dieses Skript für alle Menschen gedacht, die an den Inhalten Interesse haben und/oder eine ähnliche Vorlesung besuchen. \\
+An zusätzlichen Ressourcen wurden vor allem die Demtröder--Bände und Wikipedia (genauer: das Internet) herangezogen, ohne diese explizit anzugeben. \\
 
-Für Fehler, Anregungen, gute Witze, liebe Grüße, Danksagungen, Spenden und Kolloquiumseinladungen bitte ein formloses Schreiben an: 
+Über unsere Seminargruppe\footnote{\fabs:= Fabian Krautgasser, \chris:= Christian Schmidt, \michi:= Michael Heinrich, \newline \paul:= Paul Wiesemeyer, \anton:= Anton Kreuzkamp, \soeren:= Sören Breidenbach, \hein:= Hein-Erik Schnell, \martina:= Martina Zündel, \mitsch:= Michelangelo Tagliavini} hinaus ist dieses Skript für alle Menschen gedacht, die an den Inhalten Interesse haben und/oder eine ähnliche Vorlesung boykottieren. \\
+
+Das Skript befindet sich noch in einer $\beta$--Phase, deshalb freuen wir uns über jegliches Feedback zur Verständlichkeit der Inhalte. Dies ist ein Skript von Studis für Studis, daher sind die Angaben wie immer ohne Gewähr. \\
+
+Für Fehler, Anregungen, gute Witze, Danksagungen, Spenden und Kolloquiumseinladungen bitte ein formloses Schreiben an: 
 
 \href{spamfilter@akreuzkamp.de}{spamfilter@akreuzkamp.de}
 
