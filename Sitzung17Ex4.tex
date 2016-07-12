@@ -1,75 +1,78 @@
 \documentclass[Ex4_Zusammenfassung.tex]{subfiles}
 
 \begin{document}
-\section{Kernspaltung}
-\textbf{von \mitsch und \soeren} \newline 
-Kernspaltung ist ein Prozess, bei dem en Atomkern unter Energiefreisetzung in zwei oder mehrere Kerne zerlegt wird.
-\subsection{Spontane Spaltung}
-Ist die Spaltung ohne äußere Energiezufuhr. \\
-Bei der Spaltung müssen  die abgespaltenen Teilchen eine Potentialbarriere überwinden, den sog. Coulomb-Wall.
-Wir betrachten nun die Potentialbarrieren für zwei verschiedene Arten der Spaltung.
-\begin{itemize}
-\item Spaltung in zwei gleich große Teile (Fission): 
-		\begin{equation}
-		V_{cb}^f = \frac{1.44 MeV \ fm}{r} \cdot \frac{Z}{2}^2
-		\end{equation}
-\item $\alpha$-Zerfall: 
-		\begin{equation}
-		V_{cb}^{\alpha} = \frac{1.44 MeV \ fm}{r} \cdot \underbrace{2 \ (Z-2)}_{\approx 2 \cdot Z}
-		\end{equation}
-\end{itemize}
-Daraus erschließt man, dass i.A. die Spaltung viel unwahrscheinlicher ist, als der $\alpha$-Zerfall, da für die Tunnelwahrscheinlichkeit gilt $T \propto e^{-V}$ \\ 
+\section{Angeregte Zustände in Atomkernen}
+\textbf{von \hein \& \martina}\\
 
-Bei der Spaltung wird die annähernd kugelsymmetrische Verteilung der Nukleonen deformiert (Abb.11.6)
-\begin{figure}[H]
-\includegraphics[scale=0.7]{Kernspaltung.png}
-\caption{Schematischer Verlauf der pot. Energie bei Kernspaltung}
+\subsection*{Rückblick}
+Bei 2--atomigen Molekülen sind verschiedene Formen der Anregung möglich. Die niedrigsten angeregten Zustände sind Rotationen, außerdem sind auch Vibrationen möglich. Vibrationsanregungen haben deutlich höhere Energien als Rotationsanregungen: $E_{\text{Vib}}  \simeq 100\cdot E_{\text{Rot}}$
+
+\subsection{Angeregte Zustände}
+Kerne mit abgeschlossenen Schalen sind kugelsymmetrisch. In der Nähe abgeschlossener Schalen wird ein Kern immer noch am besten durch das Schalenmodell beschrieben. Ist die Schale nicht abgeschlossen, ist der Kern nicht mehr kugelsymmetrisch, sondern ähnelt einem Ellipsoid. 
+\begin{figure}[h]
+	\begin{subfigure}[t]{0.3\textwidth}
+		\centering
+		\includegraphics[scale=0.55, trim= 0 -0.45cm 0 0]{ellipsoid_1.png}
+	\end{subfigure}
+	~
+	\begin{subfigure}[b]{0.7\textwidth}
+		\centering
+		\includegraphics[scale=0.6]{ellipsoid_2.png}
+	\end{subfigure}
+	\caption{Allgemeine Beschreibung der Ellipsoiden (links), und die Bezeichnungen für die 2 verschiedenen Formen (rechts, a und b)}
+	\label{ellipsoids}
 \end{figure}
-Dabei steigt die Oberflächenspannung (Oberfläche wird stärker außeinandergezogen) 
-\begin{equation}
-E_{\epsilon}^S = E_0^S + \Delta E_{\epsilon}^S
-\end{equation}
-während die Coulomb-Energie abnimmt (Ladungsträger werden weiter außeinandergebracht, abstoßende Wirkung wird also kleiner)
-\begin{equation}
-E_{\epsilon}^C = E_0^C - \Delta E_{\epsilon}^C
-\end{equation}
-Eine spontane Spaltung tritt auf, wenn $\Delta E_{\epsilon}^C \geq \Delta E_{\epsilon}^S$, also die Gesamtenergie bei Deformation abnimmt. Dies ist der Fall, wenn $\nicefrac{Z^2}{A} \geq 51$. Bei knapp kleineren Z  ist durch Tunneleffekt noch eine spontane Spaltung möglich. Für kleinere Werte Werte von Z nimmt die Spaltung stark ab. 
-\begin{figure}[H]
-\includegraphics[scale=0.8]{Kernspaltung_Abnahme.png}
-\caption{Potentialschwelle der Kernspaltung für verschiedene Werte des Verhältnisses $\frac{Z^2}{A}$}
+Ein rotationssymmetrischer Ellipsoid kann durch Polardarstellung dargestellt werden:
+\begin{align}
+	R(\vartheta) &= R_0 \left[ 1 + \beta \cdot Y_2^0 (\cos \vartheta ) \right], \quad \beta \ll 1\\
+	R_k &= R_0 \cdot \left[ 1 + \sqrt{\frac{5}{4\pi}} \beta \cos\lp \vartheta - \frac{2 \pi k}{3}\rp  \right]
+\end{align}
+wobei $\beta$ einen Deformationsparameter darstellt. 
+
+Dabei treten zwei Formen auf: Oblaten und Prolaten (Abb. \ref{ellipsoids} rechts). 
+
+\subsection{Rotation}
+Da in den Kernspektren äquidistante Linien auftauchen, schließt man nun auf Rotationsanregungen. Durch Stöße mit schweren Projektilen (Protonen, $\alpha$--Teilchen) können Drehimpulse erzeugt und der Kern damit zu Rotation angeregt werden. Da auf kugelsymmetrische Objekte kein Drehimpuls übertragen werden kann, werden die Kerne als deformiert angenommen. 
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.4]{deformiert.png}
+	\caption{Kein Drehimpulsübertrag bei kugelsymmetrischem Kern (a), Drehimpulsübertrag auf deformierten Kern (b).}
 \end{figure}
-Da das Potential für große $\frac{Z^2}{A}$ stets monoton abfällt ist die Spaltung deterministisch und wird auf jeden Fall eintreten. Für kleinere $\frac{Z^2}{A}$ gibt es einen ansteigenden Bereich indem die Spaltung propabilistisch möglich ist durch den Tunneleffekt. Im abfallenden Bereich ist sie stets deterministisch. Je kleiner $\frac{Z^2}{A}$ wird, desto weiter verschiebt sich der Peak in positive $\epsilon$-Richtung, und der deterministische Bereich wird immer kleiner, wobei der propabilistische Bereich zunimmt. Wir sehen außerdem, dass die Potentialschwelle $\Delta E_F$ (Höhe des Peaks) mit abnehmendem $\nicefrac{Z^2}{A}$ größer wird. 
+Entsprechend steht die Rotationsachse immer senkrecht auf der Symmetrieachse, da sonst wie bei der Kugel kein Drehmoment wirken kann. 
 
-\subsection{Stoßinduzierte Spaltung}
-Diese Spaltung passiert, wenn genug Energie aufgebracht wird, um die Oberflächenspannung zu überwinden (bei $\nicefrac{Z^2}{A} < 51$). \\ \newline
-\textbf{Beispiel: Uran $^{235} U$} \newline
-Uran könnte z.B durch Neutronenbeschuss zur Kernspaltung induziert werden. Dies passiert für $^{235} U$ am effektivsten wenn thermische Neutronen zum Beschuss verwendet werden (d.h $E_{Neutronen} \approx \frac{1}{40}$ eV [$k_B  T$ bei Zimmertemperatur] ) \newline
-Im Allgemeinen sind die Zerfallsprodukte nicht symmetrisch. Die Töchter sind oft angeregt (zerfallen durch $\beta^-$ oder $\gamma$-Zerfall) und direkt erzeugte Neutronen. Wir betrachten dazu ein Beispiel:
+Die Energieniveaus eines quantenmechanischen Rotators sind
 \begin{equation}
-^ {235} U + n \rightarrow ^{236} U ^*  \rightarrow ^{96}_{36} Kr + ^{138}_{56} Ba + 2n + \gamma
+	E = \frac{\hslash^2}{2 \Theta} I (I+1)
 \end{equation}
-Pro Spaltkern werden im Mittel 200-250 MeV frei.
-\begin{itemize}
-\item 83 \% davon gehen in die kinetische Energie der Fragmente
-\item 2.5 \% in $E_{kin}$ von Neutronen
-\item 3.5 \% in direkte $\gamma$-Strahlung 
-\item 17 \% in Anregungsenergie der Spaltfragmente
-\end{itemize}  
-Im Mittel werden 2.5 Neutronen mit $E_k = 1-2$ MeV pro Spaltung erzeugt. Um neue Spaltungen zu induzieren, müssen diese auf thermische Energiebereiche abgebremst werden. 
+wobei $\Theta$ das Trägheitsmoment und $I$ die Drehimpulsquantenzahl des Kerns darstellen. 
 
-\subsubsection{Begriffserklärung}
+Aus den Abständen zwischen zwei Spektrallinien lässt sich $\Theta$ ermitteln. Aufgrund der Paritätserhaltung sind nur gerade Werte für $I$ erlaubt:
+\begin{align}
+	\intertext{hierfür sei} A = \frac{\hslash^2}{2 \Theta}
+	\intertext{und somit folgt}
+	\Delta E = E_I - E_{I-2} &= AI(I+1) - A(I-2)(I-1)\\
+	&= A(I^2 + I - I^2 + 3I - 2)\\
+	&= A(4I - 2)\\
+	&= 4AI - 2A
+\end{align}
+$\Delta E$ entspricht einer Spektrallinie. Also folgt für die Differenz zweier Spektrallinien:
+\begin{align}
+	\Delta (\Delta E) &= 4A(I+2) -2A - 4AI + 2A\\
+	&= 4AI + 8A - 4AI \\
+	&= 8A = 8 \frac{\hslash^2}{2\Theta}
+\end{align}
+Die berechneten $\Theta$ sind um den Faktor 2 zu groß, da man den Kern nicht als starren Rotator annehmen kann. 
+\subsection{Vibration}
+kann auch bei kugelsymmetrischen Kernen auftreten. Dabei gibt es 2 wesentliche Schwingungstypen:
 \begin{itemize}
-\item Kritische Reaktion: Im Mittel wird aus den Spaltprodukten wieder 1 Kern zur Spaltung angeregt. Es entsteht eine Reaktionskette mit konstanter Rate. 
-\item Superkritsche Reaktion: Mehrere induzierte Spaltungen pro Spaltprodukte. Es entsteht eine ansteigende Reaktionsrate. 
-\item Subkritische Reaktion: Im Mittel wird aus den Spaltprodukten weniger als 1 Kern zur Spaltung angeregt. Die Reaktionsrate stirbt mit der Zeit aus. 
+	\item Radiale Kompressionssschwingung:\\
+	Die Dichte des Kerns ändert sich periodisch und es tritt kein Drehimpuls auf. Da die Kernmaterie aber fast inkompressibel ist, muss die Anregungsenergie hierfür sehr groß sein.
+	\item Oberflächenschwingung:\\
+	Das Kernvolumen ändert sich nicht, aber der Kern wird deformiert. Hier kann z.B. die Kugel abwechselnd in Oblate und Prolate übergehen.
 \end{itemize}
-
-\subsubsection{Technische Punkte}
-\begin{itemize}
-\item Die induzierten Neutronen müssen andere Kerne treffen. Dafür wird ein hoher Dichtewert und ein kleiner $\nicefrac{Oberflaeche}{Volumen}$-Wert benötigt.
-\item Neutronen müssen abgebremst werden. Es werden dafür leichtes und schweres Wasser oder Graphit benutzt. (Moderator)
-\item Die Reaktion muss kontrollierbar sein. es werden Absorberstäbe aus Cadmium oder Bor für den Neutroneneinfang verwendet. 
-\end{itemize}
-Natürliches Uran besteht zu 99.3 \% aus $^{238} U$ und zu 0.7 \% aus $^{235} U $. Ersteres produziert keine Spaltungskette, da die Neutronen zu langsam sind um neue Spaltungen von $^{238} U$ zu induzieren. Zusätzlich fängt $^{238} U$ die von $^{235} U $ durch Spaltung erzeugten Neutronen, ohne aber sich zu spalten. Daraus folgt, dass Uran bis 3 \% von $ ^{235} U$ eingereicht werden muss, sodass eine Kettenreaktion auftreten kann.
-
+Abhängig von der Art der Schwingung erhält man bei genügend kleinen Amplituden die Energiewerte des harmonischen Oszillators:
+\begin{equation}
+	E_{\text{Vib}} = \hslash \omega_{\ell, m} \lp n + \frac{1}{2} \rp
+\end{equation}
+$\omega_{\ell, m}$ hängt von der Art der Schwingung und Deformation ab.
 \end{document}
