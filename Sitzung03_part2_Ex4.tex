@@ -168,17 +168,44 @@ Die folgenden Sätze gelten nicht für alle verschiedenen Wechselwirkungen. Welc
 	
 	\subsection{Feynman-Kalkül}
 	
-	Prozesse sind auf beliebig vielen Arten darstellbar (mehrere Vertices möglich). Jeder Vertex liefert die Wurzel aus einer Kopplungskonstanten $\sqrt{\alpha_{\text{WW}}(q)}$, wobei hier $q$ für die Ladung des Teilchens und WW für die Art der Wechselwirkung steht.
+	Prozesse sind auf beliebig vielen Arten darstellbar (mehrere Vertices möglich). Jeder Vertex liefert zur Übergangswahrscheinlichkeit die Kopplungskonstante $\alpha_{\text{WW}}(q)$, wobei hier $q$ für die Ladung des Teilchens und WW für die Art der Wechselwirkung steht. Wir werden dies im Folgenden \textbf{plausibilisieren}:
 	
 	Beispielsweise ist es für die elektromagnetische WW die Feinstrukturkonstante $\alpha = \frac{e^2}{\hslash c}$.\\
 	
 	Je mehr Vertices ein Diagramm enthält, desto geringer ist sein Beitrag zur Gesamtamplitude der superponierten Zustände (alle bis heute erzielten Forschungsergebnisse mit Termen nur bis 4. Ordnung errechnet).
 	
-	Austauschteilchen in Berechnung von Matrixelement durch Propagator beschrieben. Es gilt:
+	Wir fragen uns nun, wieviel ein Vertex in einem Feynman-Diagramm zur \\ Übergangswahrscheinlichkeit der zugehörigen Reaktion in Abhängigkeit von der Wechselwirkung beiträgt. Dies kann man sich zunächst für die Elektromagnetische Wechselwirkung klar machen. Hier gilt für das Potential:
 	\begin{equation}
-		 \frac{1}{m^2 + q^2} \text{, Matrixelement } M \propto \frac{1}{\alpha q^2} \Rightarrow \sigma \propto \frac{\alpha^2}{q^4}
+	V(r) = \frac{e^2}{r} = \frac{\alpha \hslash c}{r}
 	\end{equation}
-		
-		[PLACEHOLDER FÜR (AUSFÜHRLICHERE) ERKLÄRUNG HIERZU.]
+	Nach Fermis Goldener Regel gilt für die Übergangswahrscheinlichkeit P:
+	\begin{equation}
+	P \propto \frac{dP}{dt} = \lambda = \frac{2\pi}{\hslash} \bra{\psi_E}|V|\ket{\psi_A}|^2 \rho_E \propto  |\bra{\psi_E}|V|\ket{\psi_A}|^2 \propto \alpha^2
+	\end{equation}
+	Hier wurden bereits 2 Vertices betrachtet, (Anfangszustand und Endzustand). Skaliert man dies auf einen Vertex runter erhält man also für den Beitrag eines Vertex zur Übergangswahrscheinlichkeit: $ P \propto \alpha$ \newline
+	Um dieses Prinzip jetzt für andere Teilchen als Elektronen zu verallgemeinern betrachtet man den Beitrag der Ladungszahlen im Coulombpotential. Genauer betrachtet lautet es mit den Ladungszahlen $q_1,q_2$
+	\begin{equation}
+	V(r) = \frac{q_1 q_2 e^2}{r} = \frac{q_1 q_2 \alpha \hslash c}{r} 
+	\end{equation}
+	Mit analoger Rechnung halten wir fest, dass pro Vertex die Übergangswahrscheinlichkeit skaliert mit $q_1 q_2 \alpha$ wobei $q_i$ die Ladungszahlen der wechselwirkenden Teilchen sind, (für up Quark z.B $q_1=\frac{2}{3}$ und down Quark $q_2= - \frac{1}{3}$.) \newline
+	Wir greifen jetzt ein wenig vorweg:	Betrachtet man die Potentiale der starken und schwachen Wechselwirkung
+	\begin{align}
+	V_{\text{weak}} &= \frac{g_{\text{weak}}^2}{r} \cdot \exp\lp -\frac{m_{\text{weak}} r}{\hslash c}\rp \\
+	V_{\text{strong}} &= \frac{g_{\text{strong}}^2}{r} \cdot \exp\lp -\frac{m_{\text{strong}} r}{\hslash c}\rp
+	\end{align}
+	So lässt sich auch ein Analogon für diese Wechselwirkungen zur elektromagnetischen Ladung finden. $g_i$ ist analog zu q und somit gilt bei der starken und der schwachen Wechselwirkung für die Wahrscheinlichkeit pro Vertex 
+	\begin{equation}
+	P \propto \alpha g_1 g_2
+	\end{equation}
+	Diese Analogie wird bestätigt durch die Wechselwirkungskonstanten für die starke und schwache Wechselwirkung:
+	\begin{align}
+	\alpha_{weak} &= \frac{q_{weak}^2}{\hslash c} \\
+	\alpha_{strong} &= \frac{q_{strong}^2}{\hslash c}
+	\end{align}
+	Wir halten also letzten Endes fest, dass für eine beliebige Wechselwirkung die Übergangswahrscheinlichkeit pro Vertex gegeben ist durch 
+	\begin{equation}
+	P \propto x_1 x_2 \alpha
+	\end{equation}
+	Wobei x die "Ladung" der jeweiligen Wechselwirkung ist. Wir möchten zum Schluss noch betonen, dass dies lediglich eine \textbf{Plausibilisierung} ist und auch die Analogien sehr mit Vorsicht zu genießen sind und stark vereinfacht sind. Außerdem erfolgt eine genauere Betrachtung dieser Wechselwirkungen im weiteren Verlauf des Skripts. \\ \newline
 	
 \end{document}
