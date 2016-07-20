@@ -76,4 +76,84 @@ Abhängig von der Art der Schwingung erhält man bei genügend kleinen Amplitude
 	E_{\text{Vib}} = \hslash \omega_{\ell, m} \lp n + \frac{1}{2} \rp
 \end{equation}
 $\omega_{\ell, m}$ hängt von der Art der Schwingung und Deformation ab.
+
+\section{Schalenmodell}
+Wie kann man die Peaks in Abb. \ref{kernbindungsenergie} und die Zahlen der stabilen Isotope erklären? Der Kern weißt Schalenverhalten auf, ähnlich wie Elektronen in der Hülle. 
+
+Als Näherung des Kernpotentials betrachten wir das Wood--Saxon Potential:
+\begin{equation}
+	V(r) = - \frac{V_0}{1+ \exp \lp \frac{r-R}{a} \rp }
+\end{equation}
+wobei $V_0$ die Potentialtopftiefe, $a$ die Oberflächendicke eines Kerns und $R = r_0 A^{\nicefrac{1}{3}}$ der Kernradius mit $r_0= \SI{1.25}{fm}$ und Massenzahl $A$ sind. 
+
+Wir nehmen hierbei an, dass die Kräfteverteilung $\propto$ Dichte $\propto$ Ladungsverteilung $\propto$ Fermiverteilung ist.
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.4]{woodsaxon.png}
+	\caption{Wood--Saxon--Potential mit $A=50$ und $a=\SI{0.5}{fm}$}
+\end{figure}
+
+Wir versuchen die Schrödinger Gleichung zu lösen, um konkrete Energiezustände fur Schalen zu erhalten. \Lightning Problem: $\nexists$ analytische Lösung für Wood--Saxon. Daher nähern wir das Wood--Saxon Potential durch einen harmonischen Oszillator oder durch ein Kastenpotential. Die Lösung der Schrödinger--Gleichung ergibt:
+\begin{equation}
+	 E_N = \hslash \omega \lp N + \frac{3}{2} \rp - V_0
+\end{equation}
+wobei $N = 2(n-1) + \ell $ mit der Bahndrehimpulsquantenzahl $\ell$ und $\ell$ die Werte $N,\ N-2,\ ...\ 1 \text{ oder } 0$ annimmt. $n$ ist die Anzahl der radialen Knoten.
+
+Für die Entartung $g(N)$ ergibt sich
+\begin{equation}
+	g(N) = \frac{1}{2} (N+1)(N+2)
+\end{equation} 
+
+Wir betrachten die Schalen:
+\begin{table}
+	\centering
+	$
+	\begin{array}{llclccc}
+	n & \ell & N & \text{Orbitale } n\ell & \text{Parität} & \text{Entartungsgrad } 2g(N) & \sum 2g(N) \\ \hline
+	1 & 0 & 0 & 1s & + & 2 & 2 \\ 
+	1 & 1 & 1 & 1p & - & 6 & 8 \\ 
+	1,\ 2 & 2,\ 0 & 2 & 2s,\ 1d & + & 12 & 20 \\ 
+	1,\ 2 & 3,\ 1 & 3 & 2p,\ 1f & - & 20 & 40 \\ 
+	1,\ 2,\ 3 & 4,\ 2,\ 0 & 4 & 3p,\ 2d,\ 1g & + & 30 & 70
+	\end{array} 
+	$
+	\caption{Der Faktor 2 in der Spalte der Entartung rührt daher, dass der Spin auch entartet ist. }
+\end{table}
+Diese Zahlen ähneln den Elektronenschalenzahlen. Aber experimentell stellen wir die magischen Zahlen (2, 8, 20, 28, 50, 82, ...) als besonders stabil fest (woraus folgt, dass dort Schalen sein müssen!) 
+
+Bisher haben wir die Entartung durch den Spin nicht betrachtet. Die Spin--Bahn--Kopplung liefert weitere Aufspaltung der Energie--Niveaus. Wir betrachten den Gesamtdrehimpuls
+\begin{equation*}
+	\vec{j} = \vec{\ell} + \vec{s} 
+\end{equation*}
+um die Differenz der neuen Energieaufspaltungen zu erhalten:
+\begin{equation}
+	E_{\ell s} = c_{\ell s} \vec{\ell} \cdot \vec{s} 
+\end{equation}
+wobei hier 
+\begin{align*}
+	\vec{\ell} \cdot \vec{s} &= \frac{1}{2} \lp \pvec{j}^2 - \pvec{\ell}^2 - \pvec{s}^2 \rp
+	\intertext{was auf den Zustand angewendet folgendes ergibt:}
+	&= \frac{1}{2} \hslash^2 \lp j(j+1) - \ell(\ell + 1) - s(s+1) \rp 
+\end{align*}
+Außerdem ist hier $s=\nicefrac{1}{2}$ (Nukleonen und Fermionen) und $j=\ell \pm \nicefrac{1}{2}$.
+\begin{equation}
+	\vec{\ell} \cdot \vec{s} = 
+		\begin{cases}
+			\frac{1}{2} \hslash^2 \ell & j=\ell + \frac{1}{2}\\
+			-\frac{1}{2} \hslash (\ell + 1) & j=\ell - \frac{1}{2}
+		\end{cases}
+\end{equation}
+Das Niveau $j=\ell + \nicefrac{1}{2}$ ist offenbar energetisch günstiger. Außerdem sieht man, dass die Energieaufspaltung
+\begin{equation}
+	\Delta E|{\ell s} = \lp \ell + \frac{1}{2} \rp \hslash^2 c_{\ell s} 
+\end{equation}
+mit zunehmendem $\ell$ größer wird. Dies führt zu sehr starker Überlappung der ursprünglichen Schalen (Abb. \ref{schalen}).
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.5]{schalenmodell.png}
+	\caption{$(n \ell) \longrightarrow (n\ell_j)$}
+	\label{schalen}
+\end{figure}
+
+Die nun entstehenden Energieniveaus entsprechen den magischen Zahlen. Offenbar liegt also im wesentlichen Unterschied vom Schalenmodell der Elektronen in den Hüllen hier ein eine viel stärkere Spin--Bahn--Kopplung vor. 
 \end{document}
